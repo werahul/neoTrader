@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Blogs | Neo Traders</title>
+    <style>
+        .container {
+            position: relative;
+            /* Increase the height based on your content */
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            right: 20%;
+            transform: translateX(-50%);
+            height: 50%;
+            width: 3px;
+            background: linear-gradient(to bottom, yellow 100%, gray 0%);
+            transition: height 0.2s ease-in-out;
+            max-height: 620px;
+        }
+
+        .pagination-body {
+
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .page {
+            width: 41px;
+            height: 41px;
+            flex-shrink: 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 17px;
+            border: 1px solid #FFF;
+            color: #FFF;
+            font-family: 'Aileron';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+
+        }
+
+        .arrow {
+            width: 105px;
+            height: 41px;
+            flex-shrink: 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 20px;
+            border: 1px solid #FFF;
+            color: #FFF;
+            font-family: 'Aileron';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+        }
+
+        .arrowNext {
+            width: 105px;
+            height: 41px;
+            flex-shrink: 0;
+            background: #003DEE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 20px;
+            color: black;
+            font-family: 'Aileron';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+        }
+
+        .activePagi {
+            background-color: #003DEE;
+            border: 1px solid #003DEE;
+            color: black;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .showMenu {
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .arrow {
+                width: 80px;
+                height: 41px;
+            }
+
+            .arrowNext {
+                width: 80px;
+                height: 41px;
+            }
+
+            .page {
+                width: 41px;
+                height: 41px;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        aileron: ["Aileron", "sans-serif"],
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="tnc-bg ">
+
+    <section class="max-container lg:px-20 relative px-5">
+        <!-- ----------------------------------------------------- Navbar Starts -->
+        <nav class="flex items-center justify-between  z-50">
+            <div class="lg:w-[20%] ">
+                <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class="lg:w-[500px]  w-[170px]"></a>
+            </div>
+            <div class="lg:flex hidden lg:space-x-7 lg:ml-28 w-[60%] ">
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Product</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="https://software.neotrader.in/"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
+                            Trading Tool</a>
+                        <a href="courses.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Courses</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Trading</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-2">
+                        <!-- Dropdown Items -->
+                        <a href="index-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Index
+                        </a>
+                        <a href="intraday.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Intraday
+                        </a>
+
+                        <a href="option.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Options
+                        </a>
+                        <a href="swing-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Swing
+                        </a>
+                        <a href="positional-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Positional
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Resources</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="blogs.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
+                        <a href="youtube-links.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Youtube
+                            Links</a>
+                        <a href="https://neotraderskb.tawk.help/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
+                            Base</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Company</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="/about.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">About
+                            Us</a>
+                        <a href="/faq.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">FAQ's</a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Careers</a>
+                        <a href="/contact.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <a href="pricing.html">
+                    <div class="text-white text-lg font-medium font-aileron tracking-wide cursor-pointer">Pricing
+                    </div>
+                </a>
+
+            </div>
+            <div class=" lg:flex hidden lg:space-x-5 ml-10 w-auto">
+                <a href="signin.html">
+                    <button
+                        class="w-36 h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                        Up
+                    </button>
+                </a>
+                <a href="login.html">
+                    <button
+                        class="w-[110px] h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                        Log In
+                    </button>
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <img src="/images/hamMenu.png" alt="" onclick="showMenu()" class="">
+
+                <div id="menuCard"
+                    class="bgDropFillter absolute left-0 top-0 bg-[#2A2F37] bg-opacity-90 w-full h-screen pb-10 z-10 hidden px-5">
+                    <div class="flex justify-between items-center">
+                        <div class="">
+                            <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class=" w-[170px]"></a>
+                        </div>
+                        <div class="">
+                            <img src="/images/crossHum.svg" alt="" onclick="showMenu()" class="">
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+                        <ul class="list-none ">
+                            <div class="dropdown space-y-3 my-2" id="dropdown1">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown1')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Product</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="https://software.neotrader.in/">
+                                        <li>AI Trading Tool</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="courses.html">
+                                        <li class="mt-3">Courses</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow2">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow2')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Trading</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="index-trading.html">
+                                        <li class="">Index</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="intraday.html">
+                                        <li class="mt-3">Intraday</li>
+                                    </a>
+
+
+                                    <hr class="opacity-40">
+                                    <a href="option.html">
+                                        <li class="mt-3">Options</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="swing-trading.html">
+                                        <li class="mt-3">Swing</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="positional-trading.html">
+                                        <li class="mt-3">Positional</li>
+                                    </a>
+                                    <hr class="opacity-40">
+
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdown3">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown3')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Resources</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="blogs.html">
+                                        <li>Blogs</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="youtube-links.html">
+                                        <li class="mt-3">Youtube Links</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://neotraderskb.tawk.help/" target="_blank">
+                                        <li class="mt-3">Knowledge Base</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow4">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow4')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Company</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="about.html">
+                                        <li>About Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="faq.html">
+                                        <li class="mt-3">FAQ’s</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                                        <li class="mt-3">Careers</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="contact.html">
+                                        <li class="mt-3">Contact Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <a href="pricing.html">
+                                <li
+                                    class="mt-3 text-white text-lg font-medium font-poppins leading-[18px] tracking-wide">
+                                    Pricing</li>
+                            </a>
+                        </ul>
+
+                        <div class="mt-10 ">
+                            <a href="signin.html">
+                                <button
+                                    class="w-full h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                                    Up
+                                </button>
+                            </a>
+                            <a href="login.html">
+                                <button
+                                    class="mt-5 w-full h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                                    Log In
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- ----------------------------------------------------- BreadCrumbs Starts -->
+        <div class="breadcrumbs flex space-x-2 justify-start items-center mt-10 font-aileron">
+            <a href="/index.html">
+                <div
+                    class="breadcrumb-item text-zinc-500 lg:text-xl text-base font-normal font-aileron capitalize hover:underline cursor-pointer">
+                    Home
+                </div>
+            </a>
+            <img src="./images/breadcrumbArrow.svg" alt="Breadcrumb Arrow">
+            <a href="#">
+                <div
+                    class="breadcrumb-item text-zinc-500 lg:text-xl text-base font-normal font-aileron capitalize hover:underline cursor-pointer">
+                    Resources
+                </div>
+            </a>
+            <img src="./images/breadcrumbArrow.svg" alt="Breadcrumb Arrow">
+            <div
+                class="breadcrumb-item text-white lg:text-xl text-base font-normal font-aileron capitalize hover:underline cursor-pointer">
+                Blogs
+            </div>
+            <img src="./images/breadcrumbArrow-white.svg" alt="Breadcrumb Arrow">
+
+        </div>
+
+        <!-- ------------------------------------------------------- First Section Top With Timeline animation -->
+        <div class="lg:mt-14 mt-5 relative">
+
+            <div
+                class="text-white lg:text-5xl text-2xl lg:font-semibold font-bold font-poppins lg:leading-[62.40px] leading-[31.20px]">
+                Featured this <span class="text-[#FDDC1F]">Month</span></div>
+
+
+            <div class="flex lg:flex-row flex-col lg:justify-between  lg:mt-10 mt-5 lg:space-x-4 w-full">
+                <div class="lg:w-[70%] w-full lg:space-y-3 space-y-6">
+
+                    <div class="w-full lg:h-[319px] bg-[#292D35] rounded-[7px] lg:flex  p-6 lg:space-x-4">
+
+
+                        <div class="lg:w-[50%]">
+                            <div class="w-auto h-auto bg-zinc-300 rounded-[7px]">
+                                <a href="blogs/Blog2.html">
+                                    <img src="/images/blog/blog2024.jpg" alt=""
+                                        class="w-[400px] h-[271px] object-cover rounded-[7px] ">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:w-[50%] ">
+                            <div
+                                class="lg:mt-0 mt-4 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                                <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                    Market</div>
+                            </div>
+                            <a href="blogs/Blog2.html">
+                                <h2
+                                    class="text-white text-2xl font-bold font-aileron leading-[31.20px] lg:mt-4 mt-2 hover:underline">
+                                    New year resolutions
+                                    <h2 />
+                            </a>
+                            <div class="flex space-x-4 mt-4">
+
+                                <div class="flex space-x-2 lg:items-center items-start">
+                                    <div class="">
+                                        <img src="/images/blog/circle.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        NeoTrader </div>
+                                </div>
+
+                                <div class="flex space-x-2 lg:items-center items-start">
+                                    <div class="">
+                                        <img src="/images/blog/dateIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        13 January 2024 </div>
+                                </div>
+
+                                <div class="flex space-x-2 lg:items-center items-start">
+                                    <div class="">
+                                        <img src="/images/blog/timeIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        3 min. to read </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="text-zinc-500 text-base font-normal font-aileron leading-normal tracking-wider mt-4">
+                                Every New Year brings with it an opportunity to make some resolutions. Most of
+                                us do. But, by approximately the 10th of Jan,
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:h-[319px] bg-[#292D35] rounded-[7px] lg:flex  p-6 lg:space-x-4">
+
+                        <div class="lg:w-[50%]">
+                            <div class="w-auto h-auto bg-zinc-300 rounded-[7px]">
+                                <a href="blogs/Blog3.html">
+                                    <img src="/images/blog/blogMain1.jpg" alt=""
+                                        class="w-[400px] h-[271px] object-cover rounded-[7px]">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:w-[50%] ">
+                            <div
+                                class="mt-4 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                                <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                    Market</div>
+                            </div>
+                            <a href="blogs/Blog3.html">
+                                <h2
+                                    class="text-white text-2xl font-bold font-aileron lg:leading-[31.20px] lg:mt-4 mt-2 hover:underline">
+                                    Market success thru curiosity
+                                    <h2 />
+                            </a>
+                            <div class="flex space-x-4 mt-4">
+
+                                <div class="flex space-x-2 lg:items-center items-start">
+                                    <div class="">
+                                        <img src="/images/blog/circle.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        NeoTrader </div>
+                                </div>
+
+                                <div class="flex space-x-2 lg:items-center items-start">
+                                    <div class="">
+                                        <img src="/images/blog/dateIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        30 December 2023 </div>
+                                </div>
+
+                                <div class="flex space-x-2 lg:items-center items-start">
+                                    <div class="">
+                                        <img src="/images/blog/timeIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        3 min. to read </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="text-zinc-500 text-base font-normal font-aileron leading-normal tracking-wider mt-4">
+                                We all know that the market is a challenging environment. More often than not,
+                                the
+                                ones with additional knowledge seem to be having a greater level of success in
+                                the
+                                market. </div>
+
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="container w-[1%] lg:block hidden   ">
+                    <div class="line" id="scrollLine"></div>
+                </div>
+                <div
+                    class="flex flex-col justify-between lg:mt-0 space-y-4 lg:relative absolute lg:bottom-2 -bottom-[575px] left-0 ">
+                    <hr class="block lg:hidden">
+                    <div class="flex space-x-2">
+                        <div class="w-auto h-auto bg-white rounded-[7px] ">
+                            <a href="blogs/Blog4.html">
+                                <img src="/images/blog/blogMain2.jpg" alt=""
+                                    class="rounded-[7px] w-[129px] h-[115px] object-cover">
+                            </a>
+                        </div>
+                        <div class="flex flex-col justify-between py-1">
+                            <div
+                                class="w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                                <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                    Market
+                                </div>
+                            </div>
+                            <a href="blogs/Blog4.html">
+                                <p
+                                    class="text-white  text-base font-normal font-aileron leading-normal tracking-wider mt-2 hover:underline">
+                                    Big wins desired but not..
+                                </p>
+                            </a>
+
+                            <div class="flex space-x-2 mt-2">
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/circle.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        NeoTrader <span class="lg:inline-flex hidden"> &emsp; |</span></div>
+                                </div>
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/timeIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        3 min. to read </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex space-x-2">
+                        <div class="w-auto h-auto bg-white rounded-[7px]">
+                            <a href="blogs/Blog1.html">
+                                <img src="/images/blog/blog3.webp" alt=""
+                                    class="rounded-[7px] w-[129px] h-[115px] object-cover">
+                            </a>
+                        </div>
+                        <div class="flex flex-col justify-between py-1">
+                            <div
+                                class="w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                                <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                    Market
+                                </div>
+                            </div>
+                            <a href="blogs/Blog1.html">
+                                <p
+                                    class="text-white text-base font-normal font-aileron leading-normal tracking-wider mt-2 hover:underline">
+                                    Even amateurs can win in..
+                                </p>
+                            </a>
+
+                            <div class="flex space-x-2 mt-2">
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/circle.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        NeoTrader <span class="lg:inline-flex hidden"> &emsp; |</span></div>
+                                </div>
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/timeIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        3 min. to read </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex space-x-2">
+                        <div class="w-auto h-auto bg-white rounded-[7px]">
+                            <a href="blogs/Blog5.html">
+                                <img src="/images/blog/blog4.webp" alt=""
+                                    class="rounded-[7px] w-[129px] h-[115px] object-cover">
+                            </a>
+                        </div>
+                        <div class="flex flex-col justify-between py-1">
+                            <div
+                                class="w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                                <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                    Market
+                                </div>
+                            </div>
+                            <a href="blogs/Blog5.html">
+                                <p
+                                    class="text-white text-base font-normal font-aileron leading-normal tracking-wider mt-2 hover:underline">
+                                    Simplification is a must
+                                </p>
+                            </a>
+
+                            <div class="flex space-x-2 mt-2">
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/circle.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        NeoTrader <span class="lg:inline-flex hidden"> &emsp; |</span></div>
+                                </div>
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/timeIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        3 min. to read </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex space-x-2">
+                        <div class="w-auto h-auto bg-white rounded-[7px]">
+                            <a href="blogs/Blog6.html">
+                                <img src="/images/blog/blog5.webp" alt=""
+                                    class=" rounded-[7px] w-[129px] h-[115px] object-cover">
+                            </a>
+                        </div>
+                        <div class="flex flex-col justify-between py-1">
+                            <div
+                                class="w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                                <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                    Market
+                                </div>
+                            </div>
+                            <a href="blogs/Blog6.html">
+                                <p
+                                    class="text-white text-base font-normal font-aileron leading-normal tracking-wider mt-2 hover:underline cursor-pointer">
+                                    The Constant Need To..
+                                </p>
+                            </a>
+
+                            <div class="flex space-x-2 mt-2">
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/circle.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        NeoTrader <span class="lg:inline-flex hidden"> &emsp; |</span></div>
+                                </div>
+                                <div class="flex space-x-1 items-center">
+                                    <div class="">
+                                        <img src="/images/blog/timeIcon.png" alt="">
+                                    </div>
+                                    <div class="text-neutral-500 text-xs font-normal font-aileron capitalize leading-3">
+                                        3 min. to read </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ----------------------------------------------------- Second Section Grid Card Blogs -->
+            <div class="mt-20 ">
+                <div class="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:mb-0 mb-[600px]">
+                    <div class="">
+                        <div class="w-auto h-auto bg-zinc-300 rounded-[5px]">
+                            <a href="blogs/Blog2.html">
+                                <img src="/images/blog/blog2024.jpg" alt=""
+                                    class="rounded-[5px] w-[100%] h-[330px] object-cover">
+                            </a>
+                        </div>
+                        <div
+                            class="mt-5 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                            <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                Market</div>
+                        </div>
+                        <a href="blogs/Blog2.html">
+                            <div
+                                class="mt-5 text-white text-[32px] font-bold font-aileron leading-[41.60px] hover:underline cursor-pointer">
+                                New year resolutions
+                            </div>
+                        </a>
+                        <div class="flex space-x-4 mt-2">
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/circle.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    NeoTrader </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/dateIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    13 January 2024 </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/timeIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    3 min. to read </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-white text-base font-normal font-aileron leading-normal tracking-wider">
+                            Every New Year brings with it an opportunity to make some resolutions. Most of us do. But,
+                            by
+                            approximately the 10th of Jan..
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="w-auto h-auto bg-zinc-300 rounded-[5px]">
+                            <a href="blogs/Blog3.html">
+                                <img src="/images/blog/blog1.webp" alt=""
+                                    class=" rounded-[5px] w-[100%] h-[330px] object-cover">
+                            </a>
+                        </div>
+                        <div
+                            class="mt-5 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                            <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                Market</div>
+                        </div>
+                        <a href="blogs/Blog3.html">
+                            <div
+                                class="mt-5 text-white text-[32px] font-bold font-aileron leading-[41.60px] cursor-pointer hover:underline">
+                                Market
+                                success thru curiosity
+                            </div>
+                        </a>
+                        <div class="flex space-x-4 mt-2">
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/circle.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    NeoTrader </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/dateIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    30 December 2023 </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/timeIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    3 min. to read </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-white text-base font-normal font-aileron  leading-normal tracking-wider">
+                            We all know that the market is a challenging environment. More often than not, the…
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="w-auto h-auto bg-zinc-300 rounded-[5px]">
+                            <a href="blogs/Blog4.html">
+                                <img src="/images/blog/blog2.webp" alt=""
+                                    class="rounded-[5px] w-[100%] h-[330px] object-cover">
+                            </a>
+                        </div>
+                        <div
+                            class="mt-5 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                            <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                Market</div>
+                        </div>
+                        <a href="blogs/Blog4.html">
+                            <div
+                                class="mt-5 text-white text-[32px] font-bold font-aileron leading-[41.60px] cursor-pointer hover:underline">
+                                Big wins desired but not obtained
+                            </div>
+                        </a>
+                        <div class="flex space-x-4 mt-2">
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/circle.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    NeoTrader </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/dateIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    06 December 2023 </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/timeIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    3 min. to read </div>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-5 w-auto h-[67px] text-white text-base font-normal font-aileron leading-normal tracking-wider">
+                            In the market, everyone dreams of winning big. Most of the time, this happens because…
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="w-auto h-auto bg-zinc-300 rounded-[5px]">
+                            <a href="blogs/Blog1.html">
+                                <img src="/images/blog/blog3.webp" alt=""
+                                    class="rounded-[5px] w-[100%] h-[330px] object-cover">
+                            </a>
+                        </div>
+                        <div
+                            class="mt-5 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                            <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                Market</div>
+                        </div>
+                        <a href="blogs/Blog1.html">
+                            <div
+                                class="mt-5 text-white text-[32px] font-bold font-aileron leading-[41.60px] hover:underline">
+                                Even amateurs can win in the market
+                            </div>
+                        </a>
+                        <div class="flex space-x-4 mt-2">
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/circle.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    NeoTrader </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/dateIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    13 November 2023 </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/timeIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    3 min. to read </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-white text-base font-normal font-aileron leading-normal tracking-wider">
+                            Most of us are amateur traders and investors. Even though we like to think otherwise…
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="w-auto h-auto bg-zinc-300 rounded-[5px]">
+                            <a href="blogs/Blog5.html">
+                                <img src="/images/blog/blog4.webp" alt=""
+                                    class="rounded-[5px] w-[100%] h-[330px] object-cover">
+                            </a>
+                        </div>
+                        <div
+                            class="mt-5 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                            <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                Market</div>
+                        </div>
+                        <a href="blogs/Blog5.html">
+                            <div
+                                class="mt-5 text-white text-[32px] font-bold font-aileron leading-[41.60px] hover:underline">
+                                Simplification is a must
+                            </div>
+                        </a>
+                        <div class="flex space-x-4 mt-2">
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/circle.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    NeoTrader </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/dateIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    28 October 2023 </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/timeIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    3 min. to read </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-white text-base font-normal font-aileron leading-normal tracking-wider">
+                            A few days ago, I met with some eager students of technical analysis, who wanted…
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="w-auto h-auto bg-zinc-300 rounded-[5px]">
+                            <a href="blogs/Blog6.html">
+                                <img src="/images/blog/blog5.webp" alt=""
+                                    class="rounded-[5px] w-[100%] h-[330px] object-cover">
+                            </a>
+                        </div>
+                        <div
+                            class="mt-5 w-[54px] h-5 px-2 py-1 bg-yellow-400 rounded-[17px] justify-center items-center gap-2.5 inline-flex">
+                            <div class="text-neutral-800 text-xs font-normal font-aileron capitalize leading-3">
+                                Market</div>
+                        </div>
+                        <a href="blogs/Blog6.html">
+                            <div
+                                class="mt-5 text-white text-[32px] font-bold font-aileron leading-[41.60px] hover:underline">
+                                The constant need to improve
+                            </div>
+                        </a>
+                        <div class="flex space-x-4 mt-2">
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/circle.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    NeoTrader </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/dateIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    20 September 2023 </div>
+                            </div>
+
+                            <div class="flex space-x-2 items-center">
+                                <div class="">
+                                    <img src="/images/blog/timeIcon.png" alt="">
+                                </div>
+                                <div class="text-white text-xs font-normal font-aileron capitalize leading-3">
+                                    3 min. to read </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-white text-base font-normal font-aileron leading-normal tracking-wider">
+                            Everyone in this world wants to improve. I am certain of that. If you are…
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------- Pagination -->
+
+        <div class="pagination-body">
+            <ul class="pagination" id="pagination">
+                <li class="arrow" onclick="prevPage()"><span class="mr-2"> <img src="/images/blog/prevArr.png"
+                            alt=""></span>Prev. </li>
+                <li class="page activePagi" onclick="changePage(1)">1</li>
+                <li class="page" onclick="changePage(2)">2</li>
+                <li class="page" onclick="changePage(3)">3</li>
+                <li class="arrowNext" onclick="nextPage()">Next <span class="ml-2"> <img src="/images/blog/nextArr.png"
+                            alt=""></span></li>
+            </ul>
+        </div>
+
+
+        <!-- ----------------------------------------------------- Footer Starts -->
+        <footer class="mt-32">
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col  lg:flex-col items-start lg:justify-normal justify-between">
+                    <img src="./images/footer-logo.svg" alt="" class="">
+                    <!-- <img src="./images/footer-logo-mobile.svg" alt="" class="lg:hidden block"> -->
+                    <div class="flex space-x-4 cursor-pointer lg:mt-5 lg:mb-0 mb-4">
+                        <a href="https://www.linkedin.com/company/neo-trader/" target="_blank"
+                            rel="noopener noreferrer"> <img src="/images/contact/linkedIn.png" alt=""
+                                class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.instagram.com/neotrader.in/" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/contact/insta.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.facebook.com/NeoTrader.in" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/contact/facebook.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://twitter.com/NeoTrader_in" target="_blank" rel="noopener noreferrer"> <img
+                                src="/images/contact/twiter.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.youtube.com/@NeoTrader" target="_blank" rel="noopener noreferrer"> <img
+                                src="/images/contact/ytIcon.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="custom-accordion mt-5" id="accordion1">
+                    <div class="custom-accordion-item">
+                        <div class="custom-accordion-header text-white text-xl lg:text-2xl font-medium font-poppins">
+                            Company <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-3">
+                            <a href="about.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">About
+                                Us</a>
+                            <a href="blogs.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Blogs</a>
+                            <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Careers</a>
+                            <a href="terms-and-conditions.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Terms
+                                & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion" id="accordion2">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                            Trading Types <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content  space-y-2 mt-2">
+                            <a href="index-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Index
+                            </a>
+                            <a href="intraday.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Intraday</a>
+
+                            <a href="option.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Options</a>
+                            <a href="swing-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Swing</a>
+                            <a href="positional-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Positional</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion" id="accordion3">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white text-xl mt-5 lg:mt-0 lg:text-2xl font-medium font-poppins">
+                            Product Offerings <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-2">
+                            <a href="https://software.neotrader.in/"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">AI
+                                Trading Software</a>
+                            <a href="courses.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Courses</a>
+                            <a href="pricing.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Pricing
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion mb-5" id="accordion4">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                            Support <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-2">
+                            <a href="contact.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Contact
+                                Us</a>
+                            <a href="faq.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">FAQ’s
+                            </a>
+                            <a href="https://neotraderskb.tawk.help/" target="_blank"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Knowledge
+                                Base
+                            </a>
+                            <a href="youtube-links.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                YouTube Links
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- for desktop -->
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Company</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="about.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                About Us
+                            </div>
+                        </a>
+                        <a href="blogs.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Blogs
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Careers
+                            </div>
+                        </a>
+                        <a href="terms-and-conditions.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Terms & Conditions
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Trading Types</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="index-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Index
+                            </div>
+                        </a>
+                        <a href="intraday.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Intraday
+                            </div>
+                        </a>
+
+                        <a href="option.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Options
+                            </div>
+                        </a>
+                        <a href="swing-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Swing
+                            </div>
+                        </a>
+                        <a href="positional-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Positional
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Product Offerings</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="https://software.neotrader.in/">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                AI Trading Software
+                            </div>
+                        </a>
+                        <a href="courses.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Courses
+                            </div>
+                        </a>
+                        <a href="pricing.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Pricing Details
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Support</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="contact.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Contact Us
+                            </div>
+                        </a>
+
+                        <a href="faq.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                FAQ’s
+                            </div>
+                        </a>
+
+                        <a href="https://neotraderskb.tawk.help/" target="_blank">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Knowledge Base
+                            </div>
+                        </a>
+                        <a href="youtube-links.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                YouTube Links
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-8 pb-5">
+                <div class="text-white text-xl lg:font-semibold font-medium font-aileron leading-[30px] tracking-wide">
+                    Disclaimer:
+                    <span class="text-[18px] font-normal font-aileron lg:leading-[30px] tracking-wide">Investments
+                        in securities market are subject to market risks, read all the related documents carefully
+                        before investing. Brokerage will not exceed SEBI prescribed limit. The securities are quoted
+                        as an example and not as a recommendation. <br /><span class="font-semibold"> SEBI Registration</span></span><span
+                        class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                    </span><span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
+                        Name: NeoTrader | RA No. INH000002285 </span><span
+                        class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                    </span>
+                    <a href="disclaimer.html"><span
+                            class="text-blue-700 text-xl font-normal font-aileron leading-[30px] tracking-wide cursor-pointer">Read
+                            more</span></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- -------------------------------------------carousel----------------------- -->
+
+
+    </section>
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdowns = document.querySelectorAll('.group');
+            var delayTimeout;
+            var activeDropdown = null;
+
+            function closeAllDropdowns() {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.absolute');
+                    dropdownContent.style.display = 'none';
+                });
+                activeDropdown = null;
+            }
+
+            dropdowns.forEach(function (dropdown) {
+                var dropdownContent = dropdown.querySelector('.absolute');
+
+                dropdown.addEventListener('mouseenter', function () {
+                    clearTimeout(delayTimeout);
+                    if (activeDropdown !== dropdown) {
+                        closeAllDropdowns();
+                    }
+                    dropdownContent.style.display = 'block';
+                    activeDropdown = dropdown;
+                });
+
+                dropdown.addEventListener('mouseleave', function (event) {
+                    if (!dropdownContent.contains(event.relatedTarget)) {
+                        delayTimeout = setTimeout(function () {
+                            dropdownContent.style.display = 'none';
+                        }, 200);
+                    }
+                });
+
+                dropdown.addEventListener('click', function (event) {
+                    clearTimeout(delayTimeout);
+                    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                closeAllDropdowns();
+            });
+        });
+
+        function showMenu() {
+            var menuCard = document.getElementById("menuCard");
+            menuCard.classList.toggle("hidden")
+        }
+
+        function showDropMenu(dropdownId) {
+            var toggle = document.querySelector('#' + dropdownId + ' .dropdown-toggle');
+            var dropMenu = document.querySelector('#' + dropdownId + ' .dropdownMenu-toggle');
+            var img1 = document.querySelector('#' + dropdownId + ' .dropdown-img-1');
+            var img2 = document.querySelector('#' + dropdownId + ' .dropdown-img-2');
+
+            // If the dropdown is currently open, close it
+            if (toggle.classList.contains('activeBlue')) {
+                toggle.classList.remove('activeBlue');
+                toggle.classList.add('activeWhite');
+                dropMenu.classList.remove('dropMenuShow');
+                dropMenu.classList.add('dropMenuHide');
+                img1.style.display = 'block';
+                img2.style.display = 'none';
+            } else { // Otherwise, open it
+                // Close all other dropdowns
+                var allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function (dropdown) {
+                    var otherToggle = dropdown.querySelector('.dropdown-toggle');
+                    var otherDropMenu = dropdown.querySelector('.dropdownMenu-toggle');
+                    var otherImg1 = dropdown.querySelector('.dropdown-img-1');
+                    var otherImg2 = dropdown.querySelector('.dropdown-img-2');
+
+                    otherToggle.classList.remove('activeBlue');
+                    otherToggle.classList.add('activeWhite');
+                    otherDropMenu.classList.remove('dropMenuShow');
+                    otherDropMenu.classList.add('dropMenuHide');
+                    otherImg1.style.display = 'block';
+                    otherImg2.style.display = 'none';
+                });
+
+                // Open the selected dropdown
+                toggle.classList.remove('activeWhite');
+                toggle.classList.add('activeBlue');
+                dropMenu.classList.remove('dropMenuHide');
+                dropMenu.classList.add('dropMenuShow');
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('scroll', function () {
+            // Get the scroll position as a percentage
+            let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 300;
+
+            // Update the height of the line accordingly
+            document.getElementById('scrollLine').style.height = `${scrollPercentage}%`;
+        });
+
+        let currentPage = 1;
+        const totalPages = 3;
+
+        function changePage(page) {
+            currentPage = page;
+            updatePagination();
+            // Add your logic to load content for the selected page here
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePagination();
+                // Add your logic to load content for the next page here
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+                // Add your logic to load content for the previous page here
+            }
+        }
+
+        function updatePagination() {
+            const paginationItems = document.querySelectorAll('.page');
+            paginationItems.forEach(item => {
+                const pageNumber = parseInt(item.textContent);
+                if (pageNumber === currentPage) {
+                    item.classList.add('activePagi');
+                } else {
+                    item.classList.remove('activePagi');
+                }
+            });
+        }
+
+
+
+
+
+        // Footer Accordain
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionIDs = ['#accordion1', '#accordion2', '#accordion3', '#accordion4'];
+
+            accordionIDs.forEach(id => {
+                const accordionHeaders = document.querySelectorAll(`${id} .custom-accordion-header`);
+
+                accordionHeaders.forEach(header => {
+                    header.addEventListener('click', function () {
+                        const accordionItem = this.parentNode;
+                        accordionItem.classList.toggle('active');
+                        const icon = this.querySelector('.custom-accordion-icon');
+                        icon.textContent = accordionItem.classList.contains('active') ? '-' : '+';
+                    });
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

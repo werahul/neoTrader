@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Terms & Conditions | Neo Traders</title>
+    <style>
+
+
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        aileron: ["Aileron", "sans-serif"],
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="tnc-bg ">
+    <section class="max-container px-5 lg:px-20 ">
+        <!-- ----------------------------------------------------- Navbar Starts -->
+        <nav class="flex items-center justify-between  z-50">
+            <div class="lg:w-[20%] ">
+                <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class="lg:w-[500px]  w-[170px]"></a>
+            </div>
+            <div class="lg:flex hidden lg:space-x-7 lg:ml-28 w-[60%] ">
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Product</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="https://software.neotrader.in/"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
+                            Trading Tool</a>
+                        <a href="courses.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Courses</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Trading</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-2">
+                        <!-- Dropdown Items -->
+                        <a href="index-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Index
+                        </a>
+                        <a href="intraday.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Intraday
+                        </a>
+
+                        <a href="option.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Options
+                        </a>
+                        <a href="swing-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Swing
+                        </a>
+                        <a href="positional-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Positional
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Resources</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="blogs.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
+                        <a href="youtube-links.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Youtube
+                            Links</a>
+                        <a href="https://neotraderskb.tawk.help/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
+                            Base</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Company</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="/about.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">About
+                            Us</a>
+                        <a href="/faq.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">FAQ's</a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Careers</a>
+                        <a href="/contact.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <a href="pricing.html">
+                    <div class="text-white text-lg font-medium font-aileron tracking-wide cursor-pointer">Pricing
+                    </div>
+                </a>
+
+            </div>
+            <div class=" lg:flex hidden lg:space-x-5 ml-10 w-auto">
+                <a href="signin.html">
+                    <button
+                        class="w-36 h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                        Up
+                    </button>
+                </a>
+                <a href="login.html">
+                    <button
+                        class="w-[110px] h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                        Log In
+                    </button>
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <img src="/images/hamMenu.png" alt="" onclick="showMenu()" class="">
+
+                <div id="menuCard"
+                    class="bgDropFillter absolute left-0 top-0 bg-[#2A2F37] bg-opacity-90 w-full h-screen pb-10 z-10 hidden px-5">
+                    <div class="flex justify-between items-center">
+                        <div class="">
+                            <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class=" w-[170px]"></a>
+                        </div>
+                        <div class="">
+                            <img src="/images/crossHum.svg" alt="" onclick="showMenu()" class="">
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+                        <ul class="list-none ">
+                            <div class="dropdown space-y-3 my-2" id="dropdown1">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown1')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Product</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="https://software.neotrader.in/">
+                                        <li>AI Trading Tool</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="courses.html">
+                                        <li class="mt-3">Courses</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow2">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow2')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Trading</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="index-trading.html">
+                                        <li class="">Index</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="intraday.html">
+                                        <li class="mt-3">Intraday</li>
+                                    </a>
+
+
+                                    <hr class="opacity-40">
+                                    <a href="option.html">
+                                        <li class="mt-3">Options</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="swing-trading.html">
+                                        <li class="mt-3">Swing</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="positional-trading.html">
+                                        <li class="mt-3">Positional</li>
+                                    </a>
+                                    <hr class="opacity-40">
+
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdown3">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown3')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Resources</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="blogs.html">
+                                        <li>Blogs</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="youtube-links.html">
+                                        <li class="mt-3">Youtube Links</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://neotraderskb.tawk.help/" target="_blank">
+                                        <li class="mt-3">Knowledge Base</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow4">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow4')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Company</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="about.html">
+                                        <li>About Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="faq.html">
+                                        <li class="mt-3">FAQ’s</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                                        <li class="mt-3">Careers</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="contact.html">
+                                        <li class="mt-3">Contact Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <a href="pricing.html">
+                                <li
+                                    class="mt-3 text-white text-lg font-medium font-poppins leading-[18px] tracking-wide">
+                                    Pricing</li>
+                            </a>
+                        </ul>
+
+                        <div class="mt-10 ">
+                            <a href="signin.html">
+                                <button
+                                    class="w-full h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                                    Up
+                                </button>
+                            </a>
+                            <a href="login.html">
+                                <button
+                                    class="mt-5 w-full h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                                    Log In
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="h-auto rounded-[20px] border border-white p-[20px] lg:p-[40px] my-8 lg:my-16  lg:text-justify ">
+
+            <div
+                class="mb-5 lg:mb-10 text-white text-2xl lg:text-5xl font-semibold font-poppins lg:leading-[62.40px] text-center">
+                NeoTrader -
+                <span class="text-[#FDDC1F]"> Terms & Conditions of Use</span>
+            </div>
+
+            <div
+                class="lg:text-justify text-white text-base lg:text-[18px] font-normal font-aileron lg:leading-[31.20px] tracking-wide mt-0">
+                [By clicking ‘I agree to
+                the Terms and Conditions or by checking the box that says “I agree” in whichever manner it appears,
+                you are deemed to have read, understood and agreed to the following terms &
+                conditions]
+            </div>
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                I. INTRODUCTION
+            </div>
+
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                Welcome to the NeoTrader application (“application”). <br>
+                By registering or installing the application or by using the service in any manner, you agree to all of
+                the terms and conditions contained herein.
+            </div>
+            <ol
+                class="text-white lg:text-lg font-normal font-aileron leading-tight tracking-wide list-decimal ml-5 space-y-1">
+                <li>
+                    These Terms of Use (“Terms”) constitute a legally binding agreement between you and Growth Avenues
+                    (“GA”) and govern your use of the application and the information, offers, services, features, and
+                    content, offered through the application (“Services”).
+                </li>
+                <li>
+                    These terms may be updated by GA from time to time.
+                </li>
+                <li>
+                    Please note that if you are an individual you must be over the age of majority under the laws of
+                    your jurisdiction to enter into this agreement otherwise, you are expressly prohibited from entering
+                    into this agreement, and/or should have your parent or guardian enter into this agreement.
+                </li>
+                <li>
+                    You agree to access the application subject to acceptance of the terms as set out herein. In
+                    addition, when using any particular services, you may be subject to any posted guidelines or rules
+                    applicable to such services. All such guidelines or rules are hereby incorporated by reference into
+                    these terms.
+                </li>
+                <li>
+                    You understand and accept that investments in the securities market are subject to market risks and
+                    may result in losses at times and do not assure or guarantee you any minimum or fixed return. You
+                    hereby agree to undertake the risks pertaining to his execution of trade/investment advice received
+                    from Growth Avenues/NeoTrader.
+                </li>
+                <li>
+                    You agree that you are solely responsible for any breach of your obligations under the terms and for
+                    the consequences (including any loss or damage which we may suffer) of any such breach.
+                </li>
+                <li>
+                    You hereby represent, warrant and covenant that you provide us with accurate, truthful, and complete
+                    registration information including, but not limited to your name ("user name"), email mobile, or
+                    other information and to keep your registration information accurate and up to date. Failure to do
+                    so shall constitute a breach of these terms, which may result in immediate termination of your
+                    account.
+                </li>
+                <li>
+                    No Refund: You understand and agree that GA has a no-refund policy on subscriptions to the NeoTrader
+                    application. GA will not provide refunds on any subscriptions of any nature of the application. Our
+                    no refund policy is reflected on the disclaimer available on the website too. You are requested to
+                    take note of this.
+                </li>
+                <li>
+                    Non disparagement clause: By accepting and using our services, you confirm that you have read and
+                    agreed to these terms and conditions, and have voluntarily decided to avail of our services; you
+                    thus agree not to make any negative or disparaging remarks, either written or verbal, about our
+                    company, our services, employees, or our affiliates on any public forum, including but not limited
+                    to any social media or other online or offline platforms. You also acknowledge that any such remarks
+                    could cause significant harm to our reputation. You further agree to maintain strict confidentiality
+                    regarding any proprietary or confidential information obtained during the course of your engagement
+                    with the company and to refrain from any actions that could be construed as a breach of such
+                    confidentiality.
+                </li>
+                <li>
+                    If you do not agree with these terms and those that are set out hereunder or those incorporated here
+                    by reference, kindly do not use this application or services.
+                </li>
+            </ol>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                II. DEFINITION OF "USER" OR “CLIENT” OR "YOU"
+            </div>
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                It means any person who accesses or avails this app and/or the site <a href="https://www.neotrader.in"
+                    target="_blank" rel="noopener noreferrer"> www.neotrader.in </a> for the purpose of accessing,
+                hosting, publishing, sharing, transacting, displaying or uploading information or views and includes
+                other persons jointly participating in using the application.
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                III. DISCLAIMER OF WARRANTIES AND LIABILITIES
+            </div>
+            <ol
+                class="text-white lg:text-lg font-normal font-aileron leading-tight tracking-wide list-decimal ml-5 space-y-1">
+                <li>
+                    You understand and agree that GA provides the Services on an “as is”, “with all faults” and “as
+                    available” basis. All warranties including, without limitation, the implied warranties of
+                    merchantability, fitness for a particular purpose, for the title and no infringement are disclaimed
+                    and excluded.
+                </li>
+                <li>
+                    Growth Avenues does not provide any warranty (express or implied) as to the appreciation in the
+                    value of the Securities that was advised as part of any service of Growth Avenues. It is clearly
+                    understood that Growth Avenues shall not, in any manner whatsoever, be liable or responsible to any
+                    entity/person (including the Client’s nominees or legal heirs or successors or authorized
+                    representatives) in case of depreciation or erosion in the value of Securities, either individually
+                    or in total, for the Funds invested using the advisory services provided by Growth Avenues or any
+                    indirect, notional, consequential losses, expenses, costs, charges or claims (including any
+                    litigation expenses) to any entity/person.
+                </li>
+                <li>
+                    The application, data and services are provided for educational purposes only. GA, and its
+                    affiliates and associates shall not be liable, at any time for any direct, indirect, punitive,
+                    incidental, special or consequential damages (including, without limitation, damages for loss of
+                    business, damage to hardware or loss of profits, loss of data or profits, whether arising in
+                    contract, tort or otherwise arising out of or in any way connected with the use of the Application,
+                    with the delay or inability to use the Applications or Services, or due to use of the contents
+                    available in the Application or for any failure of performance, error, omission, interruption,
+                    deletion, defect, delay in operation or transmission, computer virus, communications line failure,
+                    or due to use of the information contained in the Application).
+                </li>
+                <li>
+                    In the event any exclusion contained herein is held to be invalid for any reason and GA or any of
+                    its affiliate entities, officers, directors or employees becomes liable for loss or damage, then any
+                    such liability of GA or any of its affiliate entities, officers, directors or employees shall be
+                    limited to and not exceed the charges paid by you, if any, for the application usage for three
+                    months prior to such claim.
+                </li>
+                <li>
+                    No representations, warranties or guarantees whatsoever are made by GA as to the (a) accuracy,
+                    adequacy, reliability, completeness, suitability or applicability of the information to a particular
+                    situation; (b) That the Services will be uninterrupted, timely, secure, or error free; (c) The
+                    quality of any services, content, information, or other material in the Application will meet your
+                    expectations or requirements; Or (d) any errors in the Application will be corrected.
+                </li>
+                <li>
+                    This Application may have certain links which may lead to resources located on servers maintained by
+                    third parties. These third-party websites and applications may contain GA’s / NeoTrader’s logo, but
+                    they are independent of GA, and GA does not have any control over these websites or applications.
+                    GA, therefore, accepts no responsibility or liability due to your use of such third-party websites
+                    or applications.
+                </li>
+                <li>
+                    You represent that you have understood the risks involved in trading / investing securities based on
+                    advise or service subscribed to the offerings made by GA and that you are financially capable of
+                    withstanding any loss incurred as a result of such action.
+                </li>
+                <li>
+                    You shall be solely responsible for and agree to comply with all the Applicable Laws, regulations,
+                    procedures, practices and guidelines given by the competent authorities insofar as applicable to the
+                    Client, including but not restricted to the SEBI (Insider Trading) Regulations, 1992, SEBI
+                    (Substantial Acquisition of Shares and Takeovers) Regulations, 1997 and the SEBI (Prohibition of
+                    Fraudulent and Unfair Trade Practices Relating to Securities Markets) Regulations, 1995, and Growth
+                    Avenues shall not be responsible or liable in any manner whatsoever, to any person for any breach by
+                    you of such aforesaid laws, regulations, procedures, practices and guidelines.
+                </li>
+                <li>
+                    The past performance of Growth Avenues does not, in any manner, indicate the future performance with
+                    respect to any of its existing Product/s or any future Products of Growth Avenues;
+                </li>
+                <li>
+                    As with any investment in Securities, the value of the portfolio can go up or down depending on
+                    various factors that may affect the values of the investments. In addition to the factors that
+                    affect the value of individual securities, the value of the portfolio can be expected to fluctuate
+                    with movements in the broader equity and bond markets and may be influenced by factors affecting
+                    capital markets in general, such as but not limited to, changes in interest rates, currency exchange
+                    rates, changes in governmental policies, taxation, political, economic or other developments and
+                    increased volatility in the stock and bond markets.
+                </li>
+                <li>
+                    You acknowledge and confirm that you are fully aware of the Product/s, risk appetite and product
+                    suitability before investing in the Product/s. You further agree and acknowledge that you have fully
+                    read and understood any risk related to the Product/s.
+                </li>
+            </ol>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                IV. YOUR OBLIGATIONS
+            </div>
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                As a condition of your use of the Application, you shall not use the Application or Services for any
+                purpose that is unlawful or prohibited by these Terms or you shall not use the Application in any manner
+                that could damage, disable, overburden, or impair any GA server, or the network(s) connected to any GA
+                server, or interfere with any other party’s use and enjoyment of any services. You further concur that
+                you shall not, through the Application or Services indulge in the following activities:
+            </div>
+
+            <ol
+                class="text-white lg:text-lg font-normal font-aileron leading-tight tracking-wide list-decimal ml-5 space-y-1">
+                <li>
+                    Delete from the Application any legal notices, disclaimers, or proprietary notices such as copyright
+                    or trademark symbols, or modify any logos that you do not own or have express permission to modify;
+                </li>
+                <li>
+                    Use the Application / Services in any manner that could damage, disable, overburden, impair &/or
+                    undertake any action which is harmful &/or potentially harmful to any GA server, or the network(s),
+                    computer systems/resources connected to any GA server, or interfere with any other party’s use and
+                    enjoyment of the Application / Services;
+                </li>
+                <li>
+                    Obtain or attempt to obtain any materials or information through any means not intentionally made
+                    available through the Application / Services;
+                </li>
+                <li>
+                    Perform any activity which is likely to cause such harm;
+                </li>
+                <li>
+                    Carry out any “denial of service” (DoS, DDoS) or any other harmful attacks on the Application or
+                    internet service or; Disrupt, place unreasonable burdens or excessive loads on, interfere with or
+                    attempt to make or attempt any unauthorized access to any GA website or the website of any GA
+                    customer;
+                </li>
+                <li>
+                    Forge headers or otherwise manipulate identifiers in order to disguise the origin of any content
+                    transmitted through the Application.
+                </li>
+                <li>
+                    Impersonate any person or entity, including, but not limited to GA’s official, expert, forum leader,
+                    guide or host, or falsely state or otherwise misrepresent your affiliation with a person or entity;
+                </li>
+                <li>
+                    Take any action which encourages or consists of any threat of harm of any kind to any person or
+                    property or make any inappropriate, illegal or otherwise prohibited communication to any Newsgroup,
+                    Mailing List, Chat Facility, or other Internet Forum;
+                </li>
+                <li>
+                    Collect or attempt to collect personally identifiable information of any person or entity without
+                    their express written consent;
+                </li>
+                <li>
+                    Engage in antisocial, disruptive, or destructive acts, including "flaming," "spamming," "flooding,"
+                    "trolling," and "grieving" as those terms are commonly understood and used on the Internet;
+                </li>
+                <li>
+                    Upload, post, email, transmit or otherwise make available any unsolicited or unauthorised
+                    advertising, promotional materials, "junk mail," "spam," "chain letters," "pyramid schemes,"
+                    duplicative messages or any other form of solicitation;
+                </li>
+            </ol>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                V. PROPRIETARY RIGHTS
+            </div>
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                Unless otherwise stated, copyright and all intellectual property rights in all material contained in
+                and/or presented on the GA or NeoTrader website, chat rooms, message board, online forums, social media
+                pages and/or on any page or place on the internet directly related to NeoTrader or GA or any of its
+                services [collectively referred to as ‘Site’ herein for convenience] (including but not limited to text,
+                audio, video or graphical images), trademarks and logos appearing on this site are the property of GA,
+                its affiliates and associates and are protected under applicable Indian laws. You agree not to use any
+                framing or other techniques to enclose any trademark or logo or other proprietary information of GA; Or
+                remove, conceal or obliterate any copyright or other proprietary notice or any credit-line or dateline
+                on other mark or source identifier included on Site / Service, including without limitation, the size,
+                colour, location or style of all proprietary marks. Any infringement shall be vigorously defended and
+                pursued to the fullest extent permitted by law.
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                VI. PROHIBITED ACTIVITIES
+            </div>
+
+            <ol
+                class="text-white lg:text-lg font-normal font-aileron leading-tight tracking-wide list-decimal ml-5 space-y-1">
+
+                <li>
+                    You shall not host, display, upload, modify, publish, transmit, update or share any information on
+                    the Site, that –
+                </li>
+
+                <ul
+                    class="text-white lg:text-lg font-normal font-aileron leading-tight list-disc tracking-wide ml-5 space-y-1">
+                    <li>Belongs to another person and to which you do not have any right to;</li>
+                    <li>Is grossly harmful; harassing, blasphemous, defamatory, obscene, pornographic, paedophilic,
+                        libellous, invasive of another's privacy, hateful, or racially, ethnically objectionable,
+                        disparaging, relating or encouraging money laundering or gambling, or otherwise unlawful in any
+                        manner whatever;
+                    </li>
+                    <li>Harm minors in any way;</li>
+                    <li>Infringes any patent, trademark, copyright or other proprietary rights;</li>
+                    <li>Violates any law for the time being in force;</li>
+                    <li>Deceives or misleads the addressee about the origin of such messages or communicates any
+                        information which is grossly offensive or menacing in nature;</li>
+                    <li>Impersonates another person;</li>
+                    <li>Contains software viruses or any other computer code, files or programs designed to interrupt,
+                        destroy or limit the functionality of any computer resource;</li>
+                    <li>Threatens the unity, integrity, defence, security or sovereignty of India, friendly relations
+                        with foreign states, or public order or causes incitement to the commission of any cognisable
+                        offence or prevents investigation of any offence or is insulting any other nation.</li>
+                </ul>
+
+                <li>Any content uploaded by you shall be subject to relevant laws and may be disabled, and/or may be
+                    subject to investigation under appropriate laws. Furthermore, if you are found to be in
+                    noncompliance with the laws and regulations, these terms, or the privacy policy of the Site, we may
+                    terminate your account/block your access to the Site and we reserve the right to remove any
+                    non-compliant content uploaded by you and shall further have the right to take recourse to such
+                    remedies as would be available to GA under the applicable laws.
+                </li>
+
+            </ol>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                VII. TERMINATION OF ACCOUNT
+            </div>
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                GA reserves its right to refuse service, restrict, and suspend your access to the Application; Delete,
+                move, or remove any content that is available in or through the Application; Establish general practices
+                and limits concerning the use of Application at any time with or without any prior notice.
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                VIII. INDEMNIFICATION
+            </div>
+
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                You agree to defend, indemnify and hold harmless GA, its affiliates and their respective directors,
+                officers, employees and agents from and against all claims and expenses arising out of the breach of any
+                of the terms by you or due to your use/misuse of the Application.
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                IX. PRIVACY
+            </div>
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                Any personal information identifying you (“Personal Information”) if required, is asked for explicitly
+                on the relevant page in the Application. Personal Information is used to operate the Application, and
+                may occasionally be used to inform you of new features, services, and products from those offered by GA.
+                However, GA reserves the right to disclose any information in response to that it is required to be
+                shared, disclosed or made available to any governmental, administrative, regulatory or judicial
+                authority under any law or regulation applicable to GA or as GA in its sole discretion believes
+                necessary or appropriate in connection with an investigation of fraud, intellectual property
+                infringement, piracy, or other unlawful activity.
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                X. GRIEVANCE REDRESSAL
+            </div>
+
+            <ol
+                class="text-white lg:text-lg font-normal font-aileron leading-tight tracking-wide list-decimal ml-5 space-y-1">
+                <li>
+                    Redressal Mechanism: Any complaints, abuse or concerns with regards to content and or comment and/or
+                    breach of these terms shall be immediately informed in writing or through email signed with the
+                    electronic signature to <a href="mailto:support@neotrader.in"> support@neotrader.in</a>
+                </li>
+                <li>
+                    The company shall not be responsible for any communication, if addressed, to any non-designated
+                    person in this regard.
+                </li>
+
+            </ol>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                XI. COPYRIGHT NOTICE
+            </div>
+
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                Copyright ©2018 GROWTH AVENUES. All rights reserved. <br>
+                These disclaimer/terms of service notifications are subject to change without notice.
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                XII. APPLICABLE LAW
+            </div>
+
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                This agreement shall be governed by the laws of India. The courts of law in Mumbai shall have exclusive
+                jurisdiction over any disputes arising under this agreement.
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                XIII. LIMITED TIME TO BRING YOUR CLAIM
+            </div>
+
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                You and GA agree that any cause of action arising out of or related to the Application must commence
+                within three months after the cause of action accrues. Otherwise, such cause of action will be
+                permanently barred
+            </div>
+
+            <div class="w-full h-[0px] border border-white my-8"></div>
+
+            <div
+                class="text-white text-lg lg:text-[23px] font-semibold font-aileron underline lg:leading-[41.60px] tracking-wide my-5">
+                XIV. MISCELLANEOUS
+            </div>
+
+            <div class="text-white lg:text-lg font-normal font-aileron leading-7 tracking-wide">
+                GA reserves the right to refuse service to anyone for any reason at any time. The headings used in this
+                agreement are included for convenience only and will not limit or otherwise affect these Terms. Any
+                provision if found unapplicable and/or illegal shall be severable from the rest of the provisions and
+                would not affect the legality of the document or any other terms contained herein. Notices to be given
+                pursuant to these terms are to be given to the address listed in the grievance redressal clause above;
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdowns = document.querySelectorAll('.group');
+            var delayTimeout;
+            var activeDropdown = null;
+
+            function closeAllDropdowns() {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.absolute');
+                    dropdownContent.style.display = 'none';
+                });
+                activeDropdown = null;
+            }
+
+            dropdowns.forEach(function (dropdown) {
+                var dropdownContent = dropdown.querySelector('.absolute');
+
+                dropdown.addEventListener('mouseenter', function () {
+                    clearTimeout(delayTimeout);
+                    if (activeDropdown !== dropdown) {
+                        closeAllDropdowns();
+                    }
+                    dropdownContent.style.display = 'block';
+                    activeDropdown = dropdown;
+                });
+
+                dropdown.addEventListener('mouseleave', function (event) {
+                    if (!dropdownContent.contains(event.relatedTarget)) {
+                        delayTimeout = setTimeout(function () {
+                            dropdownContent.style.display = 'none';
+                        }, 200);
+                    }
+                });
+
+                dropdown.addEventListener('click', function (event) {
+                    clearTimeout(delayTimeout);
+                    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                closeAllDropdowns();
+            });
+        });
+
+        function showMenu() {
+            var menuCard = document.getElementById("menuCard");
+            menuCard.classList.toggle("hidden")
+        }
+
+        function showDropMenu(dropdownId) {
+            var toggle = document.querySelector('#' + dropdownId + ' .dropdown-toggle');
+            var dropMenu = document.querySelector('#' + dropdownId + ' .dropdownMenu-toggle');
+            var img1 = document.querySelector('#' + dropdownId + ' .dropdown-img-1');
+            var img2 = document.querySelector('#' + dropdownId + ' .dropdown-img-2');
+
+            // If the dropdown is currently open, close it
+            if (toggle.classList.contains('activeBlue')) {
+                toggle.classList.remove('activeBlue');
+                toggle.classList.add('activeWhite');
+                dropMenu.classList.remove('dropMenuShow');
+                dropMenu.classList.add('dropMenuHide');
+                img1.style.display = 'block';
+                img2.style.display = 'none';
+            } else { // Otherwise, open it
+                // Close all other dropdowns
+                var allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function (dropdown) {
+                    var otherToggle = dropdown.querySelector('.dropdown-toggle');
+                    var otherDropMenu = dropdown.querySelector('.dropdownMenu-toggle');
+                    var otherImg1 = dropdown.querySelector('.dropdown-img-1');
+                    var otherImg2 = dropdown.querySelector('.dropdown-img-2');
+
+                    otherToggle.classList.remove('activeBlue');
+                    otherToggle.classList.add('activeWhite');
+                    otherDropMenu.classList.remove('dropMenuShow');
+                    otherDropMenu.classList.add('dropMenuHide');
+                    otherImg1.style.display = 'block';
+                    otherImg2.style.display = 'none';
+                });
+
+                // Open the selected dropdown
+                toggle.classList.remove('activeWhite');
+                toggle.classList.add('activeBlue');
+                dropMenu.classList.remove('dropMenuHide');
+                dropMenu.classList.add('dropMenuShow');
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            }
+        }
+
+        // Footer Accordain
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionIDs = ['#accordion1', '#accordion2', '#accordion3', '#accordion4'];
+
+            accordionIDs.forEach(id => {
+                const accordionHeaders = document.querySelectorAll(`${id} .custom-accordion-header`);
+
+                accordionHeaders.forEach(header => {
+                    header.addEventListener('click', function () {
+                        const accordionItem = this.parentNode;
+                        accordionItem.classList.toggle('active');
+                        const icon = this.querySelector('.custom-accordion-icon');
+                        icon.textContent = accordionItem.classList.contains('active') ? '-' : '+';
+                    });
+                });
+            });
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

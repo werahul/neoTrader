@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Neo Traders</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        aileron: ["Aileron", "sans-serif"],
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        .box-bg {
+            background: linear-gradient(180deg, rgba(0, 61, 238, 0.19) -11.2%, rgba(19, 22, 35, 0) 100%);
+        }
+
+        .center-box-bg {
+            background:
+                linear-gradient(180deg, rgba(0, 61, 238, 0.48) 0%, rgba(108, 138, 228, 0.242) 49.58%, rgba(217, 217, 217, 0) 100%, rgba(19, 22, 35, 0.2) 100%);
+        }
+
+        .button-bg {
+            background: transparent;
+        }
+
+        .button-bg:hover {
+            background: linear-gradient(90deg, #003DEE 0%, #2AD9D5 100%);
+        }
+    </style>
+</head>
+
+<body class=" contact-bg max-w-[1440px] mx-auto">
+    <section class="mx-auto lg:px-20 px-5 lg:py-0 py-5">
+        <!-- ----------------------------------------------------- Navbar Starts -->
+        <nav class="flex items-center justify-between  z-50">
+            <div class="lg:w-[20%] ">
+                <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class="lg:w-[500px]  w-[170px]"></a>
+            </div>
+            <div class="lg:flex hidden lg:space-x-7 lg:ml-28 w-[60%] ">
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Product</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="https://software.neotrader.in/"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
+                            Trading Tool</a>
+                        <a href="courses.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Courses</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Trading</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-2">
+                        <!-- Dropdown Items -->
+                        <a href="index-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Index
+                        </a>
+                        <a href="intraday.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Intraday
+                        </a>
+
+                        <a href="option.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Options
+                        </a>
+                        <a href="swing-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Swing
+                        </a>
+                        <a href="positional-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Positional
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Resources</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="blogs.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
+                        <a href="youtube-links.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Youtube
+                            Links</a>
+                        <a href="https://neotraderskb.tawk.help/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
+                            Base</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Company</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="/about.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">About
+                            Us</a>
+                        <a href="/faq.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">FAQ's</a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Careers</a>
+                        <a href="/contact.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <a href="pricing.html">
+                    <div class="text-white text-lg font-medium font-aileron tracking-wide cursor-pointer">Pricing
+                    </div>
+                </a>
+
+            </div>
+            <div class=" lg:flex hidden lg:space-x-5 ml-10 w-auto">
+                <a href="signin.html">
+                    <button
+                        class="w-36 h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                        Up
+                    </button>
+                </a>
+                <a href="login.html">
+                    <button
+                        class="w-[110px] h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                        Log In
+                    </button>
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <img src="/images/hamMenu.png" alt="" onclick="showMenu()" class="">
+
+                <div id="menuCard"
+                    class="bgDropFillter absolute left-0 top-0 bg-[#2A2F37] bg-opacity-90 w-full h-screen pb-10 z-10 hidden px-5">
+                    <div class="flex justify-between items-center">
+                        <div class="">
+                            <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class=" w-[170px]"></a>
+                        </div>
+                        <div class="">
+                            <img src="/images/crossHum.svg" alt="" onclick="showMenu()" class="">
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+                        <ul class="list-none ">
+                            <div class="dropdown space-y-3 my-2" id="dropdown1">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown1')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Product</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="https://software.neotrader.in/">
+                                        <li>AI Trading Tool</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="courses.html">
+                                        <li class="mt-3">Courses</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow2">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow2')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Trading</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="index-trading.html">
+                                        <li class="">Index</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="intraday.html">
+                                        <li class="mt-3">Intraday</li>
+                                    </a>
+
+
+                                    <hr class="opacity-40">
+                                    <a href="option.html">
+                                        <li class="mt-3">Options</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="swing-trading.html">
+                                        <li class="mt-3">Swing</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="positional-trading.html">
+                                        <li class="mt-3">Positional</li>
+                                    </a>
+                                    <hr class="opacity-40">
+
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdown3">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown3')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Resources</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="blogs.html">
+                                        <li>Blogs</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="youtube-links.html">
+                                        <li class="mt-3">Youtube Links</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://neotraderskb.tawk.help/" target="_blank">
+                                        <li class="mt-3">Knowledge Base</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow4">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow4')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Company</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="about.html">
+                                        <li>About Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="faq.html">
+                                        <li class="mt-3">FAQ’s</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                                        <li class="mt-3">Careers</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="contact.html">
+                                        <li class="mt-3">Contact Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <a href="pricing.html">
+                                <li
+                                    class="mt-3 text-white text-lg font-medium font-poppins leading-[18px] tracking-wide">
+                                    Pricing</li>
+                            </a>
+                        </ul>
+
+                        <div class="mt-10 ">
+                            <a href="signin.html">
+                                <button
+                                    class="w-full h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                                    Up
+                                </button>
+                            </a>
+                            <a href="login.html">
+                                <button
+                                    class="mt-5 w-full h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                                    Log In
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Breadcrumbs Section -->
+        <div class="breadcrumbs flex space-x-2 justify-start items-center mt-10 font-aileron">
+            <div
+                class="breadcrumb-item text-zinc-500 text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
+                <a href="/index.html">Home</a>
+            </div>
+            <img src="./images/breadcrumbArrow.svg" alt="Breadcrumb Arrow">
+            <div
+                class="breadcrumb-item text-white text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
+                Pricing
+            </div>
+            <img src="./images/breadcrumbArrow-white.svg" alt="Breadcrumb Arrow">
+        </div>
+
+
+        <section class="lg:mt-[80px] mt-[50px]">
+            <div class="lg:text-center text-left"><span
+                    class="text-white lg:text-[56px] text-[27px] font-semibold font-poppins lg:leading-[72.80px]">Choose.
+                </span><span
+                    class="text-yellow-400 lg:text-[56px] text-[27px] font-semibold font-poppins lg:leading-[72.80px]">Subscribe.</span><span
+                    class="text-white lg:text-[56px] text-[27px] font-semibold font-poppins lg:leading-[72.80px]">
+                    Trade.</span></div>
+            <p
+                class=" lg:text-center text-left text-white lg:text-xl text-lg font-normal lg:mx-[100px] lg:mt-[16px] mt-2 font-aileron lg:leading-[30px] leading-6 tracking-wider">
+                NeoTrader
+                provides
+                flexible pricing options to cater to diverse needs. Tailor your trading experience with NeoTrader's
+                affordable and customisable subscription plans.
+            </p>
+        </section>
+
+        <section class="mt-[80px]">
+            <div
+                class="flex lg:flex-row flex-col items-center justify-center lg:space-x-[50px] lg:space-y-0 space-y-10">
+
+
+                <div
+                    class="lg:w-[324px] h-[500px] px-[18px] text-center pt-[51px] pb-[14px] box-bg lg:rounded-[20px] rounded-[30px] border border-zinc-500 border-opacity-50">
+                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">3 Months</h2>
+                    <div class="text-center">
+                        <div class=" h-[69px] flex items-center justify-center text-center">
+                            <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
+                                20,000
+                            </div>
+                            <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
+                                +GST
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹222/Day
+                    </p>
+                    <p
+                        class=" h-[167px] mt-[35px] text-center text-white lg:text-base text-[18px] font-normal font-aileron leading-tight tracking-wider">
+                        Unlock the power of NeoTrader with our Quarterly Plan, customised for your unique trading needs.
+                        Join today for a strategic approach to trading and investing.</p>
+                    <a href="https://pages.razorpay.com/pl_McbJAjoSMTqfmK/view" target="_blank"><button
+                            class="text-white text-xl border border-white button-bg transition-all mt-3 lg:px-[76.5px] lg:py-[16px] px-[30px] py-[8px]  rounded-full lg:font-semibold font-medium font-poppins leading-relaxed tracking-wider">Subscribe
+                        </button></a>
+                </div>
+                <div
+                    class="lg:w-[324px] lg:hidden block h-[500px] px-[18px] relative text-center pt-[51px] pb-[14px] center-box-bg lg:rounded-[20px] rounded-[30px] border border-blue-700 border-opacity-50">
+                    <div
+                        class="w-[161px] px-8 py-4 absolute bg-white bg-opacity-30 rounded-[50px] border border-white border-opacity-10 backdrop-blur-[6.60px] justify-center items-center lg:left-[26%] left-[28%] top-[-5%] inline-flex">
+                        <div
+                            class="text-white whitespace-nowrap animate-pulse text-sm font-semibold font-poppins leading-[18.20px] tracking-wider">
+                            Most Popular
+                        </div>
+                    </div>
+                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">2 Years</h2>
+                    <div class=" h-[69px] flex items-center justify-center text-center">
+                        <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
+                            1,00,000
+                        </div>
+                        <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
+                            +GST
+                        </div>
+                    </div>
+                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹188/Day
+                    </p>
+                    <p
+                        class=" h-[167px] mt-[35px] text-center text-white lg:text-base text-[17px] font-normal font-aileron leading-tight tracking-wider">
+                        Commit to excellence with NeoTrader's 2 Years Plan, offering regular training, realtime market
+                        insights, and more. Maximize your trading potential with an extended subscription period and
+                        personalized guidance.
+
+                    </p>
+                    <a href="https://pages.razorpay.com/pl_Kf5B8U0lio1Hrr/view" target="_blank"><button
+                            class="text-white text-xl border border-white button-bg transition-all mt-3 lg:px-[71px] lg:py-[16px] px-[30px] py-[8px]  rounded-full lg:font-semibold font-medium font-poppins leading-relaxed tracking-wider">Subscribe
+                        </button></a>
+
+                </div>
+                <div
+                    class="lg:w-[324px] lg:block hidden boxShadow h-[500px] px-[18px] relative text-center pt-[51px] pb-[14px] center-box-bg lg:rounded-[20px] rounded-[30px] border border-blue-700 border-opacity-50">
+                    <div
+                        class="w-[161px] px-8 py-4 absolute bg-white bg-opacity-30 rounded-[50px] border border-white border-opacity-10 backdrop-blur-[6.60px] justify-center items-center lg:left-[26%] left-[30%] top-[-5%] inline-flex">
+                        <div
+                            class="text-white whitespace-nowrap animate-pulse text-sm font-semibold font-poppins leading-[18.20px] tracking-wider">
+                            Most Popular
+                        </div>
+                    </div>
+                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">2 Years</h2>
+                    <div class=" h-[69px] flex items-center justify-center text-center">
+                        <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
+                            1,00,000
+                        </div>
+                        <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
+                            +GST
+                        </div>
+                    </div>
+                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹188/Day
+                    </p>
+                    <p
+                        class=" h-[167px] mt-[35px] text-center text-white lg:text-base text-[17px] font-normal font-aileron leading-tight tracking-wider">
+                        Commit to excellence with NeoTrader's 2 Years Plan, offering regular training, realtime market
+                        insights, and more. Maximize your trading potential with an extended subscription period and
+                        personalized guidance.
+
+                    </p>
+                    <a href="https://pages.razorpay.com/pl_Kf5B8U0lio1Hrr/view" target="_blank"><button
+                            class="text-white text-xl border border-white button-bg transition-all mt-3 lg:px-[71px] lg:py-[16px] px-[30px] py-[8px]  rounded-full lg:font-semibold font-medium font-poppins leading-relaxed tracking-wider">Subscribe
+                        </button></a>
+
+                </div>
+                <div
+                    class="lg:w-[324px] h-[500px] px-[18px] text-center pt-[51px] pb-[14px] box-bg lg:rounded-[20px] rounded-[30px] border border-zinc-500 border-opacity-50">
+
+                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">1 Year</h2>
+
+                    <div class=" h-[69px] flex items-center justify-center text-center">
+                        <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
+                            50,000
+                        </div>
+                        <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
+                            +GST
+                        </div>
+                    </div>
+
+                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹208/Day
+                    </p>
+                    <p
+                        class="  mt-[35px] text-center text-white lg:text-base text-[17px] font-normal font-aileron leading-tight tracking-wider">
+                        Elevate your trading journey with NeoTrader's Annual Plan, from masterclass mentorship to
+                        one-on-one support - access the convenience of a disciplined approach to data access for a whole
+                        year.</p>
+                    <a href="https://pages.razorpay.com/pl_MZMAOMoFfHdk0A/view" target="_blank"><button
+                            class="text-white text-xl border border-white button-bg transition-all mt-3 px-[76.5px] py-[16px] rounded-full font-semibold font-poppins leading-relaxed tracking-wider">Subscribe
+                        </button></a>
+                </div>
+
+            </div>
+            <p class="text-center mt-9 font-aileron text-white">*All prices mentioned above are exclusive of GST.
+
+            </p>
+        </section>
+
+        <section class="lg:mt-[148px] mt-[50px] lg:block hidden">
+            <div class="text-center"><span
+                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Pricing
+                </span><span
+                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Plans</span>
+            </div>
+            <div class="text-white text-[24px] lg:mt-[60px] font-aileron">
+                <div class="flex justify-between px-[40px]">
+                    <p>Features</p>
+                    <div class="flex space-x-40">
+                        <p>3 Months</p>
+                        <p>1 Year</p>
+                        <p>2 Years</p>
+                    </div>
+                </div>
+                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
+                <div class="flex justify-between pl-[50px] pr-[60px]">
+                    <ul class="space-y-[30px] list-disc  lg:w-[461px]">
+                        <li>NeoTrader Pro</li>
+                        <li>Q&A Sessions on NeoTrader</li>
+                        <li>Demos</li>
+                        <li>Offers on Training Courses</li>
+                        <li>Online Sessions by Dr C K Narayan</li>
+                        <li>Mentoring with Mr. Raja Venkatraman
+                            & Mr. Aditya Iyer</li>
+                        <li>One-on-one live market support</li>
+                        <li>Mentoring with Dr. CK Narayan</li>
+                    </ul>
+                    <div class="flex space-x-[225px]">
+                        <div class="">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[65px]">
+                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                        </div>
+                        <div class="">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[65px]">
+                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                        </div>
+                        <div>
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[65px]">
+                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
+            </div>
+        </section>
+
+        <section class="mt-[50px] lg:hidden block ">
+            <div class="text-center"><span
+                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Pricing
+                </span><span
+                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Plans</span>
+            </div>
+            <div class="font-aileron overflow-x-scroll w-[350px] space-y-2 lg:hidden block">
+                <div
+                    class="flex justify-between items-center mb-4  py-4 px-2 w-[650px] text-xl font-bold font-aileron text-white border-b-2 border-white">
+                    <p class="w-[335px]">Features</p>
+                    <p class="">3 Months</p>
+                    <p class="">1 Year</p>
+                    <p class="">3 Years</p>
+                </div>
+
+                <div
+                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; NeoTrader Pro</p>
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                </div>
+                <div
+                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; Q&A Sessions on NeoTrader</p>
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                </div>
+                <div
+                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; Demos</p>
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                </div>
+                <div
+                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; Offers on Training Courses</p>
+                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+
+                </div>
+                <div
+                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; Online Sessions by Dr C K Narayan</p>
+                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+
+                </div>
+                <div
+                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; Mentoring with Mr. Raja Venkatraman
+                        & Mr. Aditya Iyer</p>
+                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+
+                </div>
+                <div
+                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; One-on-one live market support</p>
+                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                </div>
+                <div
+                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
+                    <p class="w-[335px]">&#8608; Mentoring with Dr. CK Narayan</p>
+                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
+                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- <section class="lg:mt-[148px] mt-[50px] lg:hidden block">
+            <div class="text-center"><span
+                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Pricing
+                </span><span
+                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Plans</span>
+            </div>
+            <div class="text-white text-[24px] lg:mt-[60px] font-aileron">
+                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
+                <div class="flex flex-col justify-between lg:pl-[50px] lg:pr-[60px] pl-5 pr-5">
+                    <ol class="lg:space-y-[30px] space-y-[40px] list-decimal text-[20px]  ">
+                        <div class="">
+                            <li class="font-medium">NeoTrader Pro</li>
+                            <div class="flex space-x-2 justify-between font-normal mt-[5px]">
+                                <div class="flex flex-col items-center justify-center">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <li>Q&A Sessions on NeoTrader</li>
+                            <div class="flex space-x-2 justify-between mt-[5px]">
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <li>Demos</li>
+                            <div class="flex space-x-2 justify-between mt-[5px]">
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <li>Offers on Training Courses</li>
+                            <div class="flex space-x-2 justify-between mt-[5px]">
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <li>Online Sessions by Dr C K Narayan</li>
+                            <div class="flex space-x-2 justify-between mt-[5px]">
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <li>Mentoring with Mr. Raja Venkatraman & Mr. Aditya Iyer</li>
+                            <div class="flex space-x-2 justify-between mt-[5px]">
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <li>One-on-one live market support</li>
+                            <div class="flex space-x-2 justify-between mt-[5px]">
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <li>Mentoring with Dr. CK Narayan</li>
+                            <div class="flex space-x-2 justify-between mt-[5px]">
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
+                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
+                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                                <div class="flex flex-col items-center justify-center  ">
+                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
+                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
+                                </div>
+                            </div>
+                        </div>
+                    </ol>
+                </div>
+                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
+            </div>
+        </section> -->
+
+        <section class="lg:mt-[148px] mt-[50px]">
+            <div class="text-center"><span
+                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins lg:leading-[62.40px]">Why
+                </span><span
+                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins lg:leading-[62.40px]">30K+
+                    Users</span><span
+                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins lg:leading-[62.40px]">
+                    Trust NeoTrader</span></div>
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-[24px] mt-[50px]">
+                <div
+                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
+                    <img src="./images/pricing-page/a1.png" alt="" class="w-[58px] h-[58px]">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
+                        Simplified Analysis</div>
+                    <div
+                        class=" text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
+                        Streamlined data, signals, indicators, & expert alerts boost your winning trade
+                        probabilities.<br /></div>
+
+                </div>
+                <div
+                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
+                    <img src="./images/pricing-page/a2.png" alt="" class="w-[58px] h-[58px]">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
+                        Faster Decision Making</div>
+                    <div
+                        class=" text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
+                        Intuitive dashboards & advanced technical indicators help you make faster trading
+                        decisions.<br /></div>
+
+                </div>
+                <div
+                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
+                    <img src="./images/pricing-page/a3.png" alt="" class="w-[58px] h-[58px]">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
+                        Realtime Market View</div>
+                    <div
+                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
+                        A comprehensive heatmap provides you with a daily market view & sectoral analysis, putting you
+                        ahead of the game.<br /></div>
+
+                </div>
+                <div
+                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
+                    <img src="./images/pricing-page/a4.png" alt="" class="w-[58px] h-[58px]">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
+                        One-to-one Support</div>
+                    <div
+                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
+                        A dedicated customer support team ensures handholding & ensuring success throughout your trading
+                        journey.<br /></div>
+
+                </div>
+                <div
+                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
+                    <img src="./images/pricing-page/a5.png" alt="" class="w-[58px] h-[58px]">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
+                        Learning Opportunities</div>
+                    <div
+                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
+                        Transformational learning opportunities throughout your membership through Dr. CK Narayan’s
+                        online sessions.<br /></div>
+
+                </div>
+                <div
+                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
+                    <img src="./images/pricing-page/a6.png" alt="" class="w-[58px] h-[58px]">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
+                        One Click Execution</div>
+                    <div
+                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
+                        NeoTrader’s dynamic API & multiple broker partnerships enable you to a seamless trade execution
+                        without additional effort.<br /></div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section  -->
+
+        <section>
+            <div id="" class="baseType2 lg:px-16 lg:py-5">
+                <div
+                    class="lg:flex lg:space-x-0 space-x-10 lg:items-start items-center lg:justify-start justify-center">
+                    <div class="onePart flex flex-col lg:items-start justify-center items-center lg:w-[60%]">
+                        <div
+                            class="text-white lg:text-left text-center lg:text-5xl text-[1.6rem] font-bold font-poppins lg:leading-[62.40px] leading-tight lg:mt-5">
+                            Unlock your Trading <br />Potential with NeoTrader!
+                        </div>
+                        <div class="mt-4">
+                            <div
+                                class="lg:text-left text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-relaxed leading-tight tracking-wider">
+                                Get ready-made trades, pre processed analysis from multiple indicators , scoring and
+                                ranking on stocks and indices.
+                            </div>
+                            <div
+                                class="lg:text-left text-center text-white text-xl font-semibold font-poppins leading-relaxed tracking-wider lg:mt-2 mt-7">
+                                Ab Smart Trading Hoga Easy!</div>
+                        </div>
+                        <a href="signin.html">
+                            <button
+                                class="lg:mt-6 mt-7 w-[180px] h-[58px] px-8 py-4 rounded-[50px] border border-white justify-center items-center gap-3 inline-flex text-white text-xl font-bold whitespace-nowrap font-poppins leading-relaxed tracking-wide hover:bg-white hover:text-black">Join
+                                Today
+                            </button>
+                        </a>
+
+                    </div>
+                    <div class="twoPart lg:w-[60%] w-[100%]">
+                        <img src="/images/ctaImg2.png" alt="" class="w-auto lg:ml-0 lg:mt-0 -ml-10 mt-5 ">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ----------------------------------------------------- Footer Starts -->
+        <footer class="mt-16">
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col  lg:flex-col items-start lg:justify-normal justify-between">
+                    <img src="./images/footer-logo.svg" alt="" class="">
+                    <!-- <img src="./images/footer-logo-mobile.svg" alt="" class="lg:hidden block"> -->
+                    <div class="flex space-x-4 cursor-pointer lg:mt-5 lg:mb-0 mb-4">
+                        <a href="https://www.linkedin.com/company/neo-trader/" target="_blank"
+                            rel="noopener noreferrer"> <img src="/images/contact/linkedIn.png" alt=""
+                                class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.instagram.com/neotrader.in/" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/contact/insta.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.facebook.com/NeoTrader.in" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/contact/facebook.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://twitter.com/NeoTrader_in" target="_blank" rel="noopener noreferrer"> <img
+                                src="/images/contact/twiter.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.youtube.com/@NeoTrader" target="_blank" rel="noopener noreferrer"> <img
+                                src="/images/contact/ytIcon.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="custom-accordion mt-5" id="accordion1">
+                    <div class="custom-accordion-item">
+                        <div class="custom-accordion-header text-white text-xl lg:text-2xl font-medium font-poppins">
+                            Company <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-3">
+                            <a href="about.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">About
+                                Us</a>
+                            <a href="blogs.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Blogs</a>
+                            <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Careers</a>
+                            <a href="terms-and-conditions.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Terms
+                                & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion" id="accordion2">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                            Trading Types <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content  space-y-2 mt-2">
+                            <a href="index-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Index
+                            </a>
+                            <a href="intraday.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Intraday</a>
+
+                            <a href="option.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Options</a>
+                            <a href="swing-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Swing</a>
+                            <a href="positional-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Positional</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion" id="accordion3">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white text-xl mt-5 lg:mt-0 lg:text-2xl font-medium font-poppins">
+                            Product Offerings <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-2">
+                            <a href="https://software.neotrader.in/"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">AI
+                                Trading Software</a>
+                            <a href="courses.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Courses</a>
+                            <a href="pricing.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Pricing
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion mb-5" id="accordion4">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                            Support <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-2">
+                            <a href="contact.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Contact
+                                Us</a>
+                            <a href="faq.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">FAQ’s
+                            </a>
+                            <a href="https://neotraderskb.tawk.help/" target="_blank"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Knowledge
+                                Base
+                            </a>
+                            <a href="youtube-links.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                YouTube Links
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- for desktop -->
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Company</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="about.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                About Us
+                            </div>
+                        </a>
+                        <a href="blogs.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Blogs
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Careers
+                            </div>
+                        </a>
+                        <a href="terms-and-conditions.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Terms & Conditions
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Trading Types</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="index-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Index
+                            </div>
+                        </a>
+                        <a href="intraday.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Intraday
+                            </div>
+                        </a>
+
+                        <a href="option.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Options
+                            </div>
+                        </a>
+                        <a href="swing-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Swing
+                            </div>
+                        </a>
+                        <a href="positional-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Positional
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Product Offerings</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="https://software.neotrader.in/">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                AI Trading Software
+                            </div>
+                        </a>
+                        <a href="courses.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Courses
+                            </div>
+                        </a>
+                        <a href="pricing.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Pricing Details
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Support</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="contact.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Contact Us
+                            </div>
+                        </a>
+
+                        <a href="faq.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                FAQ’s
+                            </div>
+                        </a>
+
+                        <a href="https://neotraderskb.tawk.help/" target="_blank">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Knowledge Base
+                            </div>
+                        </a>
+                        <a href="youtube-links.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                YouTube Links
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-8 pb-5">
+                <div class="text-white text-xl lg:font-semibold font-medium font-aileron leading-[30px] tracking-wide">
+                    Disclaimer:
+                    <span class="text-[18px] font-normal font-aileron lg:leading-[30px] tracking-wide">Investments
+                        in securities market are subject to market risks, read all the related documents carefully
+                        before investing. Brokerage will not exceed SEBI prescribed limit. The securities are quoted
+                        as an example and not as a recommendation. <br /><span class="font-semibold"> SEBI
+                            Registration</span></span><span
+                        class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                    </span><span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
+                        Name: NeoTrader | RA No. INH000002285 </span><span
+                        class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                    </span>
+                    <a href="disclaimer.html"><span
+                            class="text-blue-700 text-xl font-normal font-aileron leading-[30px] tracking-wide cursor-pointer">Read
+                            more</span></a>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdowns = document.querySelectorAll('.group');
+            var delayTimeout;
+            var activeDropdown = null;
+
+            function closeAllDropdowns() {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.absolute');
+                    dropdownContent.style.display = 'none';
+                });
+                activeDropdown = null;
+            }
+
+            dropdowns.forEach(function (dropdown) {
+                var dropdownContent = dropdown.querySelector('.absolute');
+
+                dropdown.addEventListener('mouseenter', function () {
+                    clearTimeout(delayTimeout);
+                    if (activeDropdown !== dropdown) {
+                        closeAllDropdowns();
+                    }
+                    dropdownContent.style.display = 'block';
+                    activeDropdown = dropdown;
+                });
+
+                dropdown.addEventListener('mouseleave', function (event) {
+                    if (!dropdownContent.contains(event.relatedTarget)) {
+                        delayTimeout = setTimeout(function () {
+                            dropdownContent.style.display = 'none';
+                        }, 200);
+                    }
+                });
+
+                dropdown.addEventListener('click', function (event) {
+                    clearTimeout(delayTimeout);
+                    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                closeAllDropdowns();
+            });
+        });
+
+        function showMenu() {
+            var menuCard = document.getElementById("menuCard");
+            menuCard.classList.toggle("hidden")
+        }
+
+        function showDropMenu(dropdownId) {
+            var toggle = document.querySelector('#' + dropdownId + ' .dropdown-toggle');
+            var dropMenu = document.querySelector('#' + dropdownId + ' .dropdownMenu-toggle');
+            var img1 = document.querySelector('#' + dropdownId + ' .dropdown-img-1');
+            var img2 = document.querySelector('#' + dropdownId + ' .dropdown-img-2');
+
+            // If the dropdown is currently open, close it
+            if (toggle.classList.contains('activeBlue')) {
+                toggle.classList.remove('activeBlue');
+                toggle.classList.add('activeWhite');
+                dropMenu.classList.remove('dropMenuShow');
+                dropMenu.classList.add('dropMenuHide');
+                img1.style.display = 'block';
+                img2.style.display = 'none';
+            } else { // Otherwise, open it
+                // Close all other dropdowns
+                var allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function (dropdown) {
+                    var otherToggle = dropdown.querySelector('.dropdown-toggle');
+                    var otherDropMenu = dropdown.querySelector('.dropdownMenu-toggle');
+                    var otherImg1 = dropdown.querySelector('.dropdown-img-1');
+                    var otherImg2 = dropdown.querySelector('.dropdown-img-2');
+
+                    otherToggle.classList.remove('activeBlue');
+                    otherToggle.classList.add('activeWhite');
+                    otherDropMenu.classList.remove('dropMenuShow');
+                    otherDropMenu.classList.add('dropMenuHide');
+                    otherImg1.style.display = 'block';
+                    otherImg2.style.display = 'none';
+                });
+
+                // Open the selected dropdown
+                toggle.classList.remove('activeWhite');
+                toggle.classList.add('activeBlue');
+                dropMenu.classList.remove('dropMenuHide');
+                dropMenu.classList.add('dropMenuShow');
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            }
+        }
+
+        // Footer Accordain
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionIDs = ['#accordion1', '#accordion2', '#accordion3', '#accordion4'];
+
+            accordionIDs.forEach(id => {
+                const accordionHeaders = document.querySelectorAll(`${id} .custom-accordion-header`);
+
+                accordionHeaders.forEach(header => {
+                    header.addEventListener('click', function () {
+                        const accordionItem = this.parentNode;
+                        accordionItem.classList.toggle('active');
+                        const icon = this.querySelector('.custom-accordion-icon');
+                        icon.textContent = accordionItem.classList.contains('active') ? '-' : '+';
+                    });
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

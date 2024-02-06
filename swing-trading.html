@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Swing Trading | Neo Traders</title>
+    <style>
+        .whyNeoBox {
+            width: 100%;
+            height: 191px;
+            flex-shrink: 0;
+            border-radius: 30px;
+            border: 1px solid rgba(219, 219, 219, 0.20);
+            background: linear-gradient(180deg, rgba(0, 61, 238, 0.64) 0%, rgba(19, 22, 35, 0.00) 100%);
+            padding: 30px 20px;
+        }
+
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .accordion-item {
+            margin-bottom: 8px;
+        }
+
+        .accordion-title {
+            cursor: pointer;
+            padding: 8px;
+            /* background-color: transparent; */
+            /* border: 1px solid #ddd; */
+            text-align: left;
+            color: white;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 8px;
+            /* border-bottom: 1px solid #ddd; */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .flex-contain {
+            display: flex;
+            /* justify-content: center; */
+            font-weight: 600;
+            color: #FDDC1F;
+            font-size: 56px;
+        }
+
+        .typewriter {
+            overflow: hidden;
+            display: inline-block;
+            white-space: nowrap;
+            font-family: 'Poppins', sans-serif;
+            color: #FDDC1F;
+            font-weight: 600;
+
+        }
+
+        .static-word {
+            font-weight: 700;
+            color: #FDDC1F;
+            font-size: 56px;
+            margin-left: 8px;
+            margin-top: -5px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        aileron: ["Aileron", "sans-serif"],
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="tnc-bg ">
+
+    <section class="max-container lg:px-20 px-5 ">
+        <!-- ----------------------------------------------------- Navbar Starts -->
+        <nav class="flex items-center justify-between  z-50">
+            <div class="lg:w-[20%] ">
+                <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class="lg:w-[500px]  w-[170px]"></a>
+            </div>
+            <div class="lg:flex hidden lg:space-x-7 lg:ml-28 w-[60%] ">
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Product</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="https://software.neotrader.in/"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
+                            Trading Tool</a>
+                        <a href="courses.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Courses</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Trading</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-2">
+                        <!-- Dropdown Items -->
+                        <a href="index-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Index
+                        </a>
+                        <a href="intraday.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Intraday
+                        </a>
+
+                        <a href="option.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Options
+                        </a>
+                        <a href="swing-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Swing
+                        </a>
+                        <a href="positional-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Positional
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Resources</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="blogs.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
+                        <a href="youtube-links.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Youtube
+                            Links</a>
+                        <a href="https://neotraderskb.tawk.help/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
+                            Base</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Company</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="/about.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">About
+                            Us</a>
+                        <a href="/faq.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">FAQ's</a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Careers</a>
+                        <a href="/contact.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <a href="pricing.html">
+                    <div class="text-white text-lg font-medium font-aileron tracking-wide cursor-pointer">Pricing
+                    </div>
+                </a>
+
+            </div>
+            <div class=" lg:flex hidden lg:space-x-5 ml-10 w-auto">
+                <a href="signin.html">
+                    <button
+                        class="w-36 h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                        Up
+                    </button>
+                </a>
+                <a href="login.html">
+                    <button
+                        class="w-[110px] h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                        Log In
+                    </button>
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <img src="/images/hamMenu.png" alt="" onclick="showMenu()" class="">
+
+                <div id="menuCard"
+                    class="bgDropFillter absolute left-0 top-0 bg-[#2A2F37] bg-opacity-90 w-full h-screen pb-10 z-10 hidden px-5">
+                    <div class="flex justify-between items-center">
+                        <div class="">
+                            <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class=" w-[170px]"></a>
+                        </div>
+                        <div class="">
+                            <img src="/images/crossHum.svg" alt="" onclick="showMenu()" class="">
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+                        <ul class="list-none ">
+                            <div class="dropdown space-y-3 my-2" id="dropdown1">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown1')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Product</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="https://software.neotrader.in/">
+                                        <li>AI Trading Tool</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="courses.html">
+                                        <li class="mt-3">Courses</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow2">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow2')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Trading</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="index-trading.html">
+                                        <li class="">Index</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="intraday.html">
+                                        <li class="mt-3">Intraday</li>
+                                    </a>
+
+
+                                    <hr class="opacity-40">
+                                    <a href="option.html">
+                                        <li class="mt-3">Options</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="swing-trading.html">
+                                        <li class="mt-3">Swing</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="positional-trading.html">
+                                        <li class="mt-3">Positional</li>
+                                    </a>
+                                    <hr class="opacity-40">
+
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdown3">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown3')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Resources</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="blogs.html">
+                                        <li>Blogs</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="youtube-links.html">
+                                        <li class="mt-3">Youtube Links</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://neotraderskb.tawk.help/" target="_blank">
+                                        <li class="mt-3">Knowledge Base</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow4">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow4')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Company</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="about.html">
+                                        <li>About Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="faq.html">
+                                        <li class="mt-3">FAQ’s</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                                        <li class="mt-3">Careers</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="contact.html">
+                                        <li class="mt-3">Contact Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <a href="pricing.html">
+                                <li
+                                    class="mt-3 text-white text-lg font-medium font-poppins leading-[18px] tracking-wide">
+                                    Pricing</li>
+                            </a>
+                        </ul>
+
+                        <div class="mt-10 ">
+                            <a href="signin.html">
+                                <button
+                                    class="w-full h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                                    Up
+                                </button>
+                            </a>
+                            <a href="login.html">
+                                <button
+                                    class="mt-5 w-full h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                                    Log In
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- ----------------------------------------------------- BreadCrumbs Starts -->
+        <div class="breadcrumbs flex space-x-2 justify-start items-center mt-10 font-aileron">
+            <a href="/index.html">
+                <div
+                    class="breadcrumb-item text-zinc-500 text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
+                    Home
+                </div>
+            </a>
+            <img src="./images/breadcrumbArrow.svg" alt="Breadcrumb Arrow">
+            <div
+                class="breadcrumb-item text-white text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
+                Swing
+            </div>
+            <img src="./images/breadcrumbArrow-white.svg" alt="Breadcrumb Arrow">
+
+        </div>
+
+        <!-- ------------------------------------------------------- First Section Hero -->
+        <div class="lg:flex lg:space-x-5 mt-10">
+
+            <div class="lg:w-[50%]">
+                <div
+                    class="text-white lg:text-[56px] text-4xl font-semibold font-poppins lg:leading-[72.80px] leading-[46.80px]">
+                    Transform Your <br><span class="text-yellow-400">Swing Trading </span><br> with NeoTrader
+                </div>
+                <div
+                    class="mt-3 text-white lg:text-xl text-base font-normal font-aileron lg:leading-[30px] leading-[25px] tracking-wider">
+                    If you're a trader aiming to seize opportunities over several days, NeoTrader is your essential
+                    partner. Whether you're an advanced trader or a beginner in the stock market, NeoTrader equips you
+                    with the necessary tools to help you elevate your Swing Trading journey.
+                </div>
+                <a href="signin.html">
+                    <button
+                        class="w-[260px] h-[50px] mt-8 px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-bold font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">
+                        Start Your Journey
+                    </button>
+                </a>
+            </div>
+            <div class="lg:w-[50%] lg:mt-0 mt-10">
+                <video autoplay muted loop class="w-[100%] rounded-[20px]">
+                    <source src="/videos/multidayVdo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
+        </div>
+
+        <!-- ----------------------------------------------------- Second Section Past Performance (Auto Scroll) -->
+        <div class="">
+            <div
+                class="text-white text-center lg:text-[56px] text-4xl font-semibold font-poppins leading-[50px] mt-20 mb-2">
+                Our Performance:
+                <span class="text-[#FDDC1F]">Swing Trades</span>
+            </div>
+            <div class="flex space-x-5  justify-center lg:mt-7 mb-10">
+                <div class="text-white text-center lg:text-2xl text-base font-semibold font-aileron tracking-wider">
+                    Accuracy Rate:
+                    <span class="text-[#FDDC1F]">37.5%</span>
+                </div>
+                
+            </div>
+            <div class="mt-[60px] mb-[100px]">
+                <div class="container" id="infiniteScroll--left">
+                    <article>
+                        <div class="wrapper">
+                            <div class="img">
+                                <img src="./images/multiday/mday1Gail.png" alt="">
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- Make as many articles as you need -->
+                    <article>
+                        <div class="wrapper">
+                            <div class="img"><img src="./images/multiday/mday2LnT.png" alt=""></div>
+
+                        </div>
+                    </article>
+                    <article>
+                        <div class="wrapper">
+                            <div class="img"><img src="./images/multiday/mday3Chamb.png" alt=""></div>
+
+                        </div>
+                    </article>
+                    <article>
+                        <div class="wrapper">
+                            <div class="img"><img src="./images/multiday/mday4Laur.png" alt=""></div>
+
+                        </div>
+                    </article>
+                    <article>
+                        <div class="wrapper">
+                            <div class="img"><img src="./images/multiday/mday5ZeeL.png" alt=""></div>
+
+                        </div>
+                    </article>
+                    <article>
+                        <div class="wrapper">
+                            <div class="img"><img src="./images/multiday/mday3Chamb.png" alt=""></div>
+                        </div>
+                    </article>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------------- Third Section -->
+        <div class="">
+            <div class="mt-24">
+                <div class=" text-center "><span
+                        class="text-white lg:text-5xl text-4xl font-semibold font-poppins lg:leading-[62.40px] leading-[46.80px]">NeoTrader
+                    </span><span
+                        class="text-yellow-400 lg:text-5xl text-4xl font-semibold font-poppins lg:leading-[62.40px] leading-[46.80px]">Swing
+                        Trading Features</span>
+                </div>
+                <div>
+                    <div
+                        class="relative grid lg:grid-cols-3 grid-cols-1 justify-items-center lg:gap-y-28 gap-y-10 lg:gap-x-10 gap-x-5  mt-24">
+                        <img src="./images/intraday/lineHorizontal.png" alt=""
+                            class="absolute top-[30%]  lg:block hidden">
+                        <img src="./images/intraday/lineHorizontal.png" alt=""
+                            class="absolute top-[70%]  lg:block hidden">
+                        <img src="./images/intraday/lineVertcal.png" alt=""
+                            class="absolute top-[-6%] left-[33%]   lg:block hidden">
+                        <img src="./images/intraday/lineVertcal.png" alt=""
+                            class="absolute top-[-6%] right-[33%] lg:block hidden">
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek1.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Trade Filters
+                            </h4>
+                            <p class="text-center text-white text-base font-normal font-aileron leading-normal">
+                                An option to select Open Trades, Non Curated, Curated & Supercurated trades, enabling
+                                users to access a customised list of trades.</p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <!-- <div class="w-[2px] h-[290px] rounded-[2px] lineBg"></div> -->
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek2.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Trading Strategies
+                            </h4>
+                            <p class="text-center text-white text-base font-normal font-aileron leading-normal">
+                                Multiple trade setups highlighting strategies that are available to choose from, such as
+                                REVERSAL, SWING, & MOMENTUM.
+                            </p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <!-- <div class="w-[2px] h-[290px] rounded-[2px] lineBg"></div> -->
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="/images/multiweek/multiweek3.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Trade Symbol
+                            </h4>
+                            <p class="text-center text-white text-base font-normal font-aileron leading-normal">
+                                Symbols marked with stars denote super-curated trades, indicating to users that the
+                                trades have undergone higher-level filtration processes.
+                            </p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek4.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Signal Date & Time
+                            </h4>
+                            <p
+                                class="text-center w-[328px] text-white text-base font-normal font-aileron leading-normal">
+                                Displays the exact date and time when trades are initiated, enhancing confidence in the
+                                user’s trading decisions.
+                            </p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <!-- <div class="w-[1px] h-[290px] rounded-[2px] lineBg"></div> -->
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek5.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Trade Alert
+                            </h4>
+                            <p
+                                class="text-center w-[338px] text-white text-base font-normal font-aileron leading-normal">
+                                Exact alerts indicating the type of signal that has been generated - Long or Short &
+                                guiding users on whether to buy or sell.
+
+                            </p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <!-- <div class="w-[2px] h-[290px] rounded-[2px] lineBg"></div> -->
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek6.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Trade Status
+                            </h4>
+                            <p
+                                class="text-center w-[358px] text-white text-base font-normal font-aileron leading-normal">
+                                Realtime indicators showcasing various trade statuses, such as T1, T2, SL, Exit, etc.,
+                                alert users with managing risks.
+                            </p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek7.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Chart Analysis
+                            </h4>
+                            <p
+                                class="text-center w-[328px] text-white text-base font-normal font-aileron leading-normal">
+                                An integrated charting facility is available within NeoTrader software, enabling the
+                                users to use option analysis data.
+
+
+                            </p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <!-- <div class="w-[1px] h-[290px] rounded-[2px] lineBg"></div> -->
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek8.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Instant Trade Execution
+                            </h4>
+                            <p
+                                class="text-center w-[338px] text-white text-base font-normal font-aileron leading-normal">
+                                Precise entry, targets, & stop-loss points via NeoTrader, enabling one click execution
+                                on connected broker’s account.
+
+
+                            </p>
+                        </div>
+                        <img src="/images/intraday/hrLine.png" alt="" class="lg:hidden block">
+                        <!-- <div class="w-[2px] h-[290px] rounded-[2px] lineBg"></div> -->
+                        <div class="flex items-center space-y-[12px]  flex-col justify-center">
+                            <img src="./images/multiweek/multiweek9.png" alt="">
+                            <h4 class="text-white text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                Rolling Ticker Notification
+                            </h4>
+                            <p
+                                class="text-center w-[358px] text-white text-base font-normal font-aileron leading-normal">
+                                Comprehensive presentation of updated stocks, reducing additional effort to browse
+                                through individual pages.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="w-full h-[1px] hrBg"></div> -->
+                    <div class="flex space-x-10 items-center justfy-center ">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------------- Four Section Why NeoTrader -->
+        <div class="lg:mt-40">
+            <div class="text-white text-center lg:text-[56px] text-4xl font-semibold font-poppins lg:leading-[62.40px] leading-[46.80px] mt-28">Why <span
+                    class="text-[#FDDC1F]">NeoTrader</span>
+            </div>
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-x-4 lg:gap-y-0 gap-y-8 mt-8">
+                <div class="whyNeoBox">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px]">Money Earned</div>
+                    <div class="text-white lg:text-xl text-[18px] font-normal font-aileron lg:leading-7 leading-6 lg:tracking-wide mt-4">
+                        Streamlined data, signals, indicators, & expert alerts boost your trading success.
+                    </div>
+                </div>
+                <div class="whyNeoBox">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px]">Time Saved</div>
+                    <div class="text-white lg:text-xl text-[18px] font-normal font-aileron lg:leading-7 leading-6 lg:tracking-wide mt-4">
+                        Readymade dashboard & heatmap provide a daily market view, thus saving time.
+                    </div>
+                </div>
+                
+                <div class="whyNeoBox">
+                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px]">Effort Reduced</div>
+                    <div class="text-white lg:text-xl text-[18px] font-normal font-aileron lg:leading-7 leading-6 lg:tracking-wide mt-4">
+                        NeoTrader’s API enables seamless trade execution without any extra effort.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ----------------------------------------------------- Sixth Section Why Testimonial -->
+        <div class="mt-24">
+            <div
+                class="text-white text-center lg:text-[56px] text-4xl font-semibold lg:leading-[62.40px] leading-[46.80px] font-poppins mt-20 lg:mb-5 mb-10">
+                Hear From Our <span class="text-[#FDDC1F]"> Swing Traders</span>
+            </div>
+
+            <div class="testimonial testimonial-carousel">
+                <div class="testimonial-slide  mb-2 lg:mb-12">
+                    <div class="lg:w-1/2">
+                        <div class="video-container" id="videoContainer1">
+                            <img src="/images/swingTest1.png" alt="Thumbnail"
+                                class="thumbnail rounded-[20px] mx-auto w-full lg:w-[527px] lg:h-[313px] lg:mt-0 my-7 object-contain cursor-pointer"
+                                onclick="playVideo('videoContainer1', 'youtubeIframe1')">
+                            <!-- You can replace the following YouTube URL with your actual embed URL -->
+                            <iframe id="youtubeIframe1"
+                                src="https://www.youtube.com/embed/RpM4bpUlONc?si=yYxJrczOU4JnCpuq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 lg:px-8 my-0 lg:my-auto space-y-3 lg:space-y-8">
+                        <img src="/images/quates.png" alt="Additional Image" class="block" />
+                        <p class="text-white font-aileron font-normal tracking-wider lg:text-[20px] text-base">
+                            "Before diving into the diverse stock market, I sought knowledge and found NeoTrader and Dr.
+                            CK Narayan. His webinars provided valuable insights into stock market analysis. NeoTrader,
+                            curated by Dr. CK Narayan, includes essential features like recommended indicators and
+                            strategic investment tips. A year's subscription has proven incredibly beneficial on my
+                            trading journey."
+                        </p>
+                        <div class="font-poppins text-[20px] font-semibold">
+                            <h3 class="text-xl font-bold text-white">Angad Singh,</h3>
+                            <p class="text-[#FDDC1F] lg:mb-2">A Swing Trader</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide  mb-2 lg:mb-12">
+                    <div class="lg:w-1/2">
+                        <div class="video-container" id="videoContainer2">
+                            <img src="/images/swingTest2.png" alt="Thumbnail"
+                                class="thumbnail rounded-[20px] mx-auto w-full lg:w-[527px] lg:h-[313px] lg:mt-0 my-7 object-contain cursor-pointer"
+                                onclick="playVideo('videoContainer2', 'youtubeIframe2')">
+                            <!-- You can replace the following YouTube URL with your actual embed URL -->
+                            <iframe id="youtubeIframe2"
+                                src="https://www.youtube.com/embed/oNynBxQ-xso?si=PAa5yVc5sd4DNQNe"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 lg:px-8 my-0 lg:my-auto space-y-3 lg:space-y-8">
+                        <img src="/images/quates.png" alt="Additional Image" class="block" />
+                        <p class="text-white font-aileron font-normal tracking-wider lg:text-[20px] text-base">
+                            "The training provided by Mr. Raja Venkataraman and NeoTrader has elevated and transformed
+                            my trading experience. The performance in multiday trading has been truly remarkable. I've
+                            shared approximately seven to eight trades over the past two months, and every single one
+                            has been a success. A big thank you to NeoTrader!"
+                        </p>
+                        <div class="font-poppins text-[20px] font-semibold">
+                            <h3 class="text-xl font-bold text-white">Sahil Parikh,</h3>
+                            <p class="text-[#FDDC1F] lg:mb-2">A Swing Trader</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide  mb-2 lg:mb-12">
+                    <div class="lg:w-1/2">
+                        <div class="video-container" id="videoContainer3">
+                            <img src="/images/swingTest3.png" alt="Thumbnail"
+                                class="thumbnail rounded-[20px] mx-auto w-full lg:w-[527px] lg:h-[313px] lg:mt-0 my-7 object-contain cursor-pointer"
+                                onclick="playVideo('videoContainer3', 'youtubeIframe3')">
+                            <!-- You can replace the following YouTube URL with your actual embed URL -->
+                            <iframe id="youtubeIframe3"
+                                src="https://www.youtube.com/embed/fe1KdR1ajIg?si=e5ZxBUyuyl_O6AMF"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 lg:px-8 my-0 lg:my-auto space-y-3 lg:space-y-8">
+                        <img src="/images/quates.png" alt="Additional Image" class="block" />
+                        <p class="text-white font-aileron font-normal tracking-wider lg:text-[20px] text-base">
+                            "I came across a post by NeoTrader on Instagram, liked its concept, and decided to explore
+                            further. I attended their courses and subscribed to their software. After using it, I find
+                            it very useful for traders like us. You receive ready-made trades, and you can create
+                            watchlists based on various technical analyses, which prove to be very helpful. I have been
+                            using NeoTrader for the past two weeks and have already gained more than 20K in profit."
+                        </p>
+                        <div class="font-poppins text-[20px] font-semibold">
+                            <h3 class="text-xl font-bold text-white">Aniket Bhise,</h3>
+                            <p class="text-[#FDDC1F] lg:mb-2">A Swing Trader</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------------- Seventh Section FAQ -->
+        <div class="mt-20">
+            <div class="text-white text-center text-5xl font-semibold font-poppins leading-[62.40px]">FAQ’s</div>
+
+            <div class="mt-10">
+                <div class="accordion" id="accordion1">
+                    <div class="accordion-item">
+                        <div class="">
+                            <div class=" flex lg:justify-between" onclick="toggleAccordion('item1')">
+                                <div class=" accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] lg:leading-relaxed tracking-wider"
+                                    data-id="item1">
+                                    <span
+                                        class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider  mr-5 lg:mr-10">
+                                        01</span> Can I trade directly from NeoTrader?
+                                </div>
+                                <div class="flex-container">
+                                    <img src="" alt="" class="faq-img  " />
+                                </div>
+                            </div>
+
+                            <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                                id="item1">
+                                Yes, we have one one-click trade execution feature with leading brokers. All you
+                                need to
+                                do is log in once a day, and then you can place your trades into your demat
+                                account
+                                directly from NeoTrader software.
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+
+                </div>
+                <div class="accordion" id="accordion2">
+                    <div class="accordion-item">
+                        <div class="flex lg:justify-between" onclick="toggleAccordion('item2')">
+                            <div class="accordion-title lg:text-2xl text-[16px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item2">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider  mr-5 lg:mr-10">
+                                    02</span>Do I need to know Algorithmic/Algo Trading to work with NeoTrader?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item2">
+                            Not at all! Even a complete novice in the market with access to a computer can use
+                            NeoTrader effectively. The design and the output have made any knowledge of
+                            algorithms,
+                            etc., unnecessary as it deliver completely processed information to the user.
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion" id="accordion3">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item3')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item3">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5  lg:mr-10">
+                                    03</span>Do I need to know Technical analysis to work with NeoTrader?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto w-[70px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item3">
+                            Not necessary. NeoTrader delivers the outputs of crunching technical variables using
+                            different sets of technical analysis-based strategies designed by us in a
+                            ready-to-use
+                            format. So, even a layperson with limited knowledge of the markets can also use
+                            NeoTrader.
+                            That said, it is to be added here that NeoTrader’s value can be considerably
+                            enhanced if the
+                            user knows or is familiar with technical analysis. Some features can be tweaked to
+                            individual preferences to design a trading system of one’s own. For those who are
+                            interested, We also provide extensive training in technical analysis. Contact us for
+                            details
+                            on this.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+                </div>
+                <div class="accordion" id="accordion4">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item4')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item4">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    04</span>Do I need a high-quality/high-end Computer/Laptop to run NeoTrader?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[80px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item4">
+                            Not at all. The entire software runs on our servers, and the data is just being
+                            pushed
+                            into the end user's web browser for display. No processing is done at the user end,
+                            and no
+                            data is stored there. Thus, NeoTrader can be accessed from anywhere, anytime, using
+                            any
+                            desktop, laptop, or mobile.
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion" id="accordion5">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item5')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item5">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    05</span>Can I use NeoTrader on my mobile or tablet?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[55px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item5">
+                            While NeoTrader is designed to best work with desktops and laptops, it also works on
+                            tablets
+                            and mobiles. A more definitive version for these devices is currently under testing.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+                </div>
+                <div class="accordion hidden" id="accordion6">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item6')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item6">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    06</span>Do I get charts in NeoTrader?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img " />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item6">
+                            Yes, it offers embedded charts from third-party providers. We also have charts from
+                            Trading
+                            View, one of the best charting platforms in the world. We also provide live
+                            data-based
+                            charts full of Futures, Options, etc, supported through our broking partners.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion hidden" id="accordion7">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item7')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item7">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    07</span> Are the strategies shown on the charts in NeoTrader?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item7">
+                            No. Trading View is an independent service provider with integrated EOD charting
+                            facilities
+                            into NeoTrader. It does not currently permit us to feature our strategies on their
+                            charts.
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+                </div>
+                <div class="accordion hidden" id="accordion8">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item8')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item8">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    08</span>Why don’t you have your own charts in NeoTrader?
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item8">
+                            This is a development under consideration at the moment. However, there are so many
+                            choices
+                            available currently for charting that loading the program with a chart module makes
+                            it
+                            heavier and delays processing some. However, we are certainly looking at some light
+                            charting
+                            solutions that may get included in future updates of NeoTrader
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion hidden" id="accordion9">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item9')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item9">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    09</span> Is there a NeoTrader app?
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img " />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item9">
+                            Currently, we are working on delivering NeoTrader's content through a mobile
+                            application. It
+                            should be ready in the near future.
+
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+                </div>
+                <div class="accordion hidden" id="accordion10">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item10')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item10">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    10</span>Does it generate reports that I can print?
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[55px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item10">
+                            No. Currently, all information is displayed on the screen. You can, of course,
+                            copy-paste it
+                            into your preferred format.
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion hidden" id="accordion11">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item11')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item11">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    11</span> Can I save the data for later use and study?
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img w-[60px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item11">
+                            No. At the moment, this feature is not available.
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+                </div>
+                <div class="accordion hidden" id="accordion12">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item12')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item12">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    12</span>Will you take requests for customisation of the product?
+
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item12">
+                            Certainly. We believe feedback from users is the best way to improve the program.
+                            The
+                            feasible ones can certainly be incorporated.
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion hidden" id="accordion13">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item13')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item13">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    13</span> Can I use NeoTrader on different devices at the same time?
+
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item13">
+                            A: One subscription allows you to log in from anywhere and on any device only once.
+                            Logging
+                            in elsewhere will log out the current user. For multiple logins, you will have to
+                            purchase
+                            additional subscriptions.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+                </div>
+                <div class="accordion hidden" id="accordion14">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item14')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item14">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    14</span> How can I use multiple logins if I am a corporate?
+
+
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img w-[60px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item14">
+                            For corporate clients, we can create multiple logins under a common ID. This is
+                            charged
+                            differently from a retail subscription. Please get in touch with us at
+                            support@neotrader.in
+                            regarding the same.
+
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion hidden" id="accordion15">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item15')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item15">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    15</span> Can I get training on the different methods used in NeoTrader?
+
+
+
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item15">
+                            On subscribing, you get full training on the usage of the program and its many
+                            features. We
+                            have many training videos listed on every NeoTrader page that you can watch.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion hidden" id="accordion16">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item16')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item16">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    16</span> What is the support that I can get for NeoTrader usage?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[65px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item16">
+                            When you join as a member, you get full training on the usage of the program, its
+                            many
+                            features and how to use them effectively. We have technology support via dedicated
+                            phone
+                            lines and a WhatsApp helpdesk standing by during normal working hours every day. We
+                            also
+                            have market experts standing by to help you through difficulties in understanding of
+                            the
+                            methods and technical analysis issues. Support is available through email, chat as
+                            well as
+                            phone.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+                <div class="accordion hidden" id="accordion17">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item17')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item17">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    17</span> What if my system crashes? Will I get a reinstallation?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[65px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item17">
+                            No Problem. There is no program to install since this is cloud-based. Hence, it is
+                            independent of the working of your individual machine. You can simply log in from
+                            anywhere
+                            you want.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+
+                </div>
+                <div class="accordion hidden" id="accordion18">
+                    <div class="accordion-item">
+                        <div class="flex justify-between" onclick="toggleAccordion('item18')">
+                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
+                                data-id="item18">
+                                <span
+                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
+                                    18</span> Where can I get more information on NeoTrader?
+                            </div>
+                            <div class="">
+                                <img src="" alt="" class="faq-img  w-[60px] lg:w-auto" />
+                            </div>
+                        </div>
+                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
+                            id="item18">
+                            You can go to neotrader.in to find out more details about the program, see details
+                            on
+                            different features, take a small demo tour or check out some of our videos on the
+                            program.
+                            Pricing, support, subscription details, etc., are also on the site. You can also
+                            call us at
+                            +91-8779800688/8169111411 or email support@neotrader.in to get an executive to demo
+                            the
+                            program if you are a corporate client. Our support team at the office is standing by
+                            to
+                            answer all the queries you may have.
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-400 my-5"></div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <button id="viewAllBtn"
+                    class="mx-auto w-[115px] h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-[18px] font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all whitespace-nowrap">
+                    View All
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ----------------------------------------------------- Eighth Section CTA  -->
+        <div class="">
+            <div id="" class="baseType2 lg:px-16 lg:py-5">
+                <div
+                    class="lg:flex lg:space-x-0 space-x-10 lg:items-start items-center lg:justify-start justify-center">
+                    <div class="onePart flex flex-col lg:items-start justify-center items-center lg:w-[60%]">
+                        <div
+                            class="text-white lg:text-left text-center lg:text-5xl text-[1.6rem] font-bold font-poppins lg:leading-[62.40px] leading-tight lg:mt-5">
+                            Unlock your Trading <br />Potential with NeoTrader!
+                        </div>
+                        <div class="mt-4">
+                            <div
+                                class="lg:text-left text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-relaxed leading-tight tracking-wider">
+                                Get ready-made trades, pre processed analysis from multiple indicators , scoring and
+                                ranking on stocks and indices.
+                            </div>
+                            <div
+                                class="lg:text-left text-center text-white text-xl font-semibold font-poppins leading-relaxed tracking-wider lg:mt-2 mt-7">
+                                Ab Smart Trading Hoga Easy!</div>
+                        </div>
+                        <a href="signin.html">
+                            <button
+                                class="lg:mt-6 mt-7 w-[180px] h-[58px] px-8 py-4 rounded-[50px] border border-white justify-center items-center gap-3 inline-flex text-white text-xl font-bold whitespace-nowrap font-poppins leading-relaxed tracking-wide hover:bg-white hover:text-black">Join
+                                Today
+                            </button>
+                        </a>
+
+                    </div>
+                    <div class="twoPart lg:w-[60%] w-[100%]">
+                        <img src="/images/ctaImg2.png" alt="" class="w-auto lg:ml-0 lg:mt-0 -ml-10 mt-5 ">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------------- Footer Starts -->
+        <footer class="mt-16">
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col  lg:flex-col items-start lg:justify-normal justify-between">
+                    <img src="./images/footer-logo.svg" alt="" class="">
+                    <!-- <img src="./images/footer-logo-mobile.svg" alt="" class="lg:hidden block"> -->
+                    <div class="flex space-x-4 cursor-pointer lg:mt-5 lg:mb-0 mb-4">
+                        <a href="https://www.linkedin.com/company/neo-trader/" target="_blank"
+                            rel="noopener noreferrer"> <img src="/images/contact/linkedIn.png" alt=""
+                                class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.instagram.com/neotrader.in/" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/contact/insta.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.facebook.com/NeoTrader.in" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/contact/facebook.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://twitter.com/NeoTrader_in" target="_blank" rel="noopener noreferrer"> <img
+                                src="/images/contact/twiter.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        <a href="https://www.youtube.com/@NeoTrader" target="_blank" rel="noopener noreferrer"> <img
+                                src="/images/contact/ytIcon.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="custom-accordion mt-5" id="accordion1">
+                    <div class="custom-accordion-item">
+                        <div class="custom-accordion-header text-white text-xl lg:text-2xl font-medium font-poppins">
+                            Company <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-3">
+                            <a href="about.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">About
+                                Us</a>
+                            <a href="blogs.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Blogs</a>
+                            <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Careers</a>
+                            <a href="terms-and-conditions.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Terms
+                                & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion" id="accordion2">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                            Trading Types <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content  space-y-2 mt-2">
+                            <a href="index-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Index
+                            </a>
+                            <a href="intraday.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Intraday</a>
+
+                            <a href="option.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Options</a>
+                            <a href="swing-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Swing</a>
+                            <a href="positional-trading.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Positional</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion" id="accordion3">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white text-xl mt-5 lg:mt-0 lg:text-2xl font-medium font-poppins">
+                            Product Offerings <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-2">
+                            <a href="https://software.neotrader.in/"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">AI
+                                Trading Software</a>
+                            <a href="courses.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Courses</a>
+                            <a href="pricing.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Pricing
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-accordion mb-5" id="accordion4">
+                    <div class="custom-accordion-item">
+                        <div
+                            class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                            Support <span class="custom-accordion-icon">+</span></div>
+                        <div class="custom-accordion-content space-y-2 mt-2">
+                            <a href="contact.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Contact
+                                Us</a>
+                            <a href="faq.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">FAQ’s
+                            </a>
+                            <a href="https://neotraderskb.tawk.help/" target="_blank"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Knowledge
+                                Base
+                            </a>
+                            <a href="youtube-links.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                YouTube Links
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- for desktop -->
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Company</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="about.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                About Us
+                            </div>
+                        </a>
+                        <a href="blogs.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Blogs
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Careers
+                            </div>
+                        </a>
+                        <a href="terms-and-conditions.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Terms & Conditions
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Trading Types</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="index-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Index
+                            </div>
+                        </a>
+                        <a href="intraday.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Intraday
+                            </div>
+                        </a>
+
+                        <a href="option.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Options
+                            </div>
+                        </a>
+                        <a href="swing-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Swing
+                            </div>
+                        </a>
+                        <a href="positional-trading.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Positional
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Product Offerings</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="https://software.neotrader.in/">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                AI Trading Software
+                            </div>
+                        </a>
+                        <a href="courses.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Courses
+                            </div>
+                        </a>
+                        <a href="pricing.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Pricing Details
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden">
+                    <div class="text-white text-2xl font-medium font-poppins">Support</div>
+                    <div class="flex flex-col space-y-2 mt-4">
+                        <a href="contact.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Contact Us
+                            </div>
+                        </a>
+
+                        <a href="faq.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                FAQ’s
+                            </div>
+                        </a>
+
+                        <a href="https://neotraderskb.tawk.help/" target="_blank">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Knowledge Base
+                            </div>
+                        </a>
+                        <a href="youtube-links.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                YouTube Links
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-8 pb-5">
+                <div class="text-white text-xl lg:font-semibold font-medium font-aileron leading-[30px] tracking-wide">
+                    Disclaimer:
+                    <span class="text-[18px] font-normal font-aileron lg:leading-[30px] tracking-wide">Investments
+                        in securities market are subject to market risks, read all the related documents carefully
+                        before investing. Brokerage will not exceed SEBI prescribed limit. The securities are quoted
+                        as an example and not as a recommendation. <br /><span class="font-semibold"> SEBI Registration</span></span><span
+                        class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                    </span><span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
+                        Name: NeoTrader | RA No. INH000002285 </span><span
+                        class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                    </span>
+                    <a href="disclaimer.html"><span
+                            class="text-blue-700 text-xl font-normal font-aileron leading-[30px] tracking-wide cursor-pointer">Read
+                            more</span></a>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdowns = document.querySelectorAll('.group');
+            var delayTimeout;
+            var activeDropdown = null;
+
+            function closeAllDropdowns() {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.absolute');
+                    dropdownContent.style.display = 'none';
+                });
+                activeDropdown = null;
+            }
+
+            dropdowns.forEach(function (dropdown) {
+                var dropdownContent = dropdown.querySelector('.absolute');
+
+                dropdown.addEventListener('mouseenter', function () {
+                    clearTimeout(delayTimeout);
+                    if (activeDropdown !== dropdown) {
+                        closeAllDropdowns();
+                    }
+                    dropdownContent.style.display = 'block';
+                    activeDropdown = dropdown;
+                });
+
+                dropdown.addEventListener('mouseleave', function (event) {
+                    if (!dropdownContent.contains(event.relatedTarget)) {
+                        delayTimeout = setTimeout(function () {
+                            dropdownContent.style.display = 'none';
+                        }, 200);
+                    }
+                });
+
+                dropdown.addEventListener('click', function (event) {
+                    clearTimeout(delayTimeout);
+                    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                closeAllDropdowns();
+            });
+        });
+
+        function showMenu() {
+            var menuCard = document.getElementById("menuCard");
+            menuCard.classList.toggle("hidden")
+        }
+
+        function showDropMenu(dropdownId) {
+            var toggle = document.querySelector('#' + dropdownId + ' .dropdown-toggle');
+            var dropMenu = document.querySelector('#' + dropdownId + ' .dropdownMenu-toggle');
+            var img1 = document.querySelector('#' + dropdownId + ' .dropdown-img-1');
+            var img2 = document.querySelector('#' + dropdownId + ' .dropdown-img-2');
+
+            // If the dropdown is currently open, close it
+            if (toggle.classList.contains('activeBlue')) {
+                toggle.classList.remove('activeBlue');
+                toggle.classList.add('activeWhite');
+                dropMenu.classList.remove('dropMenuShow');
+                dropMenu.classList.add('dropMenuHide');
+                img1.style.display = 'block';
+                img2.style.display = 'none';
+            } else { // Otherwise, open it
+                // Close all other dropdowns
+                var allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function (dropdown) {
+                    var otherToggle = dropdown.querySelector('.dropdown-toggle');
+                    var otherDropMenu = dropdown.querySelector('.dropdownMenu-toggle');
+                    var otherImg1 = dropdown.querySelector('.dropdown-img-1');
+                    var otherImg2 = dropdown.querySelector('.dropdown-img-2');
+
+                    otherToggle.classList.remove('activeBlue');
+                    otherToggle.classList.add('activeWhite');
+                    otherDropMenu.classList.remove('dropMenuShow');
+                    otherDropMenu.classList.add('dropMenuHide');
+                    otherImg1.style.display = 'block';
+                    otherImg2.style.display = 'none';
+                });
+
+                // Open the selected dropdown
+                toggle.classList.remove('activeWhite');
+                toggle.classList.add('activeBlue');
+                dropMenu.classList.remove('dropMenuHide');
+                dropMenu.classList.add('dropMenuShow');
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            }
+        }
+
+
+
+        // Testimoal section
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll(".testimonial-slide");
+            const dotsContainer = document.querySelector(".carousel-dots");
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide) => (slide.style.display = "none"));
+                slides[index].style.display = "flex";
+            }
+
+            function updateDots(index) {
+                const dots = document.querySelectorAll(".carousel-dot");
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("active-dot", i === index);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+                updateDots(currentSlide);
+            }
+
+            // Create dots based on the number of slides
+            for (let i = 0; i < slides.length; i++) {
+                const dot = document.createElement("div");
+                dot.classList.add("carousel-dot");
+                dot.addEventListener("click", () => {
+                    currentSlide = i;
+                    showSlide(currentSlide);
+                    updateDots(currentSlide);
+                });
+                dotsContainer.appendChild(dot);
+            }
+
+            // Show the first slide and set the interval for automatic slide change
+            showSlide(currentSlide);
+            updateDots(currentSlide);
+            // setInterval(nextSlide, 5000); // Change slide every 5 seconds (adjust as needed)
+        });
+
+        function playVideo(containerId, iframeId) {
+            var container = document.getElementById(containerId);
+            var iframe = document.getElementById(iframeId);
+            var thumbnail = container.querySelector('.thumbnail');
+
+            // Hide the image and show the YouTube video iframe
+            thumbnail.style.display = 'none';
+            iframe.style.display = 'block';
+        }
+
+        // For FAQ
+        function toggleAccordion(itemId) {
+            var item = document.getElementById(itemId);
+            var allItems = document.querySelectorAll('.accordion-content');
+            var accordionTitles = document.querySelectorAll('.accordion-title');
+            var flexContainerImgs = document.querySelectorAll(".faq-img");
+
+            if (item.style.display === "block") {
+                item.style.display = "none";
+
+                for (var i = 0; i < flexContainerImgs.length; i++) {
+                    flexContainerImgs[i].src = "/images/faq/downArrow.png";
+                }
+
+                // Set opacity for hidden content wrappers
+                allItems.forEach(function (otherItem) {
+                    if (otherItem.id !== itemId) {
+                        otherItem.style.display = "none";
+                    }
+
+                });
+
+                // Set opacity for hidden accordion titles
+                accordionTitles.forEach(function (title) {
+                    if (title.getAttribute('data-id') !== itemId) {
+                        title.style.opacity = 0.5;
+                    }
+
+                });
+
+            } else {
+                item.style.display = "block";
+                item.style.opacity = 1;
+
+                allItems.forEach(function (otherItem) {
+                    if (otherItem.id !== itemId) {
+                        otherItem.style.display = "none";
+                        otherItem.style.opacity = 0.5;
+                    }
+                });
+
+                accordionTitles.forEach(function (title) {
+                    title.style.opacity = (title.getAttribute('data-id') === itemId) ? 1 : 0.5;
+                });
+
+                for (var i = 0; i < flexContainerImgs.length; i++) {
+                    if (i === Number(itemId.split('item')[1]) - 1) {
+                        flexContainerImgs[i].src = "/images/faq/upArrow.png";
+                    } else {
+                        flexContainerImgs[i].src = "/images/faq/downArrow.png";
+                    }
+                }
+            }
+        }
+
+        // Call toggleAccordion to initially display the first accordion item
+        document.addEventListener("DOMContentLoaded", function () {
+            toggleAccordion("item1");
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const viewAllBtn = document.getElementById('viewAllBtn');
+            const hiddenItems = document.querySelectorAll('.hidden');
+
+            viewAllBtn.addEventListener('click', function () {
+                // Toggle the 'hidden' class for each hidden item
+                hiddenItems.forEach(item => {
+                    item.classList.toggle('hidden');
+                });
+
+                // Update the button text based on the current state
+                const buttonText = viewAllBtn.innerText === 'View All' ? 'Show Less' : 'View All';
+                viewAllBtn.innerText = buttonText;
+            });
+        });
+
+
+
+
+
+
+
+
+        const words = ["Multiday", "Swing"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const word = words[wordIndex];
+            const element = document.getElementById("typewriter");
+            const staticWord = document.querySelector(".static-word");
+
+            if (isDeleting) {
+                element.textContent = word.substring(0, charIndex - 1);
+            } else {
+                element.textContent = word.substring(0, charIndex + 1);
+            }
+
+            if (isDeleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === word.length + 1) {
+                isDeleting = true;
+                setTimeout(() => type(), 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(() => type(), 500);
+            } else if (!isDeleting && charIndex === word.length) {
+                setTimeout(() => type(), 500);
+            } else {
+                setTimeout(() => type(), 100);
+            }
+
+            // Adjust the position to start showing "Trading" after "Multiweek" and "Positional"
+            // staticWord.style.marginLeft = element.offsetWidth + "px";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            type();
+        });
+
+        // auto Scroll
+        const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
+
+        scrollContainers.forEach((container) => {
+            const scrollWidth = container.scrollWidth;
+            let isScrollingPaused = false;
+            let isMouseDown = false;
+            let startX;
+            let clickCount = 0;
+            let isAnimating = false;
+
+            window.addEventListener("load", () => {
+                self.setInterval(() => {
+                    if (isScrollingPaused || isMouseDown || isAnimating) {
+                        return;
+                    }
+
+                    const first = container.querySelector("article");
+
+                    if (!isElementInViewport(first)) {
+                        container.appendChild(first);
+                        container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
+                    }
+                    if (container.scrollLeft !== scrollWidth) {
+                        container.scrollTo(container.scrollLeft + 1, 0);
+                    }
+                }, 15);
+            });
+
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return rect.right > 0;
+            }
+
+            function pauseScrolling() {
+                isScrollingPaused = true;
+            }
+
+            function resumeScrolling() {
+                isScrollingPaused = false;
+            }
+
+            function smoothScrollTo(targetX) {
+                isAnimating = true;
+                const startX = container.scrollLeft;
+                const duration = 500; // Set the duration of the animation in milliseconds
+                const startTime = performance.now();
+
+                function step(currentTime) {
+                    const timeElapsed = currentTime - startTime;
+                    container.scrollLeft = easeInOutQuad(timeElapsed, startX, targetX - startX, duration);
+
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(step);
+                    } else {
+                        isAnimating = false;
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            container.addEventListener("mousedown", (e) => {
+                if (e.detail === 1) {
+                    clickCount = 0;
+                    isMouseDown = true;
+                    startX = e.pageX - container.offsetLeft;
+                    container.style.cursor = "grabbing";
+                }
+            });
+
+            container.addEventListener("mouseup", () => {
+                if (isMouseDown) {
+                    clickCount++;
+                    if (clickCount === 1) {
+                        const endX = container.scrollLeft;
+                        smoothScrollTo(endX);
+                    }
+                    container.style.cursor = "grab";
+                }
+            });
+
+            container.addEventListener("mouseleave", () => {
+                if (isMouseDown) {
+                    isMouseDown = false;
+                    const endX = container.scrollLeft;
+                    smoothScrollTo(endX);
+                    container.style.cursor = "grab";
+                }
+            });
+
+            container.addEventListener("mousemove", (e) => {
+                if (!isMouseDown) return;
+                const x = e.pageX - container.offsetLeft;
+                container.scrollLeft = x;
+            });
+
+            const allArticles = container.querySelectorAll("article");
+            for (let article of allArticles) {
+                article.addEventListener("mouseenter", pauseScrolling);
+                article.addEventListener("mouseleave", resumeScrolling);
+            }
+        });
+
+        // Footer Accordain
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionIDs = ['#accordion1', '#accordion2', '#accordion3', '#accordion4'];
+
+            accordionIDs.forEach(id => {
+                const accordionHeaders = document.querySelectorAll(`${id} .custom-accordion-header`);
+
+                accordionHeaders.forEach(header => {
+                    header.addEventListener('click', function () {
+                        const accordionItem = this.parentNode;
+                        accordionItem.classList.toggle('active');
+                        const icon = this.querySelector('.custom-accordion-icon');
+                        icon.textContent = accordionItem.classList.contains('active') ? '-' : '+';
+                    });
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

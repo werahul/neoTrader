@@ -1,0 +1,604 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Aileron';
+    /* src: url('./assets/fonts/Aileron-Font/Aileron-Regular.otf') format('opentype'); */
+    src: url('/fonts/Aileron-Font/Aileron-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.max-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+}
+
+.group .absolute {
+    background-color: #1F212C;
+    /* border: 1px solid wheat; */
+    width: 200px;
+    font-family: 'Aileron';
+    animation: glide 0.3s linear;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes glide {
+    0% {
+        opacity: 0.2;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.group:hover .absolute {
+    display: block;
+}
+
+.home-bg {
+    background-image: url("/images/homeBg.png");
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: top;
+
+}
+
+.contact-bg {
+    background-image: url("/images/contact/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.tnc-bg {
+    background-image: url("/images/tncBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: auto;
+}
+
+.partTwo {
+    background-image: url("/images/contact/vikascenter.png");
+    background-position: top;
+    background-size: conver;
+    background-repeat: no-repeat;
+    height: 580px;
+    border-radius: 0 20px 20px 0;
+}
+
+.animate-float {
+    animation: floating 8s infinite ease-in-out;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+button {
+    display: flex;
+    justify-content: space-x-2;
+    border: 1px solid white;
+    width: 44px;
+    height: 14px;
+    padding: 8px;
+    border-radius: 50px;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+} */
+
+.inactive-button {
+    opacity: 0.7;
+    /* Adjust the opacity as needed */
+}
+
+.content {
+    display: none;
+    margin-top: 20px;
+}
+
+.content .active {
+    display: block;
+}
+
+/* Add your CSS styles here */
+
+
+.button-container button {
+    opacity: 0.7;
+    /* Set initial opacity for all buttons */
+}
+
+.button-container button.active {
+    opacity: 1;
+    /* Set opacity for the active button */
+}
+
+.hidden {
+    display: none;
+}
+
+.boxBg {
+    border: 1px solid rgba(219, 219, 219, 0.50);
+    background: linear-gradient(180deg, rgba(0, 61, 238, 0.24) 0%, rgba(19, 22, 35, 0.00) 100%);
+}
+
+#typewriter-text {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000;
+    font-size: 28px;
+    color: #FDDC1F;
+    font-weight: 700;
+    font-family: 'Aileron';
+    letter-spacing: 2px;
+    width: auto;
+}
+
+.baseType1 {
+    background-image: url("/images/typesBase1.svg");
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: contain;
+    width: 100%;
+    padding: 20px;
+}
+
+.baseType2 {
+    background-image: url("/images/typesBase2.png");
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: contain;
+    width: 100%;
+    padding: 20px 20px;
+    margin-top: 120px;
+}
+
+/* Auto Scroll 6th Section */
+#imageContainer {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.scrollingImages {
+    display: inline-block;
+    margin-right: 20px;
+    /* Adjust the margin as needed */
+}
+
+/* Testimanial --- */
+.video-container {
+    position: relative;
+
+    /* overflow: hidden; */
+    /* max-width: 100%; */
+}
+
+.video-container img {
+    width: 527px;
+    height: 313px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.video-container iframe {
+    /* position: absolute; */
+    top: 0;
+    left: 6%;
+    width: 510px;
+    height: 310px;
+    border: 0;
+    border-radius: 20px;
+    display: none;
+    /* padding-bottom: 56.25%; */
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.testimonial-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 48px;
+    left: 70%;
+    z-index: 20;
+    /* transform: translateX(-50%); */
+    display: flex;
+    color: white;
+    /* border: 1px solid #3498db; */
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: transparent;
+    border: 1px solid #3498db;
+}
+
+.active-dot {
+    border-color: #3498db;
+    background-color: #3498db;
+}
+
+/* .content-container div{
+    animation: slide .4s linear;
+    
+}
+
+@keyframes slide {
+
+    0%{
+        opacity: 0.2;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+} */
+
+/* autoScroll */
+.container {
+    width: 100vw;
+    overflow-x: hidden;
+    white-space: nowrap;
+    /* background-color: #fff; */
+    display: flex;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    align-items: center;
+}
+
+.scroll-disabler {
+    width: 100vw;
+    height: 450px;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.0001); */
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+article {
+    min-width: 291px;
+    height: auto;
+    padding: 1rem;
+}
+.article-img {
+    min-width: 200px;
+    height: auto;
+    padding: 1rem;
+    margin: 0 10px;
+}
+
+article .wrapper {
+    padding: 0.3rem;
+    /* background-color: #fff; */
+    height: auto;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+    /* border-radius: 25px; */
+}
+
+article .img {
+    height: auto;
+    object-fit: contain;
+    /* background-color: lightgray; */
+    /* border-radius: 25px 25px 0 0; */
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10); */
+}
+
+.mixBlend {
+    /* border-radius: 442.34px; */
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 619.863px;
+    background: #042075;
+    filter: blur(50px);
+    z-index: 30;
+
+}
+
+.mixBlend img {
+    z-index: 20;
+}
+
+
+.about-bg {
+    background-image: url("/images/about/aboutBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+
+.lineBg {
+    background: linear-gradient(180deg, #003DEE 0%, #2AD9D5 97.75%);
+}
+
+
+
+.hrBg {
+    background: linear-gradient(180deg, #003DEE 0%, #2AD9D5 100%);
+
+}
+
+.button-container button {
+    color: #acacac;
+}
+
+
+
+.button-container button .dots {
+    background-color: #acacac;
+}
+
+.button-container button .dot {
+    background-color: #003dee;
+}
+
+
+
+.button-container button.active {
+    color: #003Dee;
+}
+
+@media (max-width: 480px) {
+    .contact-bg {
+        background-image: url("/images/contact/Background-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .contact-bg {
+        background-image: url("/images/contact/Background-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+
+    .home-bg {
+        background-image: url("/images/contact/Background-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+
+    }
+
+    .baseType1 {
+        background-image: url("/images/typesBase1-mobile.svg");
+        background-repeat: no-repeat;
+        height: auto;
+        background-size: cover;
+        width: 100%;
+        /* padding: 20px; */
+        border-radius: 20px;
+    }
+
+    .testimonial-slide {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .video-container img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .carousel-dots {
+        position: absolute;
+        bottom: 0px;
+        /* left: 42%; */
+        z-index: 20;
+        transform: translateX(-100%);
+        display: flex;
+        color: white;
+        /* border: 1px solid #3498db; */
+    }
+
+    .video-container iframe {
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        border: 0;
+        border-radius: 20px;
+        display: none;
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+        width: 100%;
+        height: 240px;
+    }
+    .baseType2 {
+        background-image: url("/images/typesBase2-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 676px;
+        padding: 45px 10px;
+        border-radius: 16px;
+    }
+
+    #typewriter-text {
+        border: none; 
+        font-size: 20px;
+        color: #FDDC1F;
+        font-weight: 700;
+        font-family: 'Aileron';
+        letter-spacing: 2px;
+        width: auto;
+        letter-spacing: -0.025em;
+    }
+    .mixBlend {
+        /* border-radius: 442.34px; */
+        width: 350px;
+        height: 350px;
+        flex-shrink: 0;
+        border-radius: 619.863px;
+        background: #042075;
+        filter: blur(50px);
+        z-index: 30;
+    
+    }
+}
+
+@media (max-width: 768px) {
+    .partTwo {
+        border-radius: 20px 20px 20px 20px;
+    }
+}
+
+/* Your existing CSS styles for the custom accordion */
+.custom-accordion-content {
+    display: none;
+    /* Initially hide accordion content */
+    color: white;
+    /* Set text color to white */
+    font-size: 16px;
+    /* Set font size to 16px */
+    padding: 10px;
+    /* Add padding for better spacing */
+}
+
+.custom-accordion-icon {
+    float: right;
+}
+
+/* Additional styles for the expanded state */
+.custom-accordion-item.active .custom-accordion-content {
+    display: flex;
+    /* Show accordion content */
+    flex-direction: column;
+    /* Set content to display in a column */
+}
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+    .custom-accordion {
+        display: none;
+        /* Hide custom accordion on desktop */
+    }
+
+    .custom-accordion-item {
+        display: block !important;
+        /* Ensure custom accordion items are displayed normally */
+    }
+
+    .custom-accordion-content {
+        display: block !important;
+        /* Ensure custom accordion content is displayed normally */
+    }
+}
+
+.activeWhite{
+    color: white;
+}
+.activeBlue{
+    color: #003DEE;
+}
+.dropdown-toggle {
+    cursor: pointer;
+}
+.dropMenuHide{
+    display: none;
+}
+.dropMenuShow{
+    color: white;
+    margin-left: 40px;
+    display: block;
+}
+
+.dropdown-img-2{
+    display: none;
+}
+.bgDropFillter{
+    backdrop-filter: blur(10px);
+}
+
+.boxShadow{
+    box-shadow: 0px 0px 10px white;
+}
+
+/* Target the whole scrollbar */
+.buttonMains::-webkit-scrollbar {
+    width: 4px;
+    height: 6px; /* Width of the scrollbar */
+  }
+  
+  /* Handle on the scrollbar */
+  .buttonMains::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners of the scrollbar handle */
+    height: 2px;
+    width: 2px;
+    
+  }
+  
+  /* Handle on hover */
+  .buttonMains::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the scrollbar handle on hover */
+  }
+  
+  /* Track */
+  .buttonMains::-webkit-scrollbar-track {
+    background: transparent; /* Color of the scrollbar track */
+  }
+  
+  /* Handle when it's pressed */
+  .buttonMains::-webkit-scrollbar-thumb:active {
+    background-color: #666; /* Color of the scrollbar handle when pressed */
+  }
+  
+  /* Corner */
+  .buttonMains::-webkit-scrollbar-corner {
+    background: #f1f1f1; /* Color of the scrollbar corner */
+  }

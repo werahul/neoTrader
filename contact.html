@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Contact Us</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        aileron: ["Aileron", "sans-serif"],
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class=" contact-bg ">
+    <section class="max-container px-5 lg:px-20 ">
+        <!-- ----------------------------------------------------- Navbar Starts -->
+        <nav class="flex items-center justify-between  z-50">
+            <div class="lg:w-[20%] ">
+                <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class="lg:w-[500px]  w-[170px]"></a>
+            </div>
+            <div class="lg:flex hidden lg:space-x-7 lg:ml-28 w-[60%] ">
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Product</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="https://software.neotrader.in/"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
+                            Trading Tool</a>
+                        <a href="courses.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Courses</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Trading</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-2">
+                        <!-- Dropdown Items -->
+                        <a href="index-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Index
+                        </a>
+                        <a href="intraday.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Intraday
+                        </a>
+
+                        <a href="option.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Options
+                        </a>
+                        <a href="swing-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Swing
+                        </a>
+                        <a href="positional-trading.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Positional
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Resources</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="blogs.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
+                        <a href="youtube-links.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Youtube
+                            Links</a>
+                        <a href="https://neotraderskb.tawk.help/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
+                            Base</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="flex space-x-2 items-center cursor-pointer">
+                        <div class="text-white text-lg font-medium font-aileron tracking-wide">Company</div>
+                        <img src="./images/dropdownNav.svg" alt="">
+                    </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute hidden bg-white p-4 mt-2 space-y-4">
+                        <!-- Dropdown Items -->
+                        <a href="/about.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">About
+                            Us</a>
+                        <a href="/faq.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">FAQ's</a>
+                        <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Careers</a>
+                        <a href="/contact.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <a href="pricing.html">
+                    <div class="text-white text-lg font-medium font-aileron tracking-wide cursor-pointer">Pricing
+                    </div>
+                </a>
+
+            </div>
+            <div class=" lg:flex hidden lg:space-x-5 ml-10 w-auto">
+                <a href="signin.html">
+                    <button
+                        class="w-36 h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                        Up
+                    </button>
+                </a>
+                <a href="login.html">
+                    <button
+                        class="w-[110px] h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                        Log In
+                    </button>
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <img src="/images/hamMenu.png" alt="" onclick="showMenu()" class="">
+
+                <div id="menuCard"
+                    class="bgDropFillter absolute left-0 top-0 bg-[#2A2F37] bg-opacity-90 w-full h-screen pb-10 z-10 hidden px-5">
+                    <div class="flex justify-between items-center">
+                        <div class="">
+                            <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class=" w-[170px]"></a>
+                        </div>
+                        <div class="">
+                            <img src="/images/crossHum.svg" alt="" onclick="showMenu()" class="">
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+                        <ul class="list-none ">
+                            <div class="dropdown space-y-3 my-2" id="dropdown1">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown1')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Product</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="https://software.neotrader.in/">
+                                        <li>AI Trading Tool</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="courses.html">
+                                        <li class="mt-3">Courses</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow2">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow2')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Trading</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="index-trading.html">
+                                        <li class="">Index</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="intraday.html">
+                                        <li class="mt-3">Intraday</li>
+                                    </a>
+
+
+                                    <hr class="opacity-40">
+                                    <a href="option.html">
+                                        <li class="mt-3">Options</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="swing-trading.html">
+                                        <li class="mt-3">Swing</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="positional-trading.html">
+                                        <li class="mt-3">Positional</li>
+                                    </a>
+                                    <hr class="opacity-40">
+
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdown3">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdown3')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Resources</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="blogs.html">
+                                        <li>Blogs</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="youtube-links.html">
+                                        <li class="mt-3">Youtube Links</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://neotraderskb.tawk.help/" target="_blank">
+                                        <li class="mt-3">Knowledge Base</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <div class="dropdown space-y-3 my-2" id="dropdow4">
+                                <div class="activeWhite flex justify-between items-center dropdown-toggle"
+                                    onclick="showDropMenu('dropdow4')">
+                                    <li class="text-lg font-medium font-poppins tracking-wider">Company</li>
+                                    <div class="dropdown-icon">
+                                        <img src="/images/dropdownNav.svg" alt="" class="w-4 dropdown-img-1">
+                                        <img src="/images/dropdownNavBlue.svg" alt="" class="w-4 dropdown-img-2">
+                                    </div>
+                                </div>
+
+                                <hr class="opacity-40">
+
+                                <div
+                                    class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
+                                    <a href="about.html">
+                                        <li>About Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="faq.html">
+                                        <li class="mt-3">FAQ’s</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                                        <li class="mt-3">Careers</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                    <a href="contact.html">
+                                        <li class="mt-3">Contact Us</li>
+                                    </a>
+                                    <hr class="opacity-40">
+                                </div>
+                            </div>
+                            <a href="pricing.html">
+                                <li
+                                    class="mt-3 text-white text-lg font-medium font-poppins leading-[18px] tracking-wide">
+                                    Pricing</li>
+                            </a>
+                        </ul>
+
+                        <div class="mt-10 ">
+                            <a href="signin.html">
+                                <button
+                                    class="w-full h-[50px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white ">Sign
+                                    Up
+                                </button>
+                            </a>
+                            <a href="login.html">
+                                <button
+                                    class="mt-5 w-full h-[50px] px-6 py-3 rounded-[50px] border border-white justify-center items-center flex text-white text-xl font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 transition-all">
+                                    Log In
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- ----------------------------------------------------- BreadCrumbs Starts -->
+        <!-- Breadcrumbs Section -->
+        <div class="breadcrumbs flex space-x-2 justify-start items-center mt-10 font-aileron">
+            <a href="/index.html">
+                <div
+                    class="breadcrumb-item text-zinc-500 text-base lg:text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
+                    Home
+                </div>
+            </a>
+            <img src="./images/breadcrumbArrow.svg" alt="Breadcrumb Arrow" class="w-[8px] lg:w-auto">
+            <div
+                class="breadcrumb-item text-zinc-500 text-base lg:text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
+                Company
+            </div>
+            <img src="./images/breadcrumbArrow.svg" alt="Breadcrumb Arrow" class="w-[8px] lg:w-auto">
+            <div
+                class="breadcrumb-item text-white text-base lg:text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
+                Contact Us
+            </div>
+            <img src="./images/breadcrumbArrow-white.svg" alt="Breadcrumb Arrow" class="w-[8px] lg:w-auto">
+        </div>
+
+
+
+        <div class="mt-10  lg:mt-20">
+            <div
+                class="text-center text-white text-[32px] lg:text-[56px] font-semibold font-poppins lg:leading-[72.80px]">
+                Get in
+                <span
+                    class="text-yellow-400 text-[32px] lg:text-[56px] font-semibold font-poppins lg:leading-[72.80px]">Touch</span>
+            </div>
+            <div
+                class="lg:mt-4 mt-4 lg:mb-0  lg: w-full h-[60px] text-center text-white text-lg lg:text-xl font-normal font-aileron lg:leading-7 tracking-wide">
+                If you have any message for us, we will be happy to hear from you! <br class="hidden lg:block" />Share
+                your details and we will
+                get back to you as soon as possible.</div>
+
+            <div class="mt-24 w-full h-auto rounded-[20px] border border-zinc-500">
+                <form action="">
+                    <div class="flex flex-col lg:flex-row">
+                        <div class="partOne lg:w-[70%] px-2 lg:px-10 pt-8">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 font-aileron">
+                                <div class=" text-white flex flex-col">
+                                    <label for="name" class="mb-2"> Full Name</label>
+                                    <input type="text" name="name" required
+                                        class="h-10 lg:h-14 bg-gray-800 rounded-lg border border-slate-900 border-opacity-50 outline-none text-white px-3"></input>
+                                </div>
+                                <div class=" text-white flex flex-col">
+                                    <label for="email" class="mb-2">Email Id </label>
+                                    <input type="email" name="email" required
+                                        class="h-10 lg:h-14 bg-gray-800 rounded-lg border border-slate-900 border-opacity-50 outline-none text-white    px-3"></input>
+                                </div>
+
+                                <div class=" text-white flex flex-col">
+                                    <label for="phone" class="mb-2">Phone No. </label>
+                                    <input type="tel" name="phone" required
+                                        class="h-10 lg:h-14 bg-gray-800 rounded-lg border border-slate-900 border-opacity-50 outline-none text-white    px-3"></input>
+                                </div>
+                                <div class=" text-white flex flex-col">
+                                    <label for="subject" class="mb-2">Subject</label>
+                                    <input type="text" name="subject" required
+                                        class="h-10 lg:h-14 bg-gray-800 rounded-lg border border-slate-900 border-opacity-50 outline-none text-white px-3"></input>
+                                </div>
+                            </div>
+                            <div class=" text-white  flex flex-col mt-4 font-aileron">
+                                <label for="message" class="mb-2">Your Message</label>
+                                <textarea name="message"
+                                    class="h-[90px] lg:h-[175px]  bg-gray-800 rounded-lg border border-slate-900 border-opacity-50 text-white p-3 resize-none outline-none"></textarea>
+                            </div>
+                            <div class="flex justify-end items-center mt-6 lg:mt-12">
+                                <button
+                                    class="lg:w-[217px] lg:h-[58px] px-4 lg:px-8 py-4 bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] flex justify-center items-center text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none hover:bg-gradient-to-r hover:from-black hover:to-black transition-all">Send
+                                    Message</button>
+                            </div>
+                        </div>
+                        <div class="partTwo lg:w-[30%] mt-10 lg:mt-0 h-[634px] text-white pt-10 px-5 flex flex-col ">
+                            <div class="">
+                                <div
+                                    class="text-white text-xl lg:text-2xl font-bold font-aileron leading-[31.20px] tracking-wider">
+                                    Contact Information</div>
+                                <div class="mt-2 text-white text-base font-normal font-aileron leading-tight">To connect
+                                    with NeoTrader, you can also contact us here</div>
+                            </div>
+                            <div class=" mt-8">
+                                <div
+                                    class="text-white text-base font-bold  font-aileron leading-normal tracking-wide">
+                                    Address</div>
+                                <a href="https://maps.app.goo.gl/SFQcniSQywhPwZa6A" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <div
+                                        class=" text-white text-normal lg:text-xl font-normal font-aileron leading-tight">
+                                        14th
+                                        floor, 1402 Vikas Centre, <br />Dr C G Rd, Chembur (E), <br />Mumbai,
+                                        Maharashtra
+                                        400074</div>
+                                </a>
+                            </div>
+                            <div class="mt-8">
+                                <div
+                                    class=" text-white text-base font-bold font-aileron leading-normal tracking-wide">
+                                    Phone </div>
+
+                                <p class="text-white text-normal lg:text-xl font-normal font-aileron leading-relaxed">Support:  <a href="tel:8779800688"> +91
+                                    8779800688</a>  </p>
+                                    <p class="text-white text-normal lg:text-xl font-normal font-aileron leading-relaxed">Sales:  <a href="tel:"> +91
+                                        123123123</a>  </p>
+
+                              
+                            </div>
+                            <div class="mt-8">
+                                <div
+                                    class=" text-white text-base font-bold font-aileron leading-normal tracking-wide">
+                                    Email Id</div>
+                                <a href="mailto:support@neotrader.in">
+                                    <div
+                                        class=" text-white text-normal lg:text-xl font-normal font-aileron leading-relaxed">
+                                        support@neotrader.in</div>
+                                </a>
+                            </div>
+                            <div class="">
+                                <div
+                                    class="text-white text-base font-bold font-aileron leading-normal tracking-wide mt-8 mb-2">
+                                    Follow us on</div>
+                                <div class="flex space-x-4 cursor-pointer">
+
+                                    <a href="https://www.linkedin.com/company/neo-trader/" target="_blank"
+                                        rel="noopener noreferrer"> <img src="/images/contact/linkedIn.png" alt=""
+                                            class="w-[36px]"></a>
+                                    <a href="https://www.instagram.com/neotrader.in/" target="_blank"
+                                        rel="noopener noreferrer"> <img src="/images/contact/insta.png" alt=""
+                                            class="w-[36px]"></a>
+                                    <a href="https://www.facebook.com/NeoTrader.in" target="_blank"
+                                        rel="noopener noreferrer"> <img src="/images/contact/facebook.png" alt=""
+                                            class="w-[36px]"></a>
+                                    <a href="https://twitter.com/NeoTrader_in" target="_blank"
+                                        rel="noopener noreferrer"> <img src="/images/contact/twiter.png" alt=""
+                                            class="w-[36px]"></a>
+                                    <a href="https://wa.me/9137880257" target="_blank">
+                                        <img src="/images/contact/whatsapp.png" alt="WhatsApp Chat" class="w-[36px]">
+                                    </a>
+                                    <a href="https://www.youtube.com/@NeoTrader" target="_blank">
+                                        <img src="/images/contact/ytIcon.png" alt="WhatsApp Chat" class="w-[36px]">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+
+            <div
+                class="mt-12  lg:mt-24 mb-2 lg:mb-10 text-center  text-white text-2xl lg:text-5xl font-semibold font-poppins leading-[62.40px]">
+                Locate us <span
+                    class="text-yellow-400 text-2xl lg:text-5xl font-semibold font-poppins leading-[62.40px]">Here</span>
+            </div>
+
+            <div class=" relative ">
+                <a href="https://maps.app.goo.gl/SFQcniSQywhPwZa6A" target="_blank" rel="noopener noreferrer">
+                    <img src="./images/contact/map.png" alt="" class="w-full">
+                    <img src="./images/contact/locate-btn.png" alt=""
+                        class="absolute flex lg:top-[44%] top-[12%] left-[42%] lg:left-[40%] animate-pulse">
+                    <div
+                        class="lg:w-[461px] h-[234px] bg-gray-900 lg:rounded-t-[20px] rounded-b-[20px] lg:py-6 py-4 px-8 lg:absolute top-5 left-5 lg:animate-float">
+                        <div class="flex  lg:justify-between">
+                            <div class="">
+                                <div
+                                    class="text-white lg:text-2xl font-bold font-aileron leading-[31.20px] tracking-wide">
+                                    NeoTrader</div>
+                                <a href="" target="_blank">
+                                    <div
+                                        class="lg:w-[318px] text-white text-base lg:text-xl font-normal font-aileron leading-tight mt-2">
+                                        14th
+                                        floor,
+                                        1402 Vikas Centre, <br />Dr C G Rd, Chembur (E), <br />Mumbai, Maharashtra
+                                        400074</div>
+
+                                </a>
+                                <div class="flex space-x-2 items-center mt-2">
+                                    <div class="text-white text-xl font-normal font-aileron leading-relaxed">4.0</div>
+                                    <div class=""> <img src="/images/contact/rating.png" alt=""></div>
+                                </div>
+                                <a href="https://maps.app.goo.gl/SFQcniSQywhPwZa6A" target="_blank">
+                                    <div
+                                        class="text-blue-700 text-base font-normal font-aileron leading-normal tracking-wider">
+                                        View
+                                        larger map</div>
+                                </a>
+                            </div>
+                            <a href="https://www.google.com/maps/dir//1402+14th+Floor,+NeoTrader+-+The+No:1+Software+For+Trading,+Vikas+Center,+E,+CG+Rd,+Wadavli,+Vasant+Vihar+Complex,+Chembur,+Mumbai,+Maharashtra+400074/@19.0453758,72.8992323,17z/data=!3m1!5s0x3be7c601c21cdde5:0x6b179c8657d84330!4m8!4m7!1m0!1m5!1m1!1s0x3be7c61e3f3a8233:0xe7c69bfd022c9c18!2m2!1d72.9017824!2d19.0453781?entry=ttu"
+                                target="_blank" rel="noopener noreferrer">
+                                <div class="flex flex-col ml-8 lg:ml-0 items-center">
+
+                                    <img src="/images/contact/direction.png" alt="">
+                                    <div
+                                        class="text-blue-700 text-base font-normal font-aileron leading-normal tracking-wider mt-2">
+                                        Directions
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+
+            <!-- ----------------------------------------------------- Footer Starts -->
+            <footer class="mt-16">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="flex flex-col  lg:flex-col items-start lg:justify-normal justify-between">
+                        <img src="./images/footer-logo.svg" alt="" class="">
+                        <!-- <img src="./images/footer-logo-mobile.svg" alt="" class="lg:hidden block"> -->
+                        <div class="flex space-x-4 cursor-pointer lg:mt-5 lg:mb-0 mb-4">
+                            <a href="https://www.linkedin.com/company/neo-trader/" target="_blank"
+                                rel="noopener noreferrer"> <img src="/images/contact/linkedIn.png" alt=""
+                                    class="lg:w-[36px] w-[26px]"></a>
+                            <a href="https://www.instagram.com/neotrader.in/" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/contact/insta.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                            <a href="https://www.facebook.com/NeoTrader.in" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/contact/facebook.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                            <a href="https://twitter.com/NeoTrader_in" target="_blank" rel="noopener noreferrer"> <img
+                                    src="/images/contact/twiter.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                            <a href="https://www.youtube.com/@NeoTrader" target="_blank" rel="noopener noreferrer"> <img
+                                    src="/images/contact/ytIcon.png" alt="" class="lg:w-[36px] w-[26px]"></a>
+                        </div>
+                    </div>
+    
+                    <hr>
+                    <div class="custom-accordion mt-5" id="accordion1">
+                        <div class="custom-accordion-item">
+                            <div class="custom-accordion-header text-white text-xl lg:text-2xl font-medium font-poppins">
+                                Company <span class="custom-accordion-icon">+</span></div>
+                            <div class="custom-accordion-content space-y-2 mt-3">
+                                <a href="about.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">About
+                                    Us</a>
+                                <a href="blogs.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Blogs</a>
+                                <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Careers</a>
+                                <a href="terms-and-conditions.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Terms
+                                    & Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-accordion" id="accordion2">
+                        <div class="custom-accordion-item">
+                            <div
+                                class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                                Trading Types <span class="custom-accordion-icon">+</span></div>
+                            <div class="custom-accordion-content  space-y-2 mt-2">
+                                <a href="index-trading.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Index
+                                </a>
+                                <a href="intraday.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Intraday</a>
+    
+                                <a href="option.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Options</a>
+                                <a href="swing-trading.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Swing</a>
+                                <a href="positional-trading.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Positional</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-accordion" id="accordion3">
+                        <div class="custom-accordion-item">
+                            <div
+                                class="custom-accordion-header text-white text-xl mt-5 lg:mt-0 lg:text-2xl font-medium font-poppins">
+                                Product Offerings <span class="custom-accordion-icon">+</span></div>
+                            <div class="custom-accordion-content space-y-2 mt-2">
+                                <a href="https://software.neotrader.in/"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">AI
+                                    Trading Software</a>
+                                <a href="courses.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Courses</a>
+                                <a href="pricing.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Pricing
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-accordion mb-5" id="accordion4">
+                        <div class="custom-accordion-item">
+                            <div
+                                class="custom-accordion-header text-white mt-5 lg:mt-0 text-xl lg:text-2xl font-medium font-poppins">
+                                Support <span class="custom-accordion-icon">+</span></div>
+                            <div class="custom-accordion-content space-y-2 mt-2">
+                                <a href="contact.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Contact
+                                    Us</a>
+                                <a href="faq.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">FAQ’s
+                                </a>
+                                <a href="https://neotraderskb.tawk.help/" target="_blank"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">Knowledge
+                                    Base
+                                </a>
+                                <a href="youtube-links.html"
+                                    class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    YouTube Links
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+    
+                    <!-- for desktop -->
+                    <div class="lg:block hidden">
+                        <div class="text-white text-2xl font-medium font-poppins">Company</div>
+                        <div class="flex flex-col space-y-2 mt-4">
+                            <a href="about.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    About Us
+                                </div>
+                            </a>
+                            <a href="blogs.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Blogs
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/neo-trader/jobs/" target="_blank">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Careers
+                                </div>
+                            </a>
+                            <a href="terms-and-conditions.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Terms & Conditions
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:block hidden">
+                        <div class="text-white text-2xl font-medium font-poppins">Trading Types</div>
+                        <div class="flex flex-col space-y-2 mt-4">
+                            <a href="index-trading.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Index
+                                </div>
+                            </a>
+                            <a href="intraday.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Intraday
+                                </div>
+                            </a>
+    
+                            <a href="option.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Options
+                                </div>
+                            </a>
+                            <a href="swing-trading.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Swing
+                                </div>
+                            </a>
+                            <a href="positional-trading.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Positional
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:block hidden">
+                        <div class="text-white text-2xl font-medium font-poppins">Product Offerings</div>
+                        <div class="flex flex-col space-y-2 mt-4">
+                            <a href="https://software.neotrader.in/">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    AI Trading Software
+                                </div>
+                            </a>
+                            <a href="courses.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Courses
+                                </div>
+                            </a>
+                            <a href="pricing.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Pricing Details
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:block hidden">
+                        <div class="text-white text-2xl font-medium font-poppins">Support</div>
+                        <div class="flex flex-col space-y-2 mt-4">
+                            <a href="contact.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Contact Us
+                                </div>
+                            </a>
+    
+                            <a href="faq.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    FAQ’s
+                                </div>
+                            </a>
+    
+                            <a href="https://neotraderskb.tawk.help/" target="_blank">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    Knowledge Base
+                                </div>
+                            </a>
+                            <a href="youtube-links.html">
+                                <div
+                                    class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                    YouTube Links
+                                </div>
+                            </a>
+    
+    
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="mt-8 pb-5">
+                    <div class="text-white text-xl lg:font-semibold font-medium font-aileron leading-[30px] tracking-wide">
+                        Disclaimer:
+                        <span class="text-[18px] font-normal font-aileron lg:leading-[30px] tracking-wide">Investments
+                            in securities market are subject to market risks, read all the related documents carefully
+                            before investing. Brokerage will not exceed SEBI prescribed limit. The securities are quoted
+                            as an example and not as a recommendation. <br /><span class="font-semibold"> SEBI Registration</span></span><span
+                            class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                        </span><span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
+                            Name: NeoTrader | RA No. INH000002285 </span><span
+                            class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
+                        </span>
+                        <a href="disclaimer.html"><span
+                                class="text-blue-700 text-xl font-normal font-aileron leading-[30px] tracking-wide cursor-pointer">Read
+                                more</span></a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+
+    </section>
+
+    <script>
+        //-------------------------- for Navbar dropdown
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdowns = document.querySelectorAll('.group');
+            var delayTimeout;
+            var activeDropdown = null;
+
+            function closeAllDropdowns() {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.absolute');
+                    dropdownContent.style.display = 'none';
+                });
+                activeDropdown = null;
+            }
+
+            dropdowns.forEach(function (dropdown) {
+                var dropdownContent = dropdown.querySelector('.absolute');
+
+                dropdown.addEventListener('mouseenter', function () {
+                    clearTimeout(delayTimeout);
+                    if (activeDropdown !== dropdown) {
+                        closeAllDropdowns();
+                    }
+                    dropdownContent.style.display = 'block';
+                    activeDropdown = dropdown;
+                });
+
+                dropdown.addEventListener('mouseleave', function (event) {
+                    if (!dropdownContent.contains(event.relatedTarget)) {
+                        delayTimeout = setTimeout(function () {
+                            dropdownContent.style.display = 'none';
+                        }, 200);
+                    }
+                });
+
+                dropdown.addEventListener('click', function (event) {
+                    clearTimeout(delayTimeout);
+                    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                closeAllDropdowns();
+            });
+        });
+
+        function showMenu() {
+            var menuCard = document.getElementById("menuCard");
+            menuCard.classList.toggle("hidden")
+        }
+
+        function showDropMenu(dropdownId) {
+            var toggle = document.querySelector('#' + dropdownId + ' .dropdown-toggle');
+            var dropMenu = document.querySelector('#' + dropdownId + ' .dropdownMenu-toggle');
+            var img1 = document.querySelector('#' + dropdownId + ' .dropdown-img-1');
+            var img2 = document.querySelector('#' + dropdownId + ' .dropdown-img-2');
+
+            // If the dropdown is currently open, close it
+            if (toggle.classList.contains('activeBlue')) {
+                toggle.classList.remove('activeBlue');
+                toggle.classList.add('activeWhite');
+                dropMenu.classList.remove('dropMenuShow');
+                dropMenu.classList.add('dropMenuHide');
+                img1.style.display = 'block';
+                img2.style.display = 'none';
+            } else { // Otherwise, open it
+                // Close all other dropdowns
+                var allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function (dropdown) {
+                    var otherToggle = dropdown.querySelector('.dropdown-toggle');
+                    var otherDropMenu = dropdown.querySelector('.dropdownMenu-toggle');
+                    var otherImg1 = dropdown.querySelector('.dropdown-img-1');
+                    var otherImg2 = dropdown.querySelector('.dropdown-img-2');
+
+                    otherToggle.classList.remove('activeBlue');
+                    otherToggle.classList.add('activeWhite');
+                    otherDropMenu.classList.remove('dropMenuShow');
+                    otherDropMenu.classList.add('dropMenuHide');
+                    otherImg1.style.display = 'block';
+                    otherImg2.style.display = 'none';
+                });
+
+                // Open the selected dropdown
+                toggle.classList.remove('activeWhite');
+                toggle.classList.add('activeBlue');
+                dropMenu.classList.remove('dropMenuHide');
+                dropMenu.classList.add('dropMenuShow');
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            }
+        }
+
+
+        // Footer Accordain
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionIDs = ['#accordion1', '#accordion2', '#accordion3', '#accordion4'];
+
+            accordionIDs.forEach(id => {
+                const accordionHeaders = document.querySelectorAll(`${id} .custom-accordion-header`);
+
+                accordionHeaders.forEach(header => {
+                    header.addEventListener('click', function () {
+                        const accordionItem = this.parentNode;
+                        accordionItem.classList.toggle('active');
+                        const icon = this.querySelector('.custom-accordion-icon');
+                        icon.textContent = accordionItem.classList.contains('active') ? '-' : '+';
+                    });
+                });
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
