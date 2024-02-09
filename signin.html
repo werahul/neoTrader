@@ -239,11 +239,12 @@
             class="lg:w-[699px]  px-5 py-5 lg:px-0 lg:py-0 lg:rounded-[20px] lg:pt-[114px] lg:px-[79px] lg:h-[684px] bg-white">
             <h1 class="text-black text-[32px] font-medium font-poppins leading-[41.60px]">Sign Up</h1>
             <div class="space-y-10">
-                <form action="">
+                <form action="" method="post">
                     <div class="space-y-20 mb-10">
 
                         <div class="input-container">
-                            <input type="text" class="input-field" id="inputField" placeholder=" " value="" required>
+                            <input type="text" class="input-field" id="email" name="email" placeholder=" " value=""
+                                required>
                             <label for="inputField" class="input-label font-aileron">Enter your E-mail ID</label>
                         </div>
                         <div class="input-container">
@@ -265,22 +266,24 @@
                             <div class="">
                                 <span
                                     class="text-zinc-500 text-sm font-normal font-aileron  leading-tight tracking-wider">By
-                                    signing up, I confirm that I am 18 years of age or older, 
+                                    signing up, I confirm that I am 18 years of age or older,
                                 </span>
                                 <div class="flex space-x-1 ml-14">
                                     <div
                                         class="text-zinc-500 text-sm font-normal font-aileron ml-[-25px] leading-tight tracking-wider">
                                         and I agree to the
-                                        </div>
+                                    </div>
                                     <div
-                                        class="text-blue-700 text-sm font-normal font-aileron  leading-tight tracking-wider">Terms
+                                        class="text-blue-700 text-sm font-normal font-aileron  leading-tight tracking-wider">
+                                        Terms
                                         of Use</div>
-                                        <div
+                                    <div
                                         class="text-zinc-500 text-sm font-normal font-aileron ml-[-25px] leading-tight tracking-wider">
                                         and
-                                        </div>
+                                    </div>
                                     <div
-                                        class="text-blue-700 text-sm font-normal font-aileron ml-[-25px] leading-tight tracking-wider">Privacy
+                                        class="text-blue-700 text-sm font-normal font-aileron ml-[-25px] leading-tight tracking-wider">
+                                        Privacy
                                         Policy.
                                     </div>
                                 </div>
@@ -323,13 +326,13 @@
 
     const inputField = document.getElementById('inputField');
 
-    inputField.addEventListener('focus', () => {
-        inputField.classList.add('focused');
-    });
+    // inputField.addEventListener('focus', () => {
+    //     inputField.classList.add('focused');
+    // });
 
-    inputField.addEventListener('blur', () => {
-        inputField.classList.remove('focused');
-    });
+    // inputField.addEventListener('blur', () => {
+    //     inputField.classList.remove('focused');
+    // });
 
 
 
@@ -362,4 +365,13 @@
 
 
     }
+    function getEmailFromURL() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var email = urlParams.get('email');
+        var decodedEmail = decodeURIComponent(email);
+        document.getElementById("email").value = decodedEmail;
+    }
+
+    // Call the function when the signup page loads
+    getEmailFromURL();
 </script>
