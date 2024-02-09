@@ -27,7 +27,152 @@
 </head>
 
 <body class=" home-bg ">
+    <!-- TradingView Widget BEGIN -->
+    <!-- <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow"
+                target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            async>
+                {
+                    "symbols": [
+                        {
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500"
+                        },
+                        {
+                            "proName": "FOREXCOM:NSXUSD",
+                            "title": "US 100"
+                        },
+                        {
+                            "proName": "FX_IDC:EURUSD",
+                            "title": "EUR to USD"
+                        },
+                        {
+                            "proName": "BITSTAMP:BTCUSD",
+                            "title": "Bitcoin"
+                        },
+                        {
+                            "proName": "BITSTAMP:ETHUSD",
+                            "title": "Ethereum"
+                        },
+                        {
+                            "description": "NIFTY",
+                            "proName": "NSE:NIFTY"
+                        },
+                        {
+                            "description": "BANK",
+                            "proName": "BSE:BANK"
+                        },
+                        {
+                            "description": "BANKNIFTY",
+                            "proName": "NSE:BANKNIFTY"
+                        },
+                        {
+                            "description": "ICICI",
+                            "proName": "NSE:ICICIBANK"
+                        },
+                        {
+                            "description": "BAJAJFINANCE",
+                            "proName": "NSE:BAJFINANCE"
+                        },
+                        {
+                            "description": "SBI",
+                            "proName": "NSE:SBIN"
+                        }
+                    ],
+                        "showSymbolLogo": true,
+                            "isTransparent": false,
+                                "displayMode": "adaptive",
+                                    "colorTheme": "light",
+                                        "locale": "in"
+                }
+            </script>
+    </div> -->
+    <!-- TradingView Widget END -->
     <section class="max-container lg:px-20 px-5">
+        <div class=" popupForm  w-[90%] h-[100%]  z-50  " id="popupForm">
+            <div class="w-[100%] flex items-start flex-row-reverse space-x-6 signColor2 rounded-[20px] ">
+                <form action="https://formspree.io/f/xpzvpeyd" method="POST"
+                    class="lg:w-[40%] h-[100%] rounded-[20px] border border-zinc-500 py-5  bg-white">
+                    <div class="partOne w-full px-2 lg:px-10 pt-8">
+                        <div class="grid grid-cols-1 gap-x-8 gap-y-5 font-aileron">
+                            <div class=" text-black flex flex-col">
+                                <label for="name" class="mb-2"> Full
+                                    Name</label>
+                                <input type="text" name="name" id="name" required
+                                    class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black px-3"></input>
+                            </div>
+                            <div class=" text-black flex flex-col">
+                                <label for="phone" class="mb-2">Phone
+                                    No. </label>
+                                <input type="tel" name="phone" id="phone" required
+                                    class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                            </div>
+                            <div class=" text-black flex flex-col">
+                                <label for="email" class="mb-2">Email
+                                    Id </label>
+                                <input type="email" name="email" id="email" required
+                                    class="h-12   rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                            </div>
+
+                            <div class="text-black flex flex-col">
+                                <label for="time-slot" class="">Select
+                                    your Time Slot</label>
+                                <select id="time-slot"
+                                    class="w-full h-12 rounded-[14px] border border-slate-500 border-opacity-50 outline-none px-3 mt-2">
+                                    <option value="" hidden>Please select options</option>
+                                    <option value="11 AM">11 AM</option>
+                                    <option value="12 PM">12 PM</option>
+                                    <option value="1 PM">1 PM</option>
+                                    <option value="3 PM">3 PM</option>
+                                    <option value="4 PM">4 PM</option>
+                                    <option value="5 PM">5 PM</option>
+                                    <option value="6 PM">6 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w-full flex justify-end items-center mt-10">
+                            <button type="submit"
+                                class="lg:w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 rounded-[50px] flex justify-center items-center text-blue-700 text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none hover:bg-gradient-to-r hover:from-black hover:to-black transition-all">Book
+                                A Demo
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="lg:w-[58%] flex flex-col items-center  justify-cenitems-center px-5 py-5">
+                    <img src="images/hero-computer.png" alt="" class="w-[400px] ">
+                    <div class="text-center text-white textshadow tracking-wide ">
+                        <div
+                            class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-5">
+                            Unlock your Trading <br />Potential with NeoTrader!
+                        </div>
+
+                        <div class="mt-4">
+                            <div
+                                class=" text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
+                                Get ready-made trades, pre processed analysis from multiple indicators , scoring and
+                                ranking on stocks and indices.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="absolute right-[79px] top-[48px] cursor-pointer" id="close-btn">
+                <img src="images/closed.svg" alt="" class="w-[30px] h-[30px]">
+            </div>
+
+        </div>
+
+        <div class="fixed z-40 bottom-10 right-20">
+            <button id="togglePopup"
+                class="w-auto h-[55px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white">
+                Book A Free Demo
+            </button>
+        </div>
+
         <!-- ----------------------------------------------------- Navbar Starts -->
         <nav class="flex items-center justify-between  z-50">
             <div class="lg:w-[20%] ">
@@ -386,7 +531,8 @@
 
                 <div class="2xl:w-[70%] lg:w-[75%] w-full">
 
-                    <div class="text-white lg:text-5xl text-3xl text-center lg:text-left font-semibold font-poppins leading-[48px]">
+                    <div
+                        class="text-white lg:text-5xl text-3xl text-center lg:text-left font-semibold font-poppins leading-[48px]">
                         About Us</div>
                     <div class="lg:flex lg:text-left text-center">
                         <div id="typewriter-text" class="font-aileron tracking-tight w-auto mt-2"></div>
@@ -702,9 +848,9 @@
                             </video>
                             <a href="swing-trading.html">
                                 <button
-                                class="lg:hidden  block mt-5 w-[159px] h-[50px] lg:px-8 lg:py-4 rounded-[50px] border border-white justify-center items-center gap-3 inline-flex text-white text-[18px] font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wide hover:bg-white hover:text-black">Know
-                                More
-                            </button>
+                                    class="lg:hidden  block mt-5 w-[159px] h-[50px] lg:px-8 lg:py-4 rounded-[50px] border border-white justify-center items-center gap-3 inline-flex text-white text-[18px] font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wide hover:bg-white hover:text-black">Know
+                                    More
+                                </button>
                             </a>
 
                         </div>
@@ -843,9 +989,9 @@
 
                             <a href="index-trading.html">
                                 <button
-                                class="lg:hidden  block mt-5 w-[159px] h-[50px] lg:px-8 lg:py-4 rounded-[50px] border border-white justify-center items-center gap-3 inline-flex text-white text-[18px] font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wide hover:bg-white hover:text-black">Know
-                                More
-                            </button>
+                                    class="lg:hidden  block mt-5 w-[159px] h-[50px] lg:px-8 lg:py-4 rounded-[50px] border border-white justify-center items-center gap-3 inline-flex text-white text-[18px] font-medium whitespace-nowrap font-poppins leading-relaxed tracking-wide hover:bg-white hover:text-black">Know
+                                    More
+                                </button>
                             </a>
 
                         </div>
@@ -857,7 +1003,9 @@
         </section>
         <!-- ----------------------------------------------------- 5th Section Join US -->
         <section>
-            <div class="text-white text-center lg:text-[56px] text-4xl font-semibold font-poppins lg:leading-relaxed leading-[44px] mt-20 mb-10">Why you
+            <div
+                class="text-white text-center lg:text-[56px] text-4xl font-semibold font-poppins lg:leading-relaxed leading-[44px] mt-20 mb-10">
+                Why you
                 should <br class="lg:hidden block"> <span class="text-[#FDDC1F]">Join Us</span>
 
             </div>
@@ -871,7 +1019,8 @@
                         <h4 class="font-aileron  lg:text-[22px] text-xl font-semibold tracking-wider text-white">
                             SEBI Registered
                         </h4>
-                        <p class="font-aileron text-lg lg:text-[18px] tracking-wider lg:leading-7 leading-6  text-white">
+                        <p
+                            class="font-aileron text-lg lg:text-[18px] tracking-wider lg:leading-7 leading-6  text-white">
                             Experience a reliable trading journey with SEBI registered
                             software.
                         </p>
@@ -898,7 +1047,8 @@
                         <h4 class="font-aileron  lg:text-[22px] text-xl font-semibold tracking-wider text-white">
                             Seamless Interface
                         </h4>
-                        <p class="font-aileron text-lg lg:text-[18px]  tracking-wider lg:leading-7 leading-6 text-white">
+                        <p
+                            class="font-aileron text-lg lg:text-[18px]  tracking-wider lg:leading-7 leading-6 text-white">
                             Effortless navigation ensures a user-friendly, intuitive
                             experience.
                         </p>
@@ -1080,8 +1230,8 @@
         </section>
         <!-- ----------------------------------------------------- 7th Testimonial Section -->
         <section>
-            <div class="text-white text-center lg:text-[56px] text-4xl font-semibold font-poppins lg:mt-32 mt-0 mb-5">Our <br
-                    class="lg:hidden block"> <span class="text-[#FDDC1F]">Success Stories</span>
+            <div class="text-white text-center lg:text-[56px] text-4xl font-semibold font-poppins lg:mt-32 mt-0 mb-5">
+                Our <br class="lg:hidden block"> <span class="text-[#FDDC1F]">Success Stories</span>
             </div>
 
             <div class="testimonial testimonial-carousel">
@@ -1333,7 +1483,8 @@
                             </div>
                             <div
                                 class="text-white text-base font-normal font-aileron leading-tight tracking-wider mt-5">
-                                “We all know that the market is a challenging environment. More often <br class="lg:block hidden" />than not,
+                                “We all know that the market is a challenging environment. More often <br
+                                    class="lg:block hidden" />than not,
                                 the…”</div>
                             <a href="blogs/Blog3.html">
                                 <button
@@ -1434,7 +1585,6 @@
         </section>
         <!-- ----------------------------------------------------- 9th CTA Section -->
         <section>
-
             <div id="" class="baseType2 lg:px-16 lg:py-5">
                 <div
                     class="lg:flex lg:space-x-0 space-x-10 lg:items-start items-center lg:justify-start justify-center">
@@ -1468,7 +1618,6 @@
 
             </div>
         </section>
-
 
         <footer class="mt-16">
             <div class="flex flex-col lg:flex-row justify-between">
@@ -1506,6 +1655,9 @@
                             <a href="terms-and-conditions.html"
                                 class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">Terms
                                 & Conditions</a>
+                            <a href="disclaimer.html"
+                                class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">
+                                Disclaimer</a>
                         </div>
                     </div>
                 </div>
@@ -1598,6 +1750,12 @@
                             <div
                                 class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
                                 Terms & Conditions
+                            </div>
+                        </a>
+                        <a href="disclaimer.html">
+                            <div
+                                class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
+                                Disclaimer
                             </div>
                         </a>
                     </div>
@@ -1699,10 +1857,12 @@
             <div class="mt-8 pb-5">
                 <div class="text-white text-xl font-semibold font-aileron leading-[30px] tracking-wide">
                     Disclaimer:
-                    <span class="text-[18px] font-normal font-aileron lg:leading-[30px] leading-[24px] tracking-wide">Investments
+                    <span
+                        class="text-[18px] font-normal font-aileron lg:leading-[30px] leading-[24px] tracking-wide">Investments
                         in securities market are subject to market risks, read all the related documents carefully
                         before investing. Brokerage will not exceed SEBI prescribed limit. The securities are quoted
-                        as an example and not as a recommendation. <br /> <br/><span class="font-semibold"> SEBI Registration</span></span><span
+                        as an example and not as a recommendation. <br /> <br /><span class="font-semibold"> SEBI
+                            Registration</span></span><span
                         class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
                     </span><span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
                         Name: NeoTrader | RA No. INH000002285 </span><span
@@ -2084,9 +2244,29 @@
         });
 
 
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get references to the button and popupForm
+            var toggleButton = document.getElementById("togglePopup");
+            var popupForm = document.getElementById("popupForm");
+            var closeBtn = document.getElementById("close-btn")
+
+            // Add click event listener to the button
+            toggleButton.addEventListener("click", function () {
+                // Toggle the visibility of the popupForm
+                if (popupForm.style.display === "block") {
+                    popupForm.style.display = "none"; // Hide the popupForm
+                } else {
+                    popupForm.style.display = "block"; // Show the popupForm
+                }
+            });
+            closeBtn.addEventListener("click", function () {
+                popupForm.style.display = "none"; // Hide the popupForm
+            })
+        });
 
 
     </script>
+
 
 
 </body>
