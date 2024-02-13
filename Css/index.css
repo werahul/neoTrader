@@ -593,13 +593,41 @@ article .img {
   background: #f1f1f1; /* Color of the scrollbar corner */
 }
 
-.popupForm {
-  display: none; /* Hide the popupForm by default */
+.overlay {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px 50px;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.651);
+  /* Semi-transparent black */
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 20px 0;
 }
+
+/* Popup form style */
+.popupForm {
+  position: relative;
+  padding: 0;
+  width: 90%;
+  height: 100vh;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  z-index: 51;
+}
+
+@media (max-width: 480px) {
+  .popupForm {
+ 
+  padding: 10px 0px;
+  /* max-width: 600px; */
+  width: 90%;
+  height: 100%;
+}
+}
+
 
 

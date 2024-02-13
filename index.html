@@ -27,6 +27,80 @@
 </head>
 
 <body class=" home-bg ">
+    <div class="popupForm  w-[100%] h-[100vh]  z-50  " id="popupForm">
+        <div class="absolute w-[100%] h-[100%] flex items-start flex-row-reverse space-x-6 signColor2 rounded-[20px] ">
+            <form action="https://formspree.io/f/xpzvpeyd" method="POST"
+                class="lg:w-[40%] h-[100%] rounded-[20px] border border-zinc-500 py-5  bg-white">
+                <div class="partOne w-full px-2 lg:px-10 pt-8">
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-5 font-aileron">
+                        <div class=" text-black flex flex-col">
+                            <label for="name" class="mb-2"> Full
+                                Name</label>
+                            <input type="text" name="name" id="name" required
+                                class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black px-3"></input>
+                        </div>
+                        <div class=" text-black flex flex-col">
+                            <label for="phone" class="mb-2">Phone
+                                No. </label>
+                            <input type="tel" name="phone" id="phone" required
+                                class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                        </div>
+                        <div class=" text-black flex flex-col">
+                            <label for="email" class="mb-2">Email
+                                Id </label>
+                            <input type="email" name="email" id="email" required
+                                class="h-12   rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                        </div>
+
+                        <div class="text-black flex flex-col">
+                            <label for="time-slot" class="">Select
+                                your Time Slot</label>
+                            <select id="time-slot"
+                                class="w-full h-12 rounded-[14px] border border-slate-500 border-opacity-50 outline-none px-3 mt-2">
+                                <option value="" hidden>Please select options</option>
+                                <option value="11 AM">11 AM</option>
+                                <option value="12 PM">12 PM</option>
+                                <option value="1 PM">1 PM</option>
+                                <option value="3 PM">3 PM</option>
+                                <option value="4 PM">4 PM</option>
+                                <option value="5 PM">5 PM</option>
+                                <option value="6 PM">6 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-end items-center mt-10">
+                        <button type="submit"
+                            class="lg:w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-700 transition-all">Book
+                            A Demo
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="lg:w-[58%] flex flex-col items-center  justify-cenitems-center px-5 py-5">
+                <img src="images/hero-computer.png" alt="" class="w-[400px] ">
+                <div class="text-center text-white textshadow tracking-wide ">
+                    <div
+                        class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-5">
+                        Unlock your Trading <br />Potential with NeoTrader!
+                    </div>
+
+                    <div class="mt-4">
+                        <div
+                            class=" text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
+                            Get ready-made trades, pre processed analysis from multiple indicators , scoring and
+                            ranking on stocks and indices.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute right-[79px] top-[48px] cursor-pointer" id="close-btn">
+            <img src="images/closed.svg" alt="" class="w-[30px] h-[30px]">
+        </div>
+
+    </div>
     <!-- TradingView Widget BEGIN -->
     <!-- <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
@@ -91,80 +165,7 @@
     </div> -->
     <!-- TradingView Widget END -->
     <section class="max-container lg:px-20 px-5">
-        <div class=" popupForm  w-[90%] h-[100%]  z-50  " id="popupForm">
-            <div class="w-[100%] flex items-start flex-row-reverse space-x-6 signColor2 rounded-[20px] ">
-                <form action="https://formspree.io/f/xpzvpeyd" method="POST"
-                    class="lg:w-[40%] h-[100%] rounded-[20px] border border-zinc-500 py-5  bg-white">
-                    <div class="partOne w-full px-2 lg:px-10 pt-8">
-                        <div class="grid grid-cols-1 gap-x-8 gap-y-5 font-aileron">
-                            <div class=" text-black flex flex-col">
-                                <label for="name" class="mb-2"> Full
-                                    Name</label>
-                                <input type="text" name="name" id="name" required
-                                    class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black px-3"></input>
-                            </div>
-                            <div class=" text-black flex flex-col">
-                                <label for="phone" class="mb-2">Phone
-                                    No. </label>
-                                <input type="tel" name="phone" id="phone" required
-                                    class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
-                            </div>
-                            <div class=" text-black flex flex-col">
-                                <label for="email" class="mb-2">Email
-                                    Id </label>
-                                <input type="email" name="email" id="email" required
-                                    class="h-12   rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
-                            </div>
 
-                            <div class="text-black flex flex-col">
-                                <label for="time-slot" class="">Select
-                                    your Time Slot</label>
-                                <select id="time-slot"
-                                    class="w-full h-12 rounded-[14px] border border-slate-500 border-opacity-50 outline-none px-3 mt-2">
-                                    <option value="" hidden>Please select options</option>
-                                    <option value="11 AM">11 AM</option>
-                                    <option value="12 PM">12 PM</option>
-                                    <option value="1 PM">1 PM</option>
-                                    <option value="3 PM">3 PM</option>
-                                    <option value="4 PM">4 PM</option>
-                                    <option value="5 PM">5 PM</option>
-                                    <option value="6 PM">6 PM</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="w-full flex justify-end items-center mt-10">
-                            <button type="submit"
-                                class="lg:w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-700 transition-all">Book
-                                A Demo
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <div class="lg:w-[58%] flex flex-col items-center  justify-cenitems-center px-5 py-5">
-                    <img src="images/hero-computer.png" alt="" class="w-[400px] ">
-                    <div class="text-center text-white textshadow tracking-wide ">
-                        <div
-                            class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-5">
-                            Unlock your Trading <br />Potential with NeoTrader!
-                        </div>
-
-                        <div class="mt-4">
-                            <div
-                                class=" text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
-                                Get ready-made trades, pre processed analysis from multiple indicators , scoring and
-                                ranking on stocks and indices.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="absolute right-[79px] top-[48px] cursor-pointer" id="close-btn">
-                <img src="images/closed.svg" alt="" class="w-[30px] h-[30px]">
-            </div>
-
-        </div>
 
         <div class="fixed z-40 bottom-10 right-20">
             <button id="togglePopup"
@@ -189,9 +190,11 @@
                         <!-- Dropdown Items -->
                         <a href="https://software.neotrader.in/"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
-                            Trading Tool</a>
+                            Trading Software</a>
                         <a href="courses.html"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Courses</a>
+                        <a href="advisory.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Advisory</a>
                     </div>
                 </div>
                 <div class="relative group">
@@ -231,8 +234,7 @@
                         <a href="blogs.html"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
                         <a href="youtube-links.html"
-                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Youtube
-                            Links</a>
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Video Tutorials</a>
                         <a href="https://neotraderskb.tawk.help/" target="_blank"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
                             Base</a>
@@ -310,13 +312,16 @@
                                 <div
                                     class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
                                     <a href="https://software.neotrader.in/">
-                                        <li>AI Trading Tool</li>
+                                        <li>AI Trading Software</li>
                                     </a>
                                     <hr class="opacity-40">
                                     <a href="courses.html">
                                         <li class="mt-3">Courses</li>
                                     </a>
                                     <hr class="opacity-40">
+                                    <a href="advisory.html">
+                                        <li class="mt-3">Advisory</li>
+                                    </a>
                                 </div>
                             </div>
                             <div class="dropdown space-y-3 my-2" id="dropdow2">
@@ -377,7 +382,7 @@
                                     </a>
                                     <hr class="opacity-40">
                                     <a href="youtube-links.html">
-                                        <li class="mt-3">Youtube Links</li>
+                                        <li class="mt-3">Video Tutorials</li>
                                     </a>
                                     <hr class="opacity-40">
                                     <a href="https://neotraderskb.tawk.help/" target="_blank">
@@ -448,14 +453,17 @@
         <section>
             <div
                 class="lg:px-0 px-0 lg:text-left text-center text-white lg:text-[56px] text-[32px] font-semibold font-poppins lg:mt-20 mt-16">
-                Ab Smart Trading <span class="text-[#FDDC1F]">Hoga Easy</span></div>
+                Ab Smart Trading <span class="text-[#FDDC1F]">Hoga Easy</span>
+                <p class="text-base italic -mt-2">India's Most Cutting-Edge Trading Software</p>
+            </div>
+            
 
             <div class="mt-8 flex lg:flex-row flex-col relative">
                 <div class="">
                     <img src="./images/hero-text.png" alt="" class="lg:block hidden">
                     <img src="./images/hero-text-mob.svg" alt="" class="lg:hidden block w-full mt-3">
                     <div class=" mt-8 font-aileron">
-                        <form action="" >
+                        <form action="">
                             <input type="email" name="email"
                                 class="lg:w-[536px] text-center lg:text-left w-full h-[74px] bg-gray-800 rounded-[50px] px-5 outline-none text-white"
                                 placeholder="Enter your email address" required id="emailInput">
@@ -1595,7 +1603,7 @@
                         </div>
                         <div class="mt-4">
                             <div
-                                class="lg:text-left text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-relaxed leading-tight tracking-wider">
+                                class="lg:text-left text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
                                 Get ready-made trades, pre processed analysis from multiple indicators , scoring and
                                 ranking on stocks and indices.
                             </div>
@@ -1717,7 +1725,7 @@
                             </a>
                             <a href="youtube-links.html"
                                 class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
-                                YouTube Links
+                                Video Tutorials
                             </a>
                         </div>
                     </div>
@@ -1845,7 +1853,7 @@
                         <a href="youtube-links.html">
                             <div
                                 class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
-                                YouTube Links
+                                Video Tutorials
                             </div>
                         </a>
 
@@ -2265,7 +2273,7 @@
         });
 
         function redirectToSignup(e) {
-            
+
             e.preventDefault();
             var email = document.getElementById("emailInput").value;
             // Encode the email value to ensure it's properly passed in the URL

@@ -94,11 +94,100 @@
             /* border-radius: 25px 25px 0 0; */
             /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10); */
         }
+
+ 
     </style>
 </head>
 
 <body class="about-bg max-w-[1440px] mx-auto">
+
+    <div class="overlay" id="overlay">
+        <div class="popupForm" id="popupForm" >
+            <div  class="w-[100%] h-auto flex items-start lg:flex-row-reverse flex-col-reverse space-x-6 signColor2 rounded-[20px] ">
+                <form action="https://formspree.io/f/xpzvpeyd" method="POST"
+                    class="lg:w-[40%] w-[100%] lg:h-[100vh] rounded-[20px] border border-zinc-500 py-5  bg-white">
+                    <div class="partOne w-full px-2 lg:px-10 pt-8">
+                        <div class="grid grid-cols-1 gap-x-8 gap-y-5 font-aileron">
+                            <div class=" text-black flex flex-col">
+                                <label for="name" class="mb-2"> Full
+                                    Name <span class="text-red-700"><sup>*</sup> </span></label>
+                                <input type="text" name="name" id="name" required
+                                    class="h-14  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black px-3"></input>
+                            </div>
+                            <div class=" text-black flex flex-col">
+                                <label for="phone" class="mb-2">Phone
+                                    No. <span class="text-red-700"><sup>*</sup> </span> </label>
+                                <input type="tel" name="phone" id="phone" required
+                                    class="h-14  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                            </div>
+                            <div class=" text-black flex flex-col">
+                                <label for="email" class="mb-2">Email
+                                    Id <span class="text-red-700"><sup>*</sup> </span> </label>
+                                <input type="email" name="email" id="email" required
+                                    class="h-14   rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                            </div>
+    
+                            <div class="text-black flex flex-col">
+                                <label for="time-slot" class="">Select
+                                    your Time Slot <span class="text-red-700"><sup>*</sup> </span></label>
+                                <select id="time-slot"
+                                    class="w-full h-14 rounded-[14px] border border-slate-500 border-opacity-50 outline-none px-3 mt-2">
+                                    <option value="" hidden>Please select options</option>
+                                    <option value="11 AM">11 AM</option>
+                                    <option value="12 PM">12 PM</option>
+                                    <option value="1 PM">1 PM</option>
+                                    <option value="3 PM">3 PM</option>
+                                    <option value="4 PM">4 PM</option>
+                                    <option value="5 PM">5 PM</option>
+                                    <option value="6 PM">6 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w-full flex justify-end items-center mt-14">
+                            <button type="submit"
+                                class="w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 hover:border-none rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 hover:bg-gradient-to-r  transition-all">Book A Free Demo
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="lg:w-[58%]  flex flex-col items-center  justify-cenitems-center lg:px-5 px-2 py-5">
+                    <img src="images/hero-computer.png" alt="" class="lg:w-[400px] ">
+                    <div class="text-center text-white textshadow tracking-wide ">
+                        <div
+                            class="text-yellow-400 text-center lg:text-[2.6rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-5">
+                            Ab Smart-Trading Hoga Easy
+                        </div>
+                        <div
+                            class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-2">
+                            With NeoTrader Software!
+                        </div>
+                        
+    
+                        <div class="mt-4">
+                            <div
+                                class=" text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
+                                Get ready-made trades, pre processed analysis from multiple indicators , scoring and
+                                ranking on stocks and indices.
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="absolute right-[5px] lg:top-[5px] top-[14px] cursor-pointer" id="close-btn">
+                <img src="images/closed.svg" alt="" class="w-[30px] h-[30px]">
+            </div>
+        </div>
+    </div>
+
     <section class=" lg:px-20 px-5 mx-auto">
+        <div class="max-container fixed z-40 lg:bottom-5 lg:right-20 2xl:right-32">
+            <button id="togglePopup" onclick="togglePopup()"
+                class="w-auto h-[55px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white">
+                Book A Free Demo
+            </button>
+        </div>
         <!-- ------------------------------- Navbar Starts ----------------------->
         <nav class="flex items-center justify-between  z-50">
             <div class="lg:w-[20%] ">
@@ -115,9 +204,11 @@
                         <!-- Dropdown Items -->
                         <a href="https://software.neotrader.in/"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
-                            Trading Tool</a>
+                            Trading Software</a>
                         <a href="courses.html"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Courses</a>
+                        <a href="advisory.html"
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">Advisory</a>
                     </div>
                 </div>
                 <div class="relative group">
@@ -157,8 +248,7 @@
                         <a href="blogs.html"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
                         <a href="youtube-links.html"
-                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Youtube
-                            Links</a>
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Video Tutorials</a>
                         <a href="https://neotraderskb.tawk.help/" target="_blank"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
                             Base</a>
@@ -236,13 +326,16 @@
                                 <div
                                     class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
                                     <a href="https://software.neotrader.in/">
-                                        <li>AI Trading Tool</li>
+                                        <li>AI Trading Software</li>
                                     </a>
                                     <hr class="opacity-40">
                                     <a href="courses.html">
                                         <li class="mt-3">Courses</li>
                                     </a>
                                     <hr class="opacity-40">
+                                    <a href="advisory.html">
+                                        <li class="mt-3">Advisory</li>
+                                    </a>
                                 </div>
                             </div>
                             <div class="dropdown space-y-3 my-2" id="dropdow2">
@@ -303,7 +396,7 @@
                                     </a>
                                     <hr class="opacity-40">
                                     <a href="youtube-links.html">
-                                        <li class="mt-3">Youtube Links</li>
+                                        <li class="mt-3">Video Tutorials</li>
                                     </a>
                                     <hr class="opacity-40">
                                     <a href="https://neotraderskb.tawk.help/" target="_blank">
@@ -421,9 +514,11 @@
                 <img class="w-[400px] h-[323px] right-[0px] rounded-[20px] bottom-[0px] -z-10 absolute"
                     src="./images/about/gradient_box.png" />
                 <img class="w-14 h-14" src="./images/about/ph1.png" />
-                <h4 class=" text-white lg:text-2xl text-[20px] font-bold font-aileron lg:leading-[31.20px] tracking-wider">
+                <h4
+                    class=" text-white lg:text-2xl text-[20px] font-bold font-aileron lg:leading-[31.20px] tracking-wider">
                     Dream Big, Earn Big</h4>
-                <p class=" text-white lg:text-xl text-[16px] font-normal  font-aileron lg:leading-[30px] lg:tracking-wider">
+                <p
+                    class=" text-white lg:text-xl text-[16px] font-normal  font-aileron lg:leading-[30px] lg:tracking-wider">
                     NeoTrader is the future where every Indian trader can achieve financial success & generate a
                     reliable income from the market.</p>
 
@@ -433,9 +528,11 @@
                 <img class="w-[400px] h-[323px] right-[0px] rounded-[20px] bottom-[0px] -z-10 absolute"
                     src="./images/about/gradient_box.png" />
                 <img class="w-14 h-14" src="./images/about/ph2.png" />
-                <h4 class=" text-white lg:text-2xl text-[20px] font-bold font-aileron lg:leading-[31.20px] tracking-wider">
+                <h4
+                    class=" text-white lg:text-2xl text-[20px] font-bold font-aileron lg:leading-[31.20px] tracking-wider">
                     We Empower You</h4>
-                <p class=" text-white lg:text-xl text-[16px] font-normal font-aileron lg:leading-[30px] lg:tracking-wider">
+                <p
+                    class=" text-white lg:text-xl text-[16px] font-normal font-aileron lg:leading-[30px] lg:tracking-wider">
                     Dr. CK Narayan, Mr. Aditya Iyer & Mr. Raja Venkatraman are constantly empowering Indian traders to
                     master the financial market.</p>
 
@@ -445,7 +542,8 @@
                 <img class="w-[400px] h-[323px] right-[0px] rounded-[20px] bottom-[0px] -z-10 absolute"
                     src="./images/about/gradient_box.png" />
                 <img class="w-14 h-14" src="./images/about/ph3.png" />
-                <h4 class=" text-white lg:text-2xl text-[20px] font-bold font-aileron lg:leading-[31.20px] tracking-wider">
+                <h4
+                    class=" text-white lg:text-2xl text-[20px] font-bold font-aileron lg:leading-[31.20px] tracking-wider">
                     Innovation To Win</h4>
                 <p
                     class=" text-white lg:text-xl text-[16px] font-normal font-aileron lg:leading-[30px] leading-[24px]lg:tracking-wider">
@@ -501,10 +599,21 @@
                 </div>
                 <button id="button1" onclick="updateContent('content1', this)"
                     class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">1985
+                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">1985 - 2017
                     </div>
                     <div class="w-5 h-5 dott dots rounded-full"></div>
                 </button>
+                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
+                    <div class="">-</div>
+                    <div class="">-</div>
+                    <div class="">-</div>
+                    <div class="">-</div>
+                    <div class="">-</div>
+                    <div class="">-</div>
+                    <div class="">-</div>
+                    <div class="">-</div>
+                    <div class="">-</div>
+                </div>
                 <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
                     <div class="">-</div>
                     <div class="">-</div>
@@ -523,223 +632,7 @@
                     <div class="">-</div>
                     <div class="">-</div>
                 </div>
-                <button id="button2" onclick="updateContent('content2', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">1990
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button3" onclick="updateContent('content3', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">1993
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button4" onclick="updateContent('content4', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">1994
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button5" onclick="updateContent('content5', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">1996
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button6" onclick="updateContent('content6', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">1997
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button7" onclick="updateContent('content7', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2000
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button8" onclick="updateContent('content8', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2001
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button9" onclick="updateContent('content9', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2011
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button10" onclick="updateContent('content10', this)"
-                    class=" flex items-center justify-center flex-col">
-                    <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2015
-                    </div>
-                    <div class="w-5 h-5 dott dots rounded-full"></div>
-                </button>
-                <div class="lg:flex hidden h-[50px] text-[#acacac] items-end justify-center">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <div class="w-[100%] lg:hidden flex items-end justfy-center h-[50px] text-[#acacac] ">
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                    <div class="">-</div>
-                </div>
-                <button id="button11" onclick="updateContent('content11', this)"
+                <button id="button2" onclick="updateContent('content11', this)"
                     class=" flex items-center justify-center flex-col">
                     <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2018
                     </div>
@@ -763,7 +656,7 @@
                     <div class="">-</div>
                     <div class="">-</div>
                 </div>
-                <button id="button12" onclick="updateContent('content12', this)"
+                <button id="button3" onclick="updateContent('content12', this)"
                     class=" flex items-center justify-center flex-col">
                     <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2019
                     </div>
@@ -787,7 +680,7 @@
                     <div class="">-</div>
                     <div class="">-</div>
                 </div>
-                <button id="button13" onclick="updateContent('content13', this)"
+                <button id="button4" onclick="updateContent('content13', this)"
                     class=" flex items-center justify-center flex-col">
                     <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2020
                     </div>
@@ -811,7 +704,7 @@
                     <div class="">-</div>
                     <div class="">-</div>
                 </div>
-                <button id="button14" onclick="updateContent('content14', this)"
+                <button id="button5" onclick="updateContent('content14', this)"
                     class=" flex items-center justify-center flex-col">
                     <div class=" lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2021
                     </div>
@@ -835,7 +728,7 @@
                     <div class="">-</div>
                     <div class="">-</div>
                 </div>
-                <button id="button15" onclick="updateContent('content15', this)"
+                <button id="button6" onclick="updateContent('content15', this)"
                     class=" flex items-center  justify-center flex-col">
                     <div class="lg:text-2xl text-[20px] font-semibold  font-aileron leading-tight tracking-wide">2022
                     </div>
@@ -859,7 +752,7 @@
                     <div class="">-</div>
                     <div class="">-</div>
                 </div>
-                <button id="button16" onclick="updateContent('content16', this)"
+                <button id="button7" onclick="updateContent('content16', this)"
                     class=" flex items-center justify-center flex-col">
                     <div class="lg:text-2xl text-[20px] font-semibold font-aileron leading-tight tracking-wide">2023
                     </div>
@@ -899,101 +792,17 @@
 
                 <div id="content1" class=" ">
                     <div class="lg:flex lg:space-x-6">
-                        <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
+                        <img src="./images/about/1985to2017.jpg" alt=""
+                            class="lg:w-[612px] lg:h-[348px] rounded-[20px] object-cover">
+                        
                         <div
                             class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Launched one of the earliest Technical analysis based advisory company.<br /></div>
+                            A trailblazer in Indian trading, pioneering various initiatives: Premier Technical Analysis Advisory Firm; 'Trend Trader', India's oldest newsletter; Providing Training at UTI & BSE; Sole Technical Analysis Magazine 'Capital Market Technicals'; Early Technical Analysis Website 'ChartAdvise'; Advising Domestic and FII Funds; Full-service Firm 'Growth Avenues'. Honored with ATMA's Lifetime Achievement Award.</div>
                     </div>
 
                 </div>
+                
                 <div id="content2" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Launched one of the longest running newsletters on the market Trend Trader (unbroken
-                            publishing record of over 25 years)<br /></div>
-                    </div>
-
-                </div>
-                <div id="content3" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Launched one of the earliest structured learning programs on Technical analysis.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content4" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Launched a comprehensive technical analysis training program at UTI Inst of Capital Markets,
-                            Vashi.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content5" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Launched a comprehensive technical analysis training program at BSE Training
-                            Institute.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content6" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Re launched Capital market technicals, India’s only dedicated technical analysis magazine
-                            till date.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content7" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Launched one of the earliest websites dedicated to technical analysis advise
-                            ChartAdvise.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content8" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Advising Domestic and FII funds on technical trends as a part of one of the largest broking
-                            houses in India.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content9" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Launched Growth Avenues, a full service advisory and fund management company.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content10" class=" ">
-                    <div class="lg:flex lg:space-x-6">
-                       <div alt="" class="lg:w-[612px] w-[100%] h-[198px] bg-gray-500 lg:h-[348px] rounded-[20px] object-cover"></div>
-                        <div
-                            class="lg:mt-0 mt-5 lg:w-[612px] lg:h-[196px] text-white text-left lg:text-xl text-[16px] font-light font-aileron lg:leading-7 leading-[22px] tracking-wider">
-                            Awarded Life Time achievement award for technical analysis by ATMA.<br /></div>
-                    </div>
-
-                </div>
-                <div id="content11" class=" ">
                     <div class="lg:flex lg:space-x-6">
                         <img src="./images/about/car1.jpeg" alt=""
                             class="lg:w-[612px] lg:h-[348px] rounded-[20px] object-cover">
@@ -1007,8 +816,7 @@
                     </div>
 
                 </div>
-
-                <div id="content12" class="  hidden">
+                <div id="content3" class="  hidden">
                     <div class="lg:flex lg:space-x-6">
                         <img src="./images/about/car5.JPG" alt=""
                             class="lg:w-[612px] lg:h-[348px] rounded-[20px] object-cover">
@@ -1021,8 +829,7 @@
                     </div>
 
                 </div>
-
-                <div id="content13" class="  hidden">
+                <div id="content4" class="  hidden">
                     <div class="lg:flex lg:space-x-6">
                         <img src="./images/about/car3.png" alt=""
                             class="lg:w-[612px] lg:h-[348px] rounded-[20px] object-cover">
@@ -1035,8 +842,7 @@
                     </div>
 
                 </div>
-
-                <div id="content14" class="  hidden">
+                <div id="content5" class="  hidden">
                     <div class="lg:flex lg:space-x-6">
                         <img src="./images/about/car4.png" alt=""
                             class="lg:w-[612px] lg:h-[348px] rounded-[20px] object-cover">
@@ -1049,8 +855,7 @@
                     </div>
 
                 </div>
-
-                <div id="content15" class="  hidden">
+                <div id="content6" class="  hidden">
                     <div class="lg:flex lg:space-x-6">
                         <img src="./images/about/car2.JPG" alt=""
                             class="lg:w-[612px] lg:h-[348px] rounded-[20px] object-cover">
@@ -1063,8 +868,7 @@
                     </div>
 
                 </div>
-
-                <div id="content16" class="  hidden">
+                <div id="content7" class="  hidden">
                     <div class="lg:flex lg:space-x-6">
                         <img src="./images/about/car6.png" alt=""
                             class="lg:w-[612px] lg:h-[348px] rounded-[20px] object-cover">
@@ -1180,9 +984,11 @@
             <div class="lg:flex lg:space-x-[41px]">
                 <div class="lg:w-[631px] flex mb-[20px] lg:h-[274px] rounded-[10px] border border-zinc-400 mx-auto">
                     <img src="./images/about/RajaVenkat.png" alt="" class="rounded-l-[10px] h-[271px] lg:block hidden">
-                    <img src="./images/about/RajaVenkat-mob.svg" alt="" class="rounded-l-[10px] h-[271px] lg:hidden block">
+                    <img src="./images/about/RajaVenkat-mob.svg" alt=""
+                        class="rounded-l-[10px] h-[271px] lg:hidden block">
                     <div class="lg:py-[26px] py-[10px]  lg:px-[26px] px-[10px]">
-                        <h4 class="text-white lg:text-[28px] font-bold font-aileron  lg:leading-[39.20px] tracking-wide">
+                        <h4
+                            class="text-white lg:text-[28px] font-bold font-aileron  lg:leading-[39.20px] tracking-wide">
                             Mr. Raja Venkatraman</h4>
                         <p
                             class=" text-white lg:text-base text-[10px] font-normal font-aileron leading-normal tracking-wider">
@@ -1196,15 +1002,18 @@
                         </p>
                         <p
                             class=" text-white lg:mt-[10px] mt-5 lg:text-base text-[12px] font-normal font-aileron lg:leading-tight leading-4 lg:tracking-wide tracking-wider">
-                            Raja, a skilled leader with an MCA, MCom, and CISA, manages operations and clients in Equity, Derivative, and Commodity markets. He excels in tech, finance, and administration.
+                            Raja, a skilled leader with an MCA, MCom, and CISA, manages operations and clients in
+                            Equity, Derivative, and Commodity markets. He excels in tech, finance, and administration.
                         </p>
                     </div>
                 </div>
                 <div class="lg:w-[631px] flex mb-[20px] lg:h-[274px] rounded-[10px] border border-zinc-400 mx-auto">
                     <img src="./images/about/Aditya.png" alt="" class="rounded-l-[10px] h-[271px] lg:block hidden">
-                    <img src="./images/about/Aditya-mob.svg" alt="" class="rounded-l-[10px] h-[271px] lg:hidden block w-[50%]">
+                    <img src="./images/about/Aditya-mob.svg" alt=""
+                        class="rounded-l-[10px] h-[271px] lg:hidden block w-[50%]">
                     <div class="lg:py-[26px] py-[10px]  lg:px-[26px] px-[10px]">
-                        <h4 class="text-white lg:text-[28px] font-bold font-aileron  lg:leading-[39.20px] tracking-wide">
+                        <h4
+                            class="text-white lg:text-[28px] font-bold font-aileron  lg:leading-[39.20px] tracking-wide">
                             Mr.
                             Aditya Iyer</h4>
                         <p
@@ -1394,7 +1203,7 @@
                 <article>
                     <div class="wrapper">
                         <div class="img">
-                            <img src="./images/about/aw1.png" alt="" >
+                            <img src="./images/about/aw1.png" alt="">
 
                         </div>
 
@@ -1453,8 +1262,7 @@
                         <h2 class="font-bold text-[48px] text-[#fddc1f] md:text-3xl lg:text-5xl">
                             <span id="clientsCount">30</span> <span class="-ml-1">k+</span>
                         </h2>
-                        <p
-                            class="text-center text-white text-xl font-normal mt-1 font-aileron leading-7 tracking-wide">
+                        <p class="text-center text-white text-xl font-normal mt-1 font-aileron leading-7 tracking-wide">
                             Software Users</p>
                     </div>
 
@@ -1463,8 +1271,7 @@
                         <h2 class="font-bold text-[#fddc1f] text-[48px] md:text-3xl lg:text-5xl">
                             <span id="mediaCount">50</span> <span class="-ml-1">k+</span>
                         </h2>
-                        <p
-                            class="text-center text-white text-xl font-normal mt-1 font-aileron leading-7 tracking-wide">
+                        <p class="text-center text-white text-xl font-normal mt-1 font-aileron leading-7 tracking-wide">
                             Trained</p>
                     </div>
 
@@ -1483,9 +1290,8 @@
                         <h2 class="font-bold text-[#fddc1f] text-[48px] md:text-3xl lg:text-5xl">
                             <span id="campaignsCount">80</span> <span class="-ml-1">%</span>
                         </h2>
-                        <p
-                            class="text-center text-white text-xl font-normal mt-1 font-aileron leading-7 tracking-wide">
-                             Accuracy</p>
+                        <p class="text-center text-white text-xl font-normal mt-1 font-aileron leading-7 tracking-wide">
+                            Accuracy</p>
                     </div>
                 </div>
             </div>
@@ -1570,7 +1376,7 @@
                         </div>
                         <div class="mt-4">
                             <div
-                                class="lg:text-left text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-relaxed leading-tight tracking-wider">
+                                class="lg:text-left text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
                                 Get ready-made trades, pre processed analysis from multiple indicators , scoring and
                                 ranking on stocks and indices.
                             </div>
@@ -1633,7 +1439,7 @@
                                 & Conditions</a>
                             <a href="disclaimer.html"
                                 class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">
-                               Disclaimer</a>
+                                Disclaimer</a>
                         </div>
                     </div>
                 </div>
@@ -1693,7 +1499,7 @@
                             </a>
                             <a href="youtube-links.html"
                                 class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
-                                YouTube Links
+                                Video Tutorials
                             </a>
                         </div>
                     </div>
@@ -1731,7 +1537,7 @@
                         <a href="disclaimer.html">
                             <div
                                 class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
-                               Disclaimer
+                                Disclaimer
                             </div>
                         </a>
                     </div>
@@ -1821,7 +1627,7 @@
                         <a href="youtube-links.html">
                             <div
                                 class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
-                                YouTube Links
+                                Video Tutorials
                             </div>
                         </a>
 
@@ -1968,33 +1774,6 @@
             });
             document.getElementById('button7').addEventListener('click', function () {
                 updateContent('content7', this);
-            });
-            document.getElementById('button8').addEventListener('click', function () {
-                updateContent('content8', this);
-            });
-            document.getElementById('button9').addEventListener('click', function () {
-                updateContent('content9', this);
-            });
-            document.getElementById('button10').addEventListener('click', function () {
-                updateContent('content10', this);
-            });
-            document.getElementById('button11').addEventListener('click', function () {
-                updateContent('content11', this);
-            });
-            document.getElementById('button12').addEventListener('click', function () {
-                updateContent('content12', this);
-            });
-            document.getElementById('button13').addEventListener('click', function () {
-                updateContent('content13', this);
-            });
-            document.getElementById('button14').addEventListener('click', function () {
-                updateContent('content14', this);
-            });
-            document.getElementById('button15').addEventListener('click', function () {
-                updateContent('content15', this);
-            });
-            document.getElementById('button16').addEventListener('click', function () {
-                updateContent('content16', this);
             });
 
             function updateContent(contentId, activeButton) {
@@ -2396,6 +2175,31 @@
                     });
                 });
             });
+        });
+
+        const overlay = document.getElementById('overlay');
+        const popupForm = document.getElementById('popupForm');
+        const closeButton = document.getElementById('close-btn');
+
+        // Function to display the popup and overlay
+        function togglePopup(){
+            overlay.style.display = 'flex';
+        }
+        
+
+        // Function to close the popup and overlay
+        function closePopup() {
+            overlay.style.display = 'none';
+        }
+
+        // Event listener for the close button
+        closeButton.addEventListener('click', closePopup);
+
+        // Event listener to close popup when clicking outside of it
+        overlay.addEventListener('click', function (event) {
+            if (event.target === overlay) {
+                closePopup();
+            }
         });
 
     </script>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | Neo Traders</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Advisory | Neo Trader</title>
+    <link rel="stylesheet" href="./Css/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,13 +25,22 @@
         }
     </script>
     <style>
-        .box-bg {
-            background: linear-gradient(180deg, rgba(0, 61, 238, 0.19) -11.2%, rgba(19, 22, 35, 0) 100%);
+        .home-bg {
+            background-image: url("/images/homeBg.png");
+            background-repeat: no-repeat;
+            background-size: 130%;
+            background-position: top;
         }
 
-        .center-box-bg {
-            background:
-                linear-gradient(180deg, rgba(0, 61, 238, 0.48) 0%, rgba(108, 138, 228, 0.242) 49.58%, rgba(217, 217, 217, 0) 100%, rgba(19, 22, 35, 0.2) 100%);
+        @media (max-width: 768px) {
+            .home-bg {
+                background-image: url("/images/contact/Background-mobile.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top;
+
+            }
+
         }
 
         .button-bg {
@@ -44,9 +53,8 @@
     </style>
 </head>
 
-<body class=" contact-bg max-w-[1440px] mx-auto">
-    <section class="mx-auto lg:px-20 px-5 lg:py-0 py-5">
-        <!-- ----------------------------------------------------- Navbar Starts -->
+<body class="home-bg max-w-[1440px] mx-auto">
+    <section class=" lg:px-20 px-5 mx-auto">
         <nav class="flex items-center justify-between  z-50">
             <div class="lg:w-[20%] ">
                 <a href="/index.html"><img src="./images/nav-logo.svg" alt="" class="lg:w-[500px]  w-[170px]"></a>
@@ -322,575 +330,203 @@
         </nav>
 
 
-        <!-- Breadcrumbs Section -->
-        <div class="breadcrumbs flex space-x-2 justify-start items-center mt-10 font-aileron">
-            <div
-                class="breadcrumb-item text-zinc-500 text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
-                <a href="/index.html">Home</a>
-            </div>
-            <img src="./images/breadcrumbArrow.svg" alt="Breadcrumb Arrow">
-            <div
-                class="breadcrumb-item text-white text-xl font-normal font-aileron capitalize hover:underline cursor-pointer">
-                Pricing
-            </div>
-            <img src="./images/breadcrumbArrow-white.svg" alt="Breadcrumb Arrow">
+        <!-- main section starts  -->
+        <div>
+            <h1 class="text-center text-yellow-400 font-poppins text-[44px] lg:text-[54px] pt-10 font-bold">Advisory
+            </h1>
+            <p class="text-center text-base lg:text-[20px] text-white font-aileron">Our advisory services is an
+                all-inclusive service
+                for <br class="hidden lg:block">
+                trading the
+                stock
+                markets while having limited time at hand.</p>
         </div>
 
+        <!-- main section  -->
 
-        <section class="lg:mt-[80px] mt-[50px]">
-            <div class="lg:text-center text-left"><span
-                    class="text-white lg:text-[56px] text-[27px] font-semibold font-poppins lg:leading-[72.80px]">Choose.
-                </span><span
-                    class="text-yellow-400 lg:text-[56px] text-[27px] font-semibold font-poppins lg:leading-[72.80px]">Subscribe.</span><span
-                    class="text-white lg:text-[56px] text-[27px] font-semibold font-poppins lg:leading-[72.80px]">
-                    Trade.</span></div>
-            <p
-                class=" lg:text-center text-left text-white lg:text-xl text-lg font-normal lg:mx-[100px] lg:mt-[16px] mt-2 font-aileron lg:leading-[30px] leading-6 tracking-wider">
-                NeoTrader
-                provides
-                flexible pricing options to cater to diverse needs. Tailor your trading experience with NeoTrader's
-                affordable and customisable subscription plans.
-            </p>
+        <section
+            class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-20 items-start mt-16 lg:mt-32 mb-20">
+            <div class="text-white font-aileron">
+                <div class=" text-left"><span
+                        class="text-white lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                        Trade
+                    </span><span
+                        class="text-yellow-400 lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                        Effectively</span>
+                </div>
+                <!-- <h2 class="font-semibold text-[36px]">Trade Effectively</h2> -->
+                <p class="text-base lg:text-lg mt-4">Efficiently trade the markets on your mobile device with the
+                    expertise of a
+                    well-trained
+                    team mentored by Dr. C K Narayan. Receive timely trade recommendations for consistent profits across
+                    all assets – Cash, Futures, or Options.
+                    <br><br>
+                    Our Advisory Service, CFO Gains, supports every recommended trade with proven strategies. This
+                    ensures prompt execution, increasing your daily profit potential in the market.
+                    <br><br>
+                    Advisory Services is a powerful solution for traders lacking time but eager to participate in the
+                    market. Many individuals with capital and intent to trade often face barriers due to insufficient
+                    training or time constraints from work or business. This creates a demand for a product that
+                    delivers high-probability trades quickly, typically a task requiring several hours daily.
+                    <br><br>
+                    Imagine accessing these powerful trades effortlessly! Advisory Services CFO Gains, endorsed by Dr C
+                    K Narayan's decades of experience, is the optimal solution for seizing market opportunities with
+                    ease.
+                </p>
+            </div>
+            <img src="/images/CKNarayan.jpeg" alt="" class="rounded-[20px] w-[430px] ">
         </section>
 
-        <section class="mt-[80px]">
+
+
+        <!-- 2nd section  -->
+        <section class="lg:py-20">
+            <div class=" text-center"><span
+                    class="text-white lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                    Why Must You
+                </span><span
+                    class="text-yellow-400 lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                    Opt-in for This Service?</span>
+            </div>
+            <!-- <h2 class="text-center font-semibold text-[36px] font-aileron text-white">
+                Why Must You Opt-in for This Service?
+            </h2> -->
+            <div class="pt-10">
+                <img src="/images/about/lineHorizontal.png" alt="">
+                <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-3 font-aileron  text-white my-10">
+                    <div class="flex items-center justify-center flex-col text-center  space-y-4">
+                        <h4 class="text-center font-semibold text-xl lg:text-2xl">Cash, Future, and Option Trades at
+                            Your
+                            Fingertips</h4>
+                        <p class="text-base lg:text-[19px]">The service offers a wide range of trade recommendations and
+                            covers
+                            almost
+                            every aspect of
+                            the market by offering you recommendations for cash, future, and options trades on both a
+                            daily and weekly basis, which allows you to make profits regularly.</p>
+                    </div>
+                    <img src="/images/about/lineVertcal.png" alt="" class="h-[2px] lg:h-60 w-full lg:w-[2px]">
+                    <div class="text-center flex items-center justify-center flex-col space-y-4">
+                        <h4 class="text-center font-semibold text-xl lg:text-2xl">Artificial Intelligence based <br>
+                            trades</h4>
+                        <p class="text-base lg:text-[19px]">All are trades are passed thru high quality technical
+                            analysis based algo
+                            strategies that
+                            have been statistically tested across time for higher probability trades. This helps us give
+                            you the precise entry point, accurate targets and stop loss levels for every trade.</p>
+                    </div>
+                    <div>
+                        <img src="/images/about/lineVertcal.png" alt="" class="h-[2px] lg:h-60 w-full lg:w-[2px]">
+                    </div>
+                    <div class="text-center flex items-center justify-center flex-col space-y-4">
+                        <h4 class="text-center font-semibold text-xl lg:text-2xl">Get Trade notifications Straight on
+                            Your
+                            Smartphone</h4>
+                        <p class="text-base lg:text-[19px]">All the trade updates and calls are delivered straight to
+                            your smartphone
+                            to
+                            ensure that you
+                            never miss out on a profitable opportunity. This makes trading more convenient for you and
+                            helps you make amazing profits.</p>
+                    </div>
+                </div>
+                <img src="/images/about/lineHorizontal.png" alt="">
+            </div>
+        </section>
+
+
+        <!-- 3rd section  -->
+        <section class="py-20">
+            <div class=" text-center"><span
+                    class="text-white lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                    Exclusive Features of
+                </span><span
+                    class="text-yellow-400 lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                    CFO Gains Service</span>
+            </div>
+            <!-- <h2 class="text-center font-semibold text-[36px] font-aileron text-white">
+                Exclusive Features of CFO Gains Service
+            </h2> -->
+            <p class="text-center text-base lg:text-[19px] pt-5 font-aileron text-white">With this service, you can
+                make
+                consistent profits in cash, future, <br class="hidden lg:block"> and options trades with minimal risk
+                involved.</>
             <div
-                class="flex lg:flex-row flex-col items-center justify-center lg:space-x-[50px] lg:space-y-0 space-y-10">
+                class="p-5 lg:p-10 mt-10 space-y-5 lg:space-y-10 bg-[#2d2935] border-opacity-[20%] bg-opacity-[50%]  border border-[#fff] rounded-[20px] lg:h-[323px] relative">
+                <img class="w-[400px] h-[323px] right-[0px] rounded-[20px] bottom-[0px]  absolute"
+                    src="./images/about/gradient_box.png" />
+                <!-- <img class="w-14 h-14" src="./images/about/ph1.png" /> -->
+                <h4
+                    class=" text-white text-center lg:text-4xl text-[20px] font-bold font-aileron leading-[31.20px] tracking-wide">
+                    Weekly Index, Options, and Multi Day Trade Calls</h4>
+                <p
+                    class=" text-white text-center lg:text-xl text-[16px] font-normal  font-aileron z-20 leading-[30px] tracking-wider">
+                    From the secret trading strategies of Dr. C K Narayan, get new calls for index, option, and multiday
+                    trades from time to time and make sweet profits in less time. Every call provided is backed by
+                    extensive research and proven strategies.</p>
 
-
-                <div
-                    class="lg:w-[324px] h-[500px] px-[18px] text-center pt-[51px] pb-[14px] box-bg lg:rounded-[20px] rounded-[30px] border border-zinc-500 border-opacity-50">
-                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">3 Months</h2>
-                    <div class="text-center">
-                        <div class=" h-[69px] flex items-center justify-center text-center">
-                            <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
-                                20,000
-                            </div>
-                            <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
-                                +GST
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹222/Day
-                    </p>
-                    <p
-                        class=" h-[167px] mt-[35px] text-center text-white lg:text-base text-[18px] font-normal font-aileron leading-tight tracking-wider">
-                        Unlock the power of NeoTrader with our Quarterly Plan, customised for your unique trading needs.
-                        Join today for a strategic approach to trading and investing.</p>
-                    <a href="https://pages.razorpay.com/pl_McbJAjoSMTqfmK/view" target="_blank"><button
-                            class="text-white text-xl border border-white button-bg transition-all mt-3 lg:px-[76.5px] lg:py-[16px] px-[30px] py-[8px]  rounded-full lg:font-semibold font-medium font-poppins leading-relaxed tracking-wider">Subscribe
-                        </button></a>
-                </div>
-                <div
-                    class="lg:w-[324px] lg:hidden block h-[500px] px-[18px] relative text-center pt-[51px] pb-[14px] center-box-bg lg:rounded-[20px] rounded-[30px] border border-blue-700 border-opacity-50">
-                    <div
-                        class="w-[161px] px-8 py-4 absolute bg-white bg-opacity-30 rounded-[50px] border border-white border-opacity-10 backdrop-blur-[6.60px] justify-center items-center lg:left-[26%] left-[28%] top-[-5%] inline-flex">
-                        <div
-                            class="text-white whitespace-nowrap animate-pulse text-sm font-semibold font-poppins leading-[18.20px] tracking-wider">
-                            Most Popular
-                        </div>
-                    </div>
-                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">2 Years</h2>
-                    <div class=" h-[69px] flex items-center justify-center text-center">
-                        <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
-                            90,000
-                        </div>
-                        <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
-                            +GST
-                        </div>
-                    </div>
-                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹188/Day
-                    </p>
-                    <p
-                        class=" h-[167px] mt-[35px] text-center text-white lg:text-base text-[17px] font-normal font-aileron leading-tight tracking-wider">
-                        Commit to excellence with NeoTrader's 2 Years Plan, offering regular training, realtime market
-                        insights, and more. Maximize your trading potential with an extended subscription period and
-                        personalized guidance.
-
-                    </p>
-                    <a href="https://pages.razorpay.com/pl_Kf5B8U0lio1Hrr/view" target="_blank"><button
-                            class="text-white text-xl border border-white button-bg transition-all mt-3 lg:px-[71px] lg:py-[16px] px-[30px] py-[8px]  rounded-full lg:font-semibold font-medium font-poppins leading-relaxed tracking-wider">Subscribe
-                        </button></a>
-
-                </div>
-                <div
-                    class="lg:w-[324px] lg:block hidden boxShadow h-[500px] px-[18px] relative text-center pt-[51px] pb-[14px] center-box-bg lg:rounded-[20px] rounded-[30px] border border-blue-700 border-opacity-50">
-                    <div
-                        class="w-[161px] px-8 py-4 absolute bg-white bg-opacity-30 rounded-[50px] border border-white border-opacity-10 backdrop-blur-[6.60px] justify-center items-center lg:left-[26%] left-[30%] top-[-5%] inline-flex">
-                        <div
-                            class="text-white whitespace-nowrap animate-pulse text-sm font-semibold font-poppins leading-[18.20px] tracking-wider">
-                            Most Popular
-                        </div>
-                    </div>
-                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">2 Years</h2>
-                    <div class=" h-[69px] flex items-center justify-center text-center">
-                        <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
-                            90,000
-                        </div>
-                        <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
-                            +GST
-                        </div>
-                    </div>
-                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹188/Day
-                    </p>
-                    <p
-                        class=" h-[167px] mt-[35px] text-center text-white lg:text-base text-[17px] font-normal font-aileron leading-tight tracking-wider">
-                        Commit to excellence with NeoTrader's 2 Years Plan, offering regular training, realtime market
-                        insights, and more. Maximize your trading potential with an extended subscription period and
-                        personalized guidance.
-
-                    </p>
-                    <a href="https://pages.razorpay.com/pl_Kf5B8U0lio1Hrr/view" target="_blank"><button
-                            class="text-white text-xl border border-white button-bg transition-all mt-3 lg:px-[71px] lg:py-[16px] px-[30px] py-[8px]  rounded-full lg:font-semibold font-medium font-poppins leading-relaxed tracking-wider">Subscribe
-                        </button></a>
-
-                </div>
-                <div
-                    class="lg:w-[324px] h-[500px] px-[18px] text-center pt-[51px] pb-[14px] box-bg lg:rounded-[20px] rounded-[30px] border border-zinc-500 border-opacity-50">
-
-                    <h2 class="text-white text-2xl font-bold font-aileron leading-[31.20px]">1 Year</h2>
-
-                    <div class=" h-[69px] flex items-center justify-center text-center">
-                        <div class="text-white text-5xl font-semibold font-poppins leading-[62.40px]">
-                            50,000
-                        </div>
-                        <div class="text-white text-xl font-normal font-aileron leading-7 tracking-wider">
-                            +GST
-                        </div>
-                    </div>
-
-                    <p class="text-yellow-400 text-2xl font-bold font-aileron leading-[31.20px] lg:mt-0 mt-5"> ₹208/Day
-                    </p>
-                    <p
-                        class="  mt-[35px] text-center text-white lg:text-base text-[17px] font-normal font-aileron leading-tight tracking-wider">
-                        Elevate your trading journey with NeoTrader's Annual Plan, from masterclass mentorship to
-                        one-on-one support - access the convenience of a disciplined approach to data access for a whole
-                        year.</p>
-                    <a href="https://pages.razorpay.com/pl_MZMAOMoFfHdk0A/view" target="_blank"><button
-                            class="text-white text-xl border border-white button-bg transition-all mt-3 px-[76.5px] py-[16px] rounded-full font-semibold font-poppins leading-relaxed tracking-wider">Subscribe
-                        </button></a>
-                </div>
-
-            </div>
-            <p class="text-center mt-9 font-aileron text-white">*All prices mentioned above are exclusive of GST.
-
-            </p>
-        </section>
-
-        <section class="lg:mt-[148px] mt-[50px] lg:block hidden">
-            <div class="text-center"><span
-                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Pricing
-                </span><span
-                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Plans</span>
-            </div>
-            <div class="text-white text-[24px] lg:mt-[60px] font-aileron">
-                <div class="flex justify-between px-[40px]">
-                    <p>Features</p>
-                    <div class="flex space-x-40">
-                        <p>3 Months</p>
-                        <p>1 Year</p>
-                        <p>2 Years</p>
-                    </div>
-                </div>
-                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
-                <div class="flex justify-between pl-[50px] pr-[60px]">
-                    <ul class="space-y-[30px] list-disc  lg:w-[461px]">
-                        <li>NeoTrader Pro</li>
-                        <li>Q&A Sessions on NeoTrader</li>
-                        <li>Demos</li>
-                        <li>Offers on Training Courses</li>
-                        <li>Online Sessions by Dr C K Narayan</li>
-                        <li>Mentoring with Mr. Raja Venkatraman
-                            & Mr. Aditya Iyer</li>
-                        <li>One-on-one live market support</li>
-                        <li>Mentoring with Dr. CK Narayan</li>
-                    </ul>
-                    <div class="flex space-x-[225px]">
-                        <div class="">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[65px]">
-                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                        </div>
-                        <div class="">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[65px]">
-                            <img src="./images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                        </div>
-                        <div>
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[65px]">
-                            <img src="./images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px] mt-[40px]">
-                        </div>
-                    </div>
-                </div>
-                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
             </div>
         </section>
 
-        <section class="mt-[50px] lg:hidden block ">
-            <div class="text-center"><span
-                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Pricing
-                </span><span
-                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Plans</span>
+        <section class="lg:py-20 font-aileron text-white">
+            <div class=" text-center">
+                <span
+                    class="text-yellow-400 lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                    Subscribe</span><span
+                    class="text-white lg:text-5xl text-[32px] font-semibold font-poppins lg:leading-[62.40px] leading-[46px]">
+                    Now
+                </span>
             </div>
-            <div class="font-aileron overflow-x-scroll w-[350px] space-y-2 lg:hidden block">
-                <div
-                    class="flex justify-between items-center mb-4  py-4 px-2 w-[650px] text-xl font-bold font-aileron text-white border-b-2 border-white">
-                    <p class="w-[335px]">Features</p>
-                    <p class="">3 Months</p>
-                    <p class="">1 Year</p>
-                    <p class="">3 Years</p>
-                </div>
-
-                <div
-                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; NeoTrader Pro</p>
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                </div>
-                <div
-                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; Q&A Sessions on NeoTrader</p>
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                </div>
-                <div
-                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; Demos</p>
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                </div>
-                <div
-                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; Offers on Training Courses</p>
-                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-
-                </div>
-                <div
-                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; Online Sessions by Dr C K Narayan</p>
-                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-
-                </div>
-                <div
-                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; Mentoring with Mr. Raja Venkatraman
-                        & Mr. Aditya Iyer</p>
-                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-
-                </div>
-                <div
-                    class="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; One-on-one live market support</p>
-                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                </div>
-                <div
-                    class="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] text-xl font-medium font-aileron text-white">
-                    <p class="w-[335px]">&#8608; Mentoring with Dr. CK Narayan</p>
-                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/cross.png" alt="" class="w-[28px] h-[28px]">
-                    <img src="/images/pricing-page/tick.png" alt="" class="w-[28px] h-[28px]">
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- <section class="lg:mt-[148px] mt-[50px] lg:hidden block">
-            <div class="text-center"><span
-                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Pricing
-                </span><span
-                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins leading-[62.40px]">Plans</span>
-            </div>
-            <div class="text-white text-[24px] lg:mt-[60px] font-aileron">
-                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
-                <div class="flex flex-col justify-between lg:pl-[50px] lg:pr-[60px] pl-5 pr-5">
-                    <ol class="lg:space-y-[30px] space-y-[40px] list-decimal text-[20px]  ">
-                        <div class="">
-                            <li class="font-medium">NeoTrader Pro</li>
-                            <div class="flex space-x-2 justify-between font-normal mt-[5px]">
-                                <div class="flex flex-col items-center justify-center">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <li>Q&A Sessions on NeoTrader</li>
-                            <div class="flex space-x-2 justify-between mt-[5px]">
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <li>Demos</li>
-                            <div class="flex space-x-2 justify-between mt-[5px]">
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <li>Offers on Training Courses</li>
-                            <div class="flex space-x-2 justify-between mt-[5px]">
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <li>Online Sessions by Dr C K Narayan</li>
-                            <div class="flex space-x-2 justify-between mt-[5px]">
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <li>Mentoring with Mr. Raja Venkatraman & Mr. Aditya Iyer</li>
-                            <div class="flex space-x-2 justify-between mt-[5px]">
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <li>One-on-one live market support</li>
-                            <div class="flex space-x-2 justify-between mt-[5px]">
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <li>Mentoring with Dr. CK Narayan</li>
-                            <div class="flex space-x-2 justify-between mt-[5px]">
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Quarterly</p>
-                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">Annually</p>
-                                    <img src="./images/pricing-page/cross.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                                <div class="flex flex-col items-center justify-center  ">
-                                    <p class="text-sm mb-1 text-zinc-500">2 Years</p>
-                                    <img src="./images/pricing-page/tick.png" alt="" class="w-[20px] h-[20px]">
-                                </div>
-                            </div>
-                        </div>
-                    </ol>
-                </div>
-                <img src="./images/pricing-page/horizontalLine.png" alt="" class="mt-[30px] mb-[40px]">
-            </div>
-        </section> -->
-
-        <section class="lg:mt-[148px] mt-[50px]">
-            <div class="text-center"><span
-                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins lg:leading-[62.40px]">Why
-                </span><span
-                    class="text-yellow-400 lg:text-5xl text-[28px] font-semibold font-poppins lg:leading-[62.40px]">30K+
-                    Users</span><span
-                    class="text-white lg:text-5xl text-[28px] font-semibold font-poppins lg:leading-[62.40px]">
-                    Trust NeoTrader</span></div>
-            <div class="grid lg:grid-cols-3 grid-cols-1 gap-[24px] mt-[50px]">
-                <div
-                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
-                    <img src="./images/pricing-page/a1.png" alt="" class="w-[58px] h-[58px]">
-                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
-                        Simplified Analysis</div>
+            <!-- <h2 class="text-center font-semibold text-[36px]">Subscribe Now</h2> -->
+            <p class="mt-5 text-center text-xl">With this service, you can make consistent profits in cash, future, <br>
+                and
+                options trades
+                with minimal risk involved.</p>
+            <div
+                class="bg-white bg-opacity-[90%] flex flex-col lg:flex-row rounded-[20px] p-5 lg:p-10 mt-10 space-y-10 lg:space-y-0 lg:space-x-10 transition-all">
+                <div class="text-black space-y-5">
+                    <h3 class="text-[24px] font-semibold">Quarterly Plan</h3>
+                    <p>It’s your opportunity to make profits with cash, future, and options trades on a daily basis so
+                        make sure you don’t miss out on it. Get this service right now to ensure that you make the most
+                        out of it.</p>
+                    <p class="text-[24px]  font-semibold">₹17,700 <sub class="opacity-75"> quaterly</sub></p>
                     <div
-                        class=" text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
-                        Streamlined data, signals, indicators, & expert alerts boost your winning trade
-                        probabilities.<br /></div>
+                        class="w-full h-[53px]  mt-10 cursor-pointer text-blue-700 hover:text-white transition-all px-8 py-4 button-bg border-blue-700 hover:border-none border rounded-[50px] justify-center items-center gap-2.5 inline-flex">
+                        <a href="https://www.instamojo.com/@growthavenues/l6c324ff3404d4fca99372006533d9bcf/"
+                            target="_blank" rel="noopener noreferrer"><button type="submit"
+                                class=" text-base flex  font-semibold font-poppins leading-tight tracking-wider">
+                                Buy Now
+                            </button></a>
 
+                    </div>
+                    <li class="list-none flex lg:items-center"> <span><img src="images/tick.svg" alt="" class="w-[20px] h-[20px] mr-2"></span> 3 Months – 15000/- + GST 2700/-</>
+                    <li class="list-none flex lg:items-center"><span><img src="images/tick.svg" alt="" class="w-[20px] h-[20px] mr-2"></span> Introductory Pricing Offers. Subscribe Now !</li>
                 </div>
-                <div
-                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
-                    <img src="./images/pricing-page/a2.png" alt="" class="w-[58px] h-[58px]">
-                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
-                        Faster Decision Making</div>
+                <div class="bg-gray-400 w-[2px] h-auto"></div>
+                <div class="text-black space-y-5">
+                    <h3 class="text-[24px] font-semibold">Yearly Plan</h3>
+                    <p>It’s your opportunity to make profits with cash, future, and options trades on a daily basis so
+                        make sure you don’t miss out on it. Get this service right now to ensure that you make the most
+                        out of it.</p>
+                    <p class="text-[24px]  font-semibold">₹35,400 <sub class="opacity-75"> annually</sub></p>
                     <div
-                        class=" text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
-                        Intuitive dashboards & advanced technical indicators help you make faster trading
-                        decisions.<br /></div>
+                        class="w-full h-[53px]  mt-10 cursor-pointer text-blue-700 hover:text-white transition-all px-8 py-4 button-bg border-blue-700 hover:border-none border rounded-[50px] justify-center items-center gap-2.5 inline-flex">
+                        <a href="https://www.instamojo.com/@growthavenues/l450654e10ff6456dae11d6dbcb23ec0f/"
+                            target="_blank" rel="noopener noreferrer"><button
+                                class=" text-base flex  font-semibold font-poppins leading-tight tracking-wider">
+                                Buy Now
+                            </button></a>
 
-                </div>
-                <div
-                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
-                    <img src="./images/pricing-page/a3.png" alt="" class="w-[58px] h-[58px]">
-                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
-                        Realtime Market View</div>
-                    <div
-                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
-                        A comprehensive heatmap provides you with a daily market view & sectoral analysis, putting you
-                        ahead of the game.<br /></div>
 
-                </div>
-                <div
-                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
-                    <img src="./images/pricing-page/a4.png" alt="" class="w-[58px] h-[58px]">
-                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
-                        One-to-one Support</div>
-                    <div
-                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
-                        A dedicated customer support team ensures handholding & ensuring success throughout your trading
-                        journey.<br /></div>
-
-                </div>
-                <div
-                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
-                    <img src="./images/pricing-page/a5.png" alt="" class="w-[58px] h-[58px]">
-                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
-                        Learning Opportunities</div>
-                    <div
-                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
-                        Transformational learning opportunities throughout your membership through Dr. CK Narayan’s
-                        online sessions.<br /></div>
-
-                </div>
-                <div
-                    class="w-full h-auto space-y-[12px] px-[30px] py-[26px] box-bg  rounded-[30px] border border-zinc-300 border-opacity-50">
-                    <img src="./images/pricing-page/a6.png" alt="" class="w-[58px] h-[58px]">
-                    <div class="text-white lg:text-2xl text-xl font-bold font-aileron lg:leading-[31.20px] lg:tracking-wider">
-                        One Click Execution</div>
-                    <div
-                        class="text-white lg:text-xl text-lg font-normal font-aileron lg:leading-6 leading-tight lg:tracking-wider">
-                        NeoTrader’s dynamic API & multiple broker partnerships enable you to a seamless trade execution
-                        without additional effort.<br /></div>
-
+                    </div>
+                    <li class="list-none flex lg:items-center"><span><img src="images/tick.svg" alt="" class="w-[20px] h-[20px] mr-2"></span> 1 Year – 30000 /- + GST – 5400/-</li>
+                    <li class="list-none flex lg:items-center"><span><img src="images/tick.svg" alt="" class="w-[20px] h-[20px] mr-2"></span> Introductory Pricing Offers. Subscribe Now !</li>
                 </div>
 
             </div>
         </section>
 
-        <!-- CTA Section  -->
 
-        <section>
-            <div id="" class="baseType2 lg:px-16 lg:py-5">
-                <div
-                    class="lg:flex lg:space-x-0 space-x-10 lg:items-start items-center lg:justify-start justify-center">
-                    <div class="onePart flex flex-col lg:items-start justify-center items-center lg:w-[60%]">
-                        <div
-                            class="text-white lg:text-left text-center lg:text-5xl text-[1.6rem] font-bold font-poppins lg:leading-[62.40px] leading-tight lg:mt-5">
-                            Unlock your Trading <br />Potential with NeoTrader!
-                        </div>
-                        <div class="mt-4">
-                            <div
-                                class="lg:text-left text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
-                                Get ready-made trades, pre processed analysis from multiple indicators , scoring and
-                                ranking on stocks and indices.
-                            </div>
-                            <div
-                                class="lg:text-left text-center text-white text-xl font-semibold font-poppins leading-relaxed tracking-wider lg:mt-2 mt-7">
-                                Ab Smart Trading Hoga Easy!</div>
-                        </div>
-                        <a href="signin.html">
-                            <button
-                                class="lg:mt-6 mt-7 w-[180px] h-[58px] px-8 py-4 rounded-[50px] border border-white justify-center items-center gap-3 inline-flex text-white text-xl font-bold whitespace-nowrap font-poppins leading-relaxed tracking-wide hover:bg-white hover:text-black">Join
-                                Today
-                            </button>
-                        </a>
-
-                    </div>
-                    <div class="twoPart lg:w-[60%] w-[100%]">
-                        <img src="/images/ctaImg2.png" alt="" class="w-auto lg:ml-0 lg:mt-0 -ml-10 mt-5 ">
-                    </div>
-                </div>
-
-            </div>
-        </section>
         <!-- ----------------------------------------------------- Footer Starts -->
         <footer class="mt-16">
             <div class="flex flex-col lg:flex-row justify-between">
@@ -930,7 +566,7 @@
                                 & Conditions</a>
                             <a href="disclaimer.html"
                                 class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wide">
-                               Disclaimer</a>
+                                Disclaimer</a>
                         </div>
                     </div>
                 </div>
@@ -1028,7 +664,7 @@
                         <a href="disclaimer.html">
                             <div
                                 class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
-                               Disclaimer
+                                Disclaimer
                             </div>
                         </a>
                     </div>
@@ -1148,10 +784,8 @@
             </div>
         </footer>
 
+
     </section>
-
-
-
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -1265,7 +899,6 @@
         });
 
     </script>
-
 </body>
 
 </html>
