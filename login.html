@@ -14,7 +14,8 @@
     <title>Login | Neo Traders</title>
     <style>
         .loginBg {
-            background-image: url("./images/login/loginBg.png");
+            /* background-image: url("./images/login/loginBg.png"); */
+            background-color: #292D35;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top center;
@@ -25,6 +26,7 @@
             width: 459px;
             height: 14px;
             margin: 40px 0;
+            font-family: "Aileron";
         }
 
         .signColor {
@@ -71,9 +73,10 @@
             color: #838383;
             pointer-events: none;
             transition: top 0.3s, font-size 0.3s, color 0.3s;
+           
         }
 
-        .input-field:focus+.input-label,
+        /* .input-field:focus+.input-label,
         .input-field:not(:placeholder-shown)+.input-label {
             top: -15px;
             left: -3px;
@@ -87,7 +90,7 @@
             left: -3px;
             font-size: 14px;
             color: #838383;
-        }
+        } */
 
         .eye-icon {
             position: absolute;
@@ -112,6 +115,9 @@
         .button-bg:hover {
             background: linear-gradient(90deg, #003DEE 0%, #2AD9D5 100%);
         }
+        .input-field::placeholder {
+            color: darkslategray;
+        }
 
         @media (max-width: 480px) {
             .input-field {
@@ -131,7 +137,8 @@
             }
 
             .loginBg {
-                background-image: url("/images/login/loginBgMobile.png");
+                /* background-image: url("/images/login/loginBgMobile.png"); */
+                background-color: #292D35;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: top;
@@ -165,17 +172,17 @@
 
 <body class="loginBg">
     <div
-        class="flex lg:flex-row flex-col justify-between shadow-lg lg:mx-auto lg:max-w-[1100px] max-w-auto  lg:my-[170px] lg:rounded-[20px] lg:h-[684px] signColor">
+        class="flex lg:flex-row flex-col justify-between shadow-lg lg:mx-auto lg:max-w-[1100px] max-w-auto  lg:my-[170px] my-[50px] lg:mx-0 mx-[10px] rounded-[20px] lg:h-[684px] signColor">
         <div class="p-5">
             <p><a href="./index.html" class="linkWidth"><img src="./images/nav-logo-white.svg" alt=""
                         class="w-[179px] h-[80px]"></a></p>
             <div class="space-y-16">
                 <h2 class=" lg:mt-[60px] mt-[30px] lg:ml-2 lg:pr-[56px]"><span
-                        class="text-white lg:text-[32px] text-[28px] font-bold font-aileron lg:leading-[41.60px]">Ready to
+                        class="text-white lg:text-[32px] text-[37px] font-bold font-aileron lg:leading-[41.60px]">Ready to
                         <br class="lg:block hidden">experience
                         the</span>
                         <span
-                        class="text-yellow-400 lg:text-[32px] text-[28px] font-bold font-aileron lg:leading-[41.60px]">
+                        class="text-yellow-400 lg:text-[32px] text-[37px] font-bold font-aileron lg:leading-[41.60px]">
                         <br />future
                         of trading?</span></h2>
 
@@ -184,19 +191,18 @@
 
         </div>
         <div
-            class="lg:w-[699px]  px-5 py-5 lg:px-0 lg:py-0 lg:rounded-[20px] lg:pt-[114px] lg:px-[79px] lg:h-[684px] bg-white ">
-            <h1 class="text-black lg:text-[32px] text-xl font-medium font-poppins leading-[41.60px]">Login</h1>
-            <div class="space-y-10">
+            class="lg:w-[699px]  px-5 py-5 lg:px-0 lg:py-0 rounded-[20px] lg:pt-[114px] pt-[50px] lg:px-[79px] lg:h-[684px] bg-white ">
+            <h1 class="text-black text-[32px] font-medium font-poppins leading-[41.60px]">Login</h1>
+            <div class="lg:space-y-10">
                 <form action="#" class="">
-                    <div class="space-y-20 mb-10">
+                    <div class="lg:space-y-20 space-y-16 mb-10">
                         <div class="input-container">
-                            <input type="text" class="input-field" id="inputField" placeholder=" " required>
-                            <label for="inputField" class="input-label font-aileron">Enter your Client ID / E-mail ID /
-                                Mobile Number</label>
+                            <input type="text" class="input-field" id="inputField" placeholder="Enter your Client ID / E-mail ID / Mobile Number" required>
+                            <!-- <label for="inputField" class="input-label font-aileron"></label> -->
                         </div>
                         <div class="input-container">
-                            <input type="password" class="input-field" id="inputField2" placeholder=" " required>
-                            <label for="inputField2" class="input-label font-aileron">Enter your Password</label>
+                            <input type="password" class="input-field" id="inputField2" placeholder="Enter your Password" required>
+                            <!-- <label for="inputField2" class="input-label font-aileron"></label> -->
                             <div class="eye-icon" onclick="togglePasswordVisibility()">
                                 <img src="./images/login/eyeIcon.png" alt="Toggle Password Visibility"
                                     class="bg-[#f5f5f5] rounded-r-[8px] p-[6px] h-[54px]">
@@ -204,10 +210,10 @@
                         </div>
                     </div>
                     <div
-                        class="lg:w-[459px] h-[53px]  mt-10 cursor-pointer text-blue-700 hover:text-white transition-all px-8 py-4 button-bg border-blue-700 hover:border-none border rounded-[50px] justify-center items-center gap-2.5 inline-flex">
+                        class="lg:w-[459px] w-full h-[53px]  mt-10 text-center cursor-pointer text-blue-700 hover:text-white transition-all px-8 py-4 button-bg border-blue-700 hover:border-none border rounded-[50px] justify-center items-center gap-2.5 inline-flex">
                         <button type="submit"
-                            class=" text-base flex  font-semibold font-poppins leading-tight tracking-wider">
-                            Login <span class="lg:block hidden ml-1"> to NeoTrader</span>
+                            class=" w-full text-base  font-semibold font-poppins leading-tight tracking-wider">
+                            Login to NeoTrader
                         </button>
                     </div>
                     <div class="flex lg:flex-row flex-col border-b py-5 lg:w-[459px] lg:space-x-[210px]">
@@ -223,7 +229,7 @@
                 <div><span class="text-black text-base font-normal font-aileron leading-tight tracking-wider">Don’t
                         have an account? </span><span
                         class="text-blue-700 cursor-pointer text-base font-semibold font-poppins underline leading-tight tracking-wider"><a
-                            href="/signin.html">Sign
+                            href="/sign-up.html">Sign
                             Up here!</a>
                     </span>
                 </div>
