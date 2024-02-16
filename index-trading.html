@@ -29,6 +29,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+            text-transform: capitalize;
         }
 
         .accordion-item {
@@ -114,7 +115,92 @@
 
 <body class="tnc-bg ">
 
+    <div class="overlay" id="overlay">
+        <div class="popupForm " id="popupForm" >
+            <div  class="w-[100%] lg:h-[90vh] flex items-start lg:flex-row-reverse flex-col-reverse space-x-6 signColor2 rounded-[20px] ">
+                <form action=" " method="POST"
+                    class="lg:w-[40%] w-[100%] lg:h-[100%] rounded-[20px] border border-zinc-500 py-5  bg-white">
+                    <div class="partOne w-full px-5 lg:px-10 pt-8">
+                        <div class="grid grid-cols-1 gap-x-8 gap-y-5 font-aileron">
+                            <div class=" text-black flex flex-col">
+                                <label for="name" class="mb-2"> Full
+                                    Name <span class="text-red-700 font-semibold"><sup>*</sup> </span></label>
+                                <input type="text" name="name" id="name" required
+                                    class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black px-3"></input>
+                            </div>
+                            <div class=" text-black flex flex-col">
+                                <label for="phone" class="mb-2">Phone
+                                    No. <span class="text-red-700 font-semibold"><sup>*</sup> </span> </label>
+                                <input type="tel" name="phone" id="phone" required
+                                    class="h-12  rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                            </div>
+                            <div class=" text-black flex flex-col">
+                                <label for="email" class="mb-2">Email
+                                    Id <span class="text-red-700 font-semibold"><sup>*</sup> </span> </label>
+                                <input type="email" name="email" id="email" required
+                                    class="h-12   rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
+                            </div>
+    
+                            <div class="text-black flex flex-col">
+                                <label for="time-slot" class="">Select
+                                    your Time Slot <span class="text-red-700 font-semibold"><sup>*</sup> </span></label>
+                                <select id="time-slot"
+                                    class="w-full h-12 rounded-[14px] border border-slate-500 border-opacity-50 outline-none px-3 mt-2">
+                                    <option value="" hidden>Please select options</option>
+                                    <option value="11 AM">11 AM</option>
+                                    <option value="12 PM">12 PM</option>
+                                    <option value="1 PM">1 PM</option>
+                                    <option value="3 PM">3 PM</option>
+                                    <option value="4 PM">4 PM</option>
+                                    <option value="5 PM">5 PM</option>
+                                    <option value="6 PM">6 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w-full flex justify-end items-center mt-10">
+                            <button type="submit"
+                                class="w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 hover:border-none rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 hover:bg-gradient-to-r  transition-all">Book A Free Demo
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="lg:w-[58%] h-[100%] flex flex-col items-center  justify-center lg:px-5 px-2 py-5">
+                    <img src="images/hero-computer.png" alt="" class="lg:w-[70%] mt-0">
+                    <div class="text-center text-white textshadow tracking-wide ">
+                        <div
+                            class="text-yellow-400 text-center lg:text-[2.6rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-5">
+                            Ab Smart-Trading Hoga Easy
+                        </div>
+                        <div
+                            class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-2">
+                            With NeoTrader Software!
+                        </div>
+                        
+    
+                        <div class="mt-4">
+                            <div
+                                class=" text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
+                                Get ready-made trades, pre processed analysis from multiple indicators , scoring and
+                                ranking on stocks and indices.
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="absolute right-[5px] lg:top-[5px] top-[14px] cursor-pointer" id="close-btn">
+                <img src="images/closed.svg" alt="" class="w-[30px] h-[30px]">
+            </div>
+        </div>
+    </div>
     <section class="max-container lg:px-20 px-5">
+        <div class="max-container fixed z-40 bottom-5 lg:right-20 right-[20%] 2xl:right-32">
+            <button id="togglePopup" onclick="togglePopup()"
+                class="w-auto h-[55px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white">
+                Book A Free Demo
+            </button>
+        </div>
         <!-- ----------------------------------------------------- Navbar Starts -->
         <nav class="flex items-center justify-between  z-50">
             <div class="lg:w-[20%] ">
@@ -129,7 +215,7 @@
                     <!-- Dropdown Content -->
                     <div class="absolute text-white hidden bg-white p-4 mt-2 space-y-4">
                         <!-- Dropdown Items -->
-                        <a href="https://software.neotrader.in/"
+                        <a href="ai-trading.html"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-mediumleading-[18px] tracking-wide">AI
                             Trading Software</a>
                         <a href="courses.html"
@@ -252,7 +338,7 @@
 
                                 <div
                                     class="dropMenuHide space-y-3 text-base font-medium font-['Poppins'] leading-none tracking-tight dropdownMenu-toggle">
-                                    <a href="https://software.neotrader.in/">
+                                    <a href="ai-trading.html">
                                         <li>AI Trading Software</li>
                                     </a>
                                     <hr class="opacity-40">
@@ -711,7 +797,7 @@
                                     data-id="item1">
                                     <span
                                         class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider  mr-5 lg:mr-10">
-                                        01</span> Can I trade directly from NeoTrader?
+                                        01</span> what types of option trades can i expect?
                                 </div>
                                 <div class="flex-container">
                                     <img src="" alt="" class="faq-img  " />
@@ -720,12 +806,7 @@
 
                             <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                                 id="item1">
-                                Yes, we have one one-click trade execution feature with leading brokers. All you
-                                need to
-                                do is log in once a day, and then you can place your trades into your demat
-                                account
-                                directly from NeoTrader software.
-
+                                you will get ready made stock option trades as well index option trades.
                             </div>
                         </div>
 
@@ -741,7 +822,7 @@
                                 data-id="item2">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider  mr-5 lg:mr-10">
-                                    02</span>Do I need to know Algorithmic/Algo Trading to work with NeoTrader?
+                                    02</span> will i get trades of call and put both?
                             </div>
                             <div class="">
                                 <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
@@ -749,11 +830,8 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item2">
-                            Not at all! Even a complete novice in the market with access to a computer can use
-                            NeoTrader effectively. The design and the output have made any knowledge of
-                            algorithms,
-                            etc., unnecessary as it deliver completely processed information to the user.
-
+                            you will get option buying trades both on the call side and put side.
+                            
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
@@ -765,7 +843,7 @@
                                 data-id="item3">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5  lg:mr-10">
-                                    03</span>Do I need to know Technical analysis to work with NeoTrader?
+                                    03</span> how will i know in which strike price to trade in?
                             </div>
                             <div class="">
                                 <img src="" alt="" class="faq-img  w-[70px] lg:w-auto w-[70px] lg:w-auto" />
@@ -773,18 +851,7 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item3">
-                            Not necessary. NeoTrader delivers the outputs of crunching technical variables using
-                            different sets of technical analysis-based strategies designed by us in a
-                            ready-to-use
-                            format. So, even a layperson with limited knowledge of the markets can also use
-                            NeoTrader.
-                            That said, it is to be added here that NeoTrader’s value can be considerably
-                            enhanced if the
-                            user knows or is familiar with technical analysis. Some features can be tweaked to
-                            individual preferences to design a trading system of one’s own. For those who are
-                            interested, We also provide extensive training in technical analysis. Contact us for
-                            details
-                            on this.
+                            neo trader provides you all the elements of the trade whether be it strike price, expiry, entry, target or stop loss.
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
@@ -797,7 +864,7 @@
                                 data-id="item4">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    04</span>Do I need a high-quality/high-end Computer/Laptop to run NeoTrader?
+                                    04</span> what is the holding period of options trade?
                             </div>
                             <div class="">
                                 <img src="" alt="" class="faq-img  w-[80px] lg:w-auto" />
@@ -805,14 +872,7 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item4">
-                            Not at all. The entire software runs on our servers, and the data is just being
-                            pushed
-                            into the end user's web browser for display. No processing is done at the user end,
-                            and no
-                            data is stored there. Thus, NeoTrader can be accessed from anywhere, anytime, using
-                            any
-                            desktop, laptop, or mobile.
-
+                            you can hold it for max 3 trading sessions.
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
@@ -824,7 +884,7 @@
                                 data-id="item5">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    05</span>Can I use NeoTrader on my mobile or tablet?
+                                    05</span> will i get options selling trades or buying trades?
                             </div>
                             <div class="">
                                 <img src="" alt="" class="faq-img  w-[55px] lg:w-auto" />
@@ -832,9 +892,7 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item5">
-                            While NeoTrader is designed to best work with desktops and laptops, it also works on
-                            tablets
-                            and mobiles. A more definitive version for these devices is currently under testing.
+                            neo trader will give trades of option buying.
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
@@ -847,7 +905,7 @@
                                 data-id="item6">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    06</span>Do I get charts in NeoTrader?
+                                    06</span> how many lots should i trade in?
                             </div>
                             <div class="">
                                 <img src="" alt="" class="faq-img " />
@@ -855,11 +913,8 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item6">
-                            Yes, it offers embedded charts from third-party providers. We also have charts from
-                            Trading
-                            View, one of the best charting platforms in the world. We also provide live
-                            data-based
-                            charts full of Futures, Options, etc, supported through our broking partners.
+                            
+                            it's completely upto you with how many lots you want to trade in.
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
@@ -871,7 +926,7 @@
                                 data-id="item7">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    07</span> Are the strategies shown on the charts in NeoTrader?
+                                    07</span> what is the success ratio of the option trades?
                             </div>
                             <div class="">
                                 <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
@@ -879,10 +934,7 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item7">
-                            No. Trading View is an independent service provider with integrated EOD charting
-                            facilities
-                            into NeoTrader. It does not currently permit us to feature our strategies on their
-                            charts.
+                            to know more about the statistics of it please contact us on +91 123456789 or abcd@gmail.com.
 
                         </div>
                     </div>
@@ -896,7 +948,7 @@
                                 data-id="item8">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    08</span>Why don’t you have your own charts in NeoTrader?
+                                    08</span> can i place the trade into my broker account directly from neotrader?
 
                             </div>
                             <div class="">
@@ -905,13 +957,7 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item8">
-                            This is a development under consideration at the moment. However, there are so many
-                            choices
-                            available currently for charting that loading the program with a chart module makes
-                            it
-                            heavier and delays processing some. However, we are certainly looking at some light
-                            charting
-                            solutions that may get included in future updates of NeoTrader
+                            we have collaborated with many leading brokers, you can execute your trade with just one click. to know more see the video 
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
@@ -923,7 +969,7 @@
                                 data-id="item9">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    09</span> Is there a NeoTrader app?
+                                    09</span> is there a trailing stop mechanism in place?
 
                             </div>
                             <div class="">
@@ -932,11 +978,7 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item9">
-                            Currently, we are working on delivering NeoTrader's content through a mobile
-                            application. It
-                            should be ready in the near future.
-
-
+                            yes, the multiple targets offered to the user can be used a means of trailing stop.
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
@@ -949,7 +991,7 @@
                                 data-id="item10">
                                 <span
                                     class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    10</span>Does it generate reports that I can print?
+                                    10</span> is the trade status updated at post market or live during market hours?
 
                             </div>
                             <div class="">
@@ -958,227 +1000,12 @@
                         </div>
                         <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
                             id="item10">
-                            No. Currently, all information is displayed on the screen. You can, of course,
-                            copy-paste it
-                            into your preferred format.
-
+                            all the trades are updated live during market hours.
                         </div>
                     </div>
                     <div class="border-b border-gray-400 my-5"></div>
                 </div>
-                <div class="accordion hidden" id="accordion11">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item11')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item11">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    11</span> Can I save the data for later use and study?
-
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img w-[60px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item11">
-                            No. At the moment, this feature is not available.
-
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-
-                </div>
-                <div class="accordion hidden" id="accordion12">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item12')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item12">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    12</span>Will you take requests for customisation of the product?
-
-
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item12">
-                            Certainly. We believe feedback from users is the best way to improve the program.
-                            The
-                            feasible ones can certainly be incorporated.
-
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-                </div>
-                <div class="accordion hidden" id="accordion13">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item13')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item13">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    13</span> Can I use NeoTrader on different devices at the same time?
-
-
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item13">
-                            A: One subscription allows you to log in from anywhere and on any device only once.
-                            Logging
-                            in elsewhere will log out the current user. For multiple logins, you will have to
-                            purchase
-                            additional subscriptions.
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-
-                </div>
-                <div class="accordion hidden" id="accordion14">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item14')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item14">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    14</span> How can I use multiple logins if I am a corporate?
-
-
-
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img w-[60px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item14">
-                            For corporate clients, we can create multiple logins under a common ID. This is
-                            charged
-                            differently from a retail subscription. Please get in touch with us at
-                            support@neotrader.in
-                            regarding the same.
-
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-                </div>
-                <div class="accordion hidden" id="accordion15">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item15')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item15">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    15</span> Can I get training on the different methods used in NeoTrader?
-
-
-
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img  w-[70px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item15">
-                            On subscribing, you get full training on the usage of the program and its many
-                            features. We
-                            have many training videos listed on every NeoTrader page that you can watch.
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-                </div>
-                <div class="accordion hidden" id="accordion16">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item16')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item16">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    16</span> What is the support that I can get for NeoTrader usage?
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img  w-[65px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item16">
-                            When you join as a member, you get full training on the usage of the program, its
-                            many
-                            features and how to use them effectively. We have technology support via dedicated
-                            phone
-                            lines and a WhatsApp helpdesk standing by during normal working hours every day. We
-                            also
-                            have market experts standing by to help you through difficulties in understanding of
-                            the
-                            methods and technical analysis issues. Support is available through email, chat as
-                            well as
-                            phone.
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-                </div>
-                <div class="accordion hidden" id="accordion17">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item17')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item17">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    17</span> What if my system crashes? Will I get a reinstallation?
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img  w-[65px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item17">
-                            No Problem. There is no program to install since this is cloud-based. Hence, it is
-                            independent of the working of your individual machine. You can simply log in from
-                            anywhere
-                            you want.
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-
-                </div>
-                <div class="accordion hidden" id="accordion18">
-                    <div class="accordion-item">
-                        <div class="flex justify-between" onclick="toggleAccordion('item18')">
-                            <div class="accordion-title lg:text-2xl text-[18px] font-bold font-aileron lg:leading-[31.20px] leading-relaxed tracking-wider"
-                                data-id="item18">
-                                <span
-                                    class="lg:text-2xl text-base font-semibold font-poppins lg:leading-[31.20px] lg:tracking-wide tracking-wider mr-5 lg:mr-10">
-                                    18</span> Where can I get more information on NeoTrader?
-                            </div>
-                            <div class="">
-                                <img src="" alt="" class="faq-img  w-[60px] lg:w-auto" />
-                            </div>
-                        </div>
-                        <div class="accordion-content text-white lg:text-xl text-base font-normal font-aileron lg:leading-7 leading-snug tracking-wider lg:mt-4 lg:ml-[70px]"
-                            id="item18">
-                            You can go to neotrader.in to find out more details about the program, see details
-                            on
-                            different features, take a small demo tour or check out some of our videos on the
-                            program.
-                            Pricing, support, subscription details, etc., are also on the site. You can also
-                            call us at
-                            +91-8779800688/8169111411 or email support@neotrader.in to get an executive to demo
-                            the
-                            program if you are a corporate client. Our support team at the office is standing by
-                            to
-                            answer all the queries you may have.
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-400 my-5"></div>
-                </div>
-            </div>
+            </div>  
 
             <div class="mt-5">
                 <button id="viewAllBtn"
@@ -1295,7 +1122,7 @@
                             class="custom-accordion-header text-white text-xl mt-5 lg:mt-0 lg:text-2xl font-medium font-poppins">
                             Product Offerings <span class="custom-accordion-icon">+</span></div>
                         <div class="custom-accordion-content space-y-2 mt-2">
-                            <a href="https://software.neotrader.in/"
+                            <a href="ai-trading.html"
                                 class="custom-accordion-link text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">AI
                                 Trading Software</a>
                             <a href="courses.html"
@@ -1406,7 +1233,7 @@
                 <div class="lg:block hidden">
                     <div class="text-white text-2xl font-medium font-poppins">Product Offerings</div>
                     <div class="flex flex-col space-y-2 mt-4">
-                        <a href="https://software.neotrader.in/">
+                        <a href="ai-trading.html">
                             <div
                                 class="text-white text-base font-normal font-aileron tracking-wider cursor-pointer hover:underline">
                                 AI Trading Software
@@ -1463,15 +1290,9 @@
             </div>
             <div class="mt-8 pb-5">
                 <div class="text-white text-xl font-semibold font-aileron leading-[30px] tracking-wide">
-                    Disclaimer:
-                    <span
-                        class="text-[18px] font-normal font-aileron lg:leading-[30px] leading-[24px] tracking-wide">Investments
-                        in securities market are subject to market risks, read all the related documents carefully
-                        before investing. Brokerage will not exceed SEBI prescribed limit. The securities are quoted
-                        as an example and not as a recommendation. <br /> <br /><span class="font-semibold"> SEBI
-                            Registration</span></span><span
-                        class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
-                    </span><span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
+                    SEBI
+                    Registration
+                    <span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
                         Name: Growth Avenues | RA No. INH000002285 | Validity: Perpetual </span><span
                         class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
                     </span>
@@ -1480,9 +1301,7 @@
                         class="text-[18px] font-normal font-aileron lg:leading-[30px] leading-[24px] tracking-wide">NeoTrader
                         is a product of Growth Avenues.
                         The Trademark for NeoTrader is Owned by Growth Avenues.</span>
-                    <a href="disclaimer.html"><span
-                            class="text-blue-700 text-xl font-normal font-aileron leading-[30px] tracking-wide cursor-pointer">Read
-                            more</span></a>
+                     
                 </div>
             </div>
         </footer>
@@ -1844,6 +1663,31 @@
             });
         });
 
+
+        const overlay = document.getElementById('overlay');
+        const popupForm = document.getElementById('popupForm');
+        const closeButton = document.getElementById('close-btn');
+
+        // Function to display the popup and overlay
+        function togglePopup(){
+            overlay.style.display = 'flex';
+        }
+        
+
+        // Function to close the popup and overlay
+        function closePopup() {
+            overlay.style.display = 'none';
+        }
+
+        // Event listener for the close button
+        closeButton.addEventListener('click', closePopup);
+
+        // Event listener to close popup when clicking outside of it
+        overlay.addEventListener('click', function (event) {
+            if (event.target === overlay) {
+                closePopup();
+            }
+        });
 
 
     </script>
