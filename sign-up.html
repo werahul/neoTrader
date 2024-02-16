@@ -251,7 +251,17 @@
             }
         }
     </script>
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9703FSHC31"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9703FSHC31');
+    </script>
 </head>
 
 <body class="loginBg">
@@ -261,10 +271,10 @@
             <a href="./index.html"><img src="./images/nav-logo-white.svg" alt="" class="w-[190px] h-[85px]"></a>
             <div class="space-y-16">
                 <h2 class=" lg:mt-[60px] mt-[30px] lg:ml-2"><span
-                        class="text-white lg:text-[42px] text-[37px]  font-bold font-aileron leading-[52.60px]">Ready to
+                        class="text-white lg:text-[42px] text-[37px]  font-bold font-aileron lg:leading-[52.60px] leading-[42px]">Ready to
                         <br class="lg:block hidden">experience
                         the</span><span
-                        class="text-yellow-400 lg:text-[42px] text-[37px] font-bold font-aileron leading-[52.60px]">
+                        class="text-yellow-400 lg:text-[42px] text-[37px] font-bold font-aileron lg:leading-[52.60px] leading-[42px]">
                         <br />future
                         of trading?</span></h2>
 

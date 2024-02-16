@@ -28,12 +28,23 @@
             }
         }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9703FSHC31"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9703FSHC31');
+    </script>
 </head>
 
 <body class="tnc-bg ">
     <div class="overlay" id="overlay">
-        <div class="popupForm " id="popupForm" >
-            <div  class="w-[100%] lg:h-[90vh] flex items-start lg:flex-row-reverse flex-col-reverse space-x-6 signColor2 rounded-[20px] ">
+        <div class="popupForm " id="popupForm">
+            <div
+                class="w-[100%] lg:h-[90vh] flex items-start lg:flex-row-reverse flex-col-reverse space-x-6 signColor2 rounded-[20px] ">
                 <form action=" " method="POST"
                     class="lg:w-[40%] w-[100%] lg:h-[100%] rounded-[20px] border border-zinc-500 py-5  bg-white">
                     <div class="partOne w-full px-5 lg:px-10 pt-8">
@@ -56,7 +67,7 @@
                                 <input type="email" name="email" id="email" required
                                     class="h-12   rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
                             </div>
-    
+
                             <div class="text-black flex flex-col">
                                 <label for="time-slot" class="">Select
                                     your Time Slot <span class="text-red-700 font-semibold"><sup>*</sup> </span></label>
@@ -75,7 +86,8 @@
                         </div>
                         <div class="w-full flex justify-end items-center mt-10">
                             <button type="submit"
-                                class="w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 hover:border-none rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 hover:bg-gradient-to-r  transition-all">Book A Free Demo
+                                class="w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 hover:border-none rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 hover:bg-gradient-to-r  transition-all">Book
+                                A Free Demo
                             </button>
                         </div>
                     </div>
@@ -91,8 +103,8 @@
                             class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-2">
                             With NeoTrader Software!
                         </div>
-                        
-    
+
+
                         <div class="mt-4">
                             <div
                                 class=" text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
@@ -101,10 +113,10 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
-    
+
             <div class="absolute right-[5px] lg:top-[5px] top-[14px] cursor-pointer" id="close-btn">
                 <img src="images/closed.svg" alt="" class="w-[30px] h-[30px]">
             </div>
@@ -112,9 +124,9 @@
     </div>
 
     <section class="max-container px-5 lg:px-20 ">
-        <div class="max-container fixed z-40 bottom-5 lg:right-20 right-[20%] 2xl:right-32">
+       <div class="max-container fixed z-40 bottom-5 lg:right-20 right-7 2xl:right-32">
             <button id="togglePopup" onclick="togglePopup()"
-                class="w-auto h-[55px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white">
+                class="w-auto h-[55px] lg:px-6 px-4 lg:py-3 py-2 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 hover:to-blue-700 hover:from-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white lg:text-xl text-[14px] font-bold font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r transition-colors ">
                 Book A Free Demo
             </button>
         </div>
@@ -178,7 +190,8 @@
                         <a href="blogs.html"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Blogs</a>
                         <a href="video-tutorials.html"
-                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Video Tutorials</a>
+                            class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Video
+                            Tutorials</a>
                         <a href="https://neotraderskb.tawk.help/" target="_blank"
                             class="text-white block font-aileron hover:text-blue-700 text-lg font-medium leading-[18px] tracking-wide">Knowledge
                             Base</a>
@@ -957,10 +970,10 @@
         const closeButton = document.getElementById('close-btn');
 
         // Function to display the popup and overlay
-        function togglePopup(){
+        function togglePopup() {
             overlay.style.display = 'flex';
         }
-        
+
 
         // Function to close the popup and overlay
         function closePopup() {

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
-    <title>Home | Neo Traders</title>
+    <title>Home | NeoTrader</title>
     <script>
         tailwind.config = {
             theme: {
@@ -24,12 +24,24 @@
             }
         }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9703FSHC31"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9703FSHC31');
+    </script>
+
 </head>
 
 <body class="home-bg ">
     <div class="overlay" id="overlay">
-        <div class="popupForm " id="popupForm" >
-            <div  class="w-[100%] lg:h-[90vh] flex items-start lg:flex-row-reverse flex-col-reverse space-x-6 signColor2 rounded-[20px] ">
+        <div class="popupForm " id="popupForm">
+            <div
+                class="w-[100%] lg:h-[90vh] flex items-start lg:flex-row-reverse flex-col-reverse lg:space-x-6 signColor2 rounded-[20px] ">
                 <form action=" " method="POST"
                     class="lg:w-[40%] w-[100%] lg:h-[100%] rounded-[20px] border border-zinc-500 py-5  bg-white">
                     <div class="partOne w-full px-5 lg:px-10 pt-8">
@@ -52,7 +64,7 @@
                                 <input type="email" name="email" id="email" required
                                     class="h-12   rounded-[14px] border border-slate-500 border-opacity-50 outline-none text-black    px-3"></input>
                             </div>
-    
+
                             <div class="text-black flex flex-col">
                                 <label for="time-slot" class="">Select
                                     your Time Slot <span class="text-red-700 font-semibold"><sup>*</sup> </span></label>
@@ -71,7 +83,8 @@
                         </div>
                         <div class="w-full flex justify-end items-center mt-10">
                             <button type="submit"
-                                class="w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 hover:border-none rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 hover:bg-gradient-to-r  transition-all">Book A Free Demo
+                                class="w-full lg:h-[58px] px-4 lg:px-8 py-4 border border-blue-700 hover:border-none rounded-[50px] flex justify-center items-center text-blue-700 hover:text-white text-base lg:text-xl font-bold font-poppins leading-relaxed whitespace-nowrap tracking-wider outline-none bg-gradient-to-r hover:from-blue-700 hover:to-teal-400 hover:bg-gradient-to-r  transition-all">Book
+                                A Free Demo
                             </button>
                         </div>
                     </div>
@@ -81,14 +94,14 @@
                     <div class="text-center text-white textshadow tracking-wide ">
                         <div
                             class="text-yellow-400 text-center lg:text-[2.6rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-5">
-                            Ab Smart-Trading Hoga Easy
+                            Ab Smart-Trading <br class="lg:hidden block"> Hoga Easy
                         </div>
                         <div
-                            class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-2">
+                            class="text-white text-center lg:text-[2.5rem] text-[1.6rem] font-bold font-poppins lg:leading-[50px] leading-tight lg:mt-2 mt-1">
                             With NeoTrader Software!
                         </div>
-                        
-    
+
+
                         <div class="mt-4">
                             <div
                                 class=" text-center text-white lg:text-xl text-base font-normal font-aileron lg:leading-6 leading-tight tracking-wider">
@@ -97,10 +110,10 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
-    
+
             <div class="absolute right-[5px] lg:top-[5px] top-[14px] cursor-pointer" id="close-btn">
                 <img src="images/closed.svg" alt="" class="w-[30px] h-[30px]">
             </div>
@@ -170,9 +183,9 @@
     </div> -->
     <!-- TradingView Widget END -->
     <section class="max-container lg:px-20 px-5">
-        <div class="max-container fixed z-40 bottom-5 lg:right-20 right-[20%] 2xl:right-32">
+        <div class="max-container fixed z-40 bottom-5 lg:right-20 right-7 2xl:right-32">
             <button id="togglePopup" onclick="togglePopup()"
-                class="w-auto h-[55px] px-6 py-3 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white text-xl font-medium font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r hover:from-transparent hover:to-transparent hover:border-2 border-white">
+                class="w-auto h-[55px] lg:px-6 px-4 lg:py-3 py-2 whitespace-nowrap bg-gradient-to-r from-blue-700 to-teal-400 hover:to-blue-700 hover:from-teal-400 rounded-[50px] justify-center items-center gap-2.5 inline-flex text-white lg:text-xl text-[14px] font-bold font-poppins leading-relaxed tracking-wider hover:bg-gradient-to-r transition-colors ">
                 Book A Free Demo
             </button>
         </div>
@@ -456,11 +469,10 @@
 
         <section>
             <div
-                class="lg:px-0 px-0 lg:text-left text-center text-white lg:text-[56px] text-[32px] font-semibold font-poppins lg:mt-20 mt-16">
+                class="lg:px-0 px-0 lg:text-left text-center text-white lg:text-[56px] text-[32px] font-semibold font-poppins lg:leading-[80px] leading-9 lg:mt-20 mt-16">
                 Ab Smart Trading <span class="text-[#FDDC1F]">Hoga Easy</span>
                 <p class="text-base italic lg:-mt-2 mt-2">India's Most Cutting-Edge Trading Software</p>
             </div>
-
 
             <div class="mt-8 flex lg:flex-row flex-col relative">
                 <div class="">
@@ -532,7 +544,7 @@
             </div>
         </section>
 
-       
+
         <!-- ----------------------------------------------------- 3rd Section About Us -->
         <section>
             <div class="mt-28 flex lg:flex-row flex-col lg:space-x-8 items-center">
@@ -566,28 +578,28 @@
                         Aditya Iyer, NeoTrader empowers you to trade better, smarter & wiser.<br /></div>
                     <div class="grid lg:grid-cols-2 grid-cols-1 gap-y-5 mt-5 lg:pl-0 pl-10 ">
                         <div class="flex items-center space-x-5">
-                            <img src="/images/ab1.png" alt="">
+                            <img src="/images/ab1.png" alt="" class="w-14">
                             <div
                                 class="lg:text-center text-white lg:text-xl text-[18px] font-normal font-aileron leading-[30px] tracking-wide">
                                 30,000+ software users</div>
                         </div>
 
                         <div class="flex items-center space-x-5">
-                            <img src="/images/ab2.png" alt="">
+                            <img src="/images/ab2.png" alt=""  class="w-14">
                             <div
                                 class="lg:text-center text-white lg:text-xl text-[18px] font-normal font-aileron leading-[30px] tracking-wide">
                                 50,000+ trained</div>
                         </div>
 
                         <div class="flex items-center space-x-5">
-                            <img src="/images/ab3.png" alt="">
+                            <img src="/images/ab3.png" alt=""  class="w-14">
                             <div
                                 class="lg:text-center text-white lg:text-xl text-[18px] font-normal font-aileron leading-[30px] tracking-wide">
                                 40+ years of experience</div>
                         </div>
 
                         <div class="flex items-center space-x-5">
-                            <img src="/images/ab4.png" alt="">
+                            <img src="/images/ab4.png" alt=""  class="w-14">
                             <div
                                 class="lg:text-center text-white lg:text-xl text-[18px] font-normal font-aileron leading-[30px] tracking-wide">
                                 80% accuracy</div>
@@ -659,7 +671,8 @@
                                 Intraday Trading</div>
                             <div
                                 class="w-[100%] text-white lg:text-xl text-[16px] font-normal font-aileron lg:leading-7 tracking-wide">
-                                Get ready made trades and highly filtered signals using sophisticated technical analysis based indicators for BUY SELL signals in both stocks and Index.
+                                Get ready made trades and highly filtered signals using sophisticated technical analysis
+                                based indicators for BUY SELL signals in both stocks and Index.
                             </div>
                             <div class=" mt-4">
                                 <ul class="list-disc ml-5 text-white">
@@ -729,7 +742,8 @@
                                 Options Trading</div>
                             <div
                                 class="w-[100%] text-white lg:text-xl text-[16px] font-normal font-aileron leading-7 tracking-wide">
-                                Simplified trade suggestions with options that come readymade without having to analyse any data or complex options Greeks.
+                                Simplified trade suggestions with options that come readymade without having to analyse
+                                any data or complex options Greeks.
                             </div>
                             <div class=" mt-4">
                                 <ul class="list-disc ml-5 text-white">
@@ -758,7 +772,7 @@
                                             class="text-white lg:text-xl text-[16px] font-normal font-aileron leading-tight tracking-wide lg:mt-3 mt-1">
                                             Minimize Time Decay</div>
                                     </li>
-                                   
+
                                 </ul>
                             </div>
                             <a href="option.html">
@@ -795,7 +809,8 @@
                                 Swing Trading</div>
                             <div
                                 class="w-[100%] text-white lg:text-xl text-[16px] font-normal font-aileron leading-7 tracking-wide">
-                                Both long and short trades, capitalising on trends and market movements over an extended time frame.
+                                Both long and short trades, capitalising on trends and market movements over an extended
+                                time frame.
                             </div>
                             <div class=" mt-4">
                                 <ul class="list-disc ml-5 text-white">
@@ -829,7 +844,7 @@
                                             Rolling Ticker Notification
                                         </div>
                                     </li>
-                                   
+
                                 </ul>
                             </div>
                             <a href="swing-trading.html">
@@ -865,7 +880,8 @@
                                 Positional Trading</div>
                             <div
                                 class="w-[100%] text-white lg:text-xl text-[16x] font-normal font-aileron leading-7 tracking-wide">
-                                Create a second source of income through trades that can be carried forward for a few days to weeks.
+                                Create a second source of income through trades that can be carried forward for a few
+                                days to weeks.
                             </div>
                             <div class=" mt-4">
                                 <ul class="list-disc ml-5 text-white">
@@ -963,7 +979,7 @@
                                             class="text-white lg:text-xl text-[16px] font-normal font-aileron leading-tight tracking-wide lg:mt-3 mt-1">
                                             One-Click Trading</div>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                             <a href="index-trading.html">
@@ -1173,45 +1189,45 @@
         </section>
 
         <section class="lg:hidden block">
-            <div class="lg:mt-[60px] mt-[30px] mb-[100px]">
+            <div class="mt-[30px] mb-[100px]">
                 <div class="container" id="infiniteScroll--left3">
-                    <article>
+                    <article class="article-img">
                         <div class="wrapper">
                             <div class="img">
-                                <img src="./images/companyIcon1.svg" alt="">
+                                <img src="./images/about/client1.png" alt="">
                             </div>
 
                         </div>
                     </article>
 
                     <!-- Make as many articles as you need -->
-                    <article>
+                    <article class="article-img">
                         <div class="wrapper">
-                            <div class="img"><img src="./images/companyIcon2.svg" alt=""></div>
+                            <div class="img"><img src="./images/about/client2.png" alt=""></div>
 
                         </div>
                     </article>
-                    <article>
+                    <article class="article-img">
                         <div class="wrapper">
-                            <div class="img"><img src="./images/companyIcon3.svg" alt=""></div>
+                            <div class="img"><img src="./images/about/client3.png" alt=""></div>
 
                         </div>
                     </article>
-                    <article>
+                    <article class="article-img">
                         <div class="wrapper">
-                            <div class="img"><img src="./images/companyIcon4.svg" alt=""></div>
+                            <div class="img"><img src="./images/about/client4.png" alt=""></div>
 
                         </div>
                     </article>
-                    <article>
+                    <article class="article-img">
                         <div class="wrapper">
-                            <div class="img"><img src="./images/companyIcon5.svg" alt=""></div>
+                            <div class="img"><img src="./images/about/client5.png" alt=""></div>
 
                         </div>
                     </article>
-                    <article>
+                    <article class="article-img">
                         <div class="wrapper">
-                            <div class="img"><img src="./images/companyIcon5.svg" alt=""></div>
+                            <div class="img"><img src="./images/about/client3.png" alt=""></div>
                         </div>
                     </article>
 
@@ -1462,7 +1478,7 @@
                 <div class="lg:w-[70%]">
                     <div class="lg:flex lg:space-x-4 lg:space-y-0 space-y-4">
                         <div
-                            class="relative w-full h-[362px] bg-gray-800 rounded-[20px] shadow border border-white border-opacity-50 px-10 py-12">
+                            class="relative w-full h-[362px] bg-gray-800 rounded-[20px] shadow border border-white border-opacity-50 lg:px-10 px-8 py-12">
                             <div class="flex items-center space-x-3">
                                 <img src="/images/ReadLine.png" alt="">
                                 <div class="text-white text-lg font-normal font-aileron leading-normal tracking-wide ">
@@ -1546,7 +1562,7 @@
                 </div>
                 <div class="lg:w-[30%]">
                     <div
-                        class="relative w-full lg:h-[700px] h-[360px] bg-gray-800 rounded-[20px] py-12 flex flex-col px-0">
+                        class="relative w-full lg:h-[700px] h-[360px] bg-gray-800 rounded-[20px] py-12 flex flex-col lg:px-0 px-2">
                         <div class="flex items-center lg:space-x-3 px-5  ">
                             <img src="/images/ReadLine.png" alt="">
                             <div class=" text-white text-lg font-normal font-aileron leading-normal tracking-wide ">
@@ -1848,19 +1864,20 @@
 
             </div>
             <div class="mt-8 pb-5">
-                <div class="text-white text-xl font-semibold font-aileron leading-[30px] tracking-wide">
+                <div class="text-white text-xl font-semibold font-aileron lg:leading-[30px] leading-6 tracking-wide">
                     SEBI
                     Registration
-                    <span class="text-white text-[18px] font-light font-aileron leading-[30px] tracking-wide">:
+                    <span
+                        class="text-white text-[18px] font-light font-aileron lg:leading-[30px] leading-6 tracking-wide">:
                         Name: Growth Avenues | RA No. INH000002285 | Validity: Perpetual </span><span
                         class="text-white text-xl font-normal font-aileron leading-[30px] tracking-wide">
                     </span>
                     <br>
                     <span
-                        class="text-[18px] font-normal font-aileron lg:leading-[30px] leading-[24px] tracking-wide">NeoTrader
+                        class="text-[18px] font-normal font-aileron lg:leading-[30px] leading-6 tracking-wide">NeoTrader
                         is a product of Growth Avenues.
                         The Trademark for NeoTrader is Owned by Growth Avenues.</span>
-                     
+
                 </div>
             </div>
         </footer>
@@ -2269,10 +2286,10 @@
         const closeButton = document.getElementById('close-btn');
 
         // Function to display the popup and overlay
-        function togglePopup(){
+        function togglePopup() {
             overlay.style.display = 'flex';
         }
-        
+
 
         // Function to close the popup and overlay
         function closePopup() {
